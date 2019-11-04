@@ -4,7 +4,7 @@
 This project is an offline note taking app using react, indexeddb, and redux.
 
 
-![Screen Shot](https://ibb.co/rf8NFdp)
+![Screen Shot](https://i.ibb.co/S7YG5fm/Screenshot-2019-11-04-React-App.png)
 
 
 ### Features
