@@ -26,9 +26,15 @@ jobs:
   
     - name: Run Tests
       run: |
-        npm run test
+        npm run test -- --watchAll=false --coverage
       env:
         CI: true
+  
+    - name: Upload coverage report
+      uses: codecov/codecov-action@v1.0.3
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        file: ./coverage/clover.xml
     
     - name: Build
       run: |
