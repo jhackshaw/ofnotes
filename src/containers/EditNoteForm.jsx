@@ -46,7 +46,6 @@ const EditNoteForm = props => {
 
   const onChange = e => {
     e.persist();
-    console.log(e)
     setValues(previous => {
       const updated = {
         ...previous,
