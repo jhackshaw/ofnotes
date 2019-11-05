@@ -51,5 +51,11 @@
     "mutationobserver-shim": "^0.3.3",
     "redux-mock-store": "^1.5.3",
     "sinon": "^7.5.0"
+  },
+  "jest": {
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "src/serviceWorker.js"
+    ]
   }
 }
