@@ -1,9 +1,11 @@
-[![codecov](https://codecov.io/gh/jhackshaw/ofnotes/branch/master/graph/badge.svg)](https://codecov.io/gh/jhackshaw/ofnotes)
 [![build](https://github.com/jhackshaw/ofnotes/workflows/ofnotes/badge.svg)](https://github.com/jhackshaw/ofnotes/actions)
+[![codecov](https://codecov.io/gh/jhackshaw/ofnotes/branch/master/graph/badge.svg)](https://codecov.io/gh/jhackshaw/ofnotes)
 
 ## About
 
 This project is an offline note taking app using react, indexeddb, and redux.
+
+Try it at [ofnote.site](https://wwww.ofnote.site).
 
 
 ![Screen Shot](https://i.ibb.co/S7YG5fm/Screenshot-2019-11-04-React-App.png)
@@ -32,7 +34,7 @@ Tests are all inside of the __tests__/ directory. React-testing-library is used 
 
 ### Continous Integration
 
-See .github/workflows/ofnotes.yml for CI configuration. Every merge with master triggers the following on an ubuntu vm:
+See .github/workflows/ofnotes.yml for CI configuration. Every merge with master triggers the following:
 
  1. install dependencies ```(npm ci)```
  2. run tests ```(npm run test)```

@@ -31,6 +31,7 @@ describe('idempotent db', () => {
   ]
 
   beforeAll(async () => {
+    await db.notes.clear()
     await db.notes.bulkAdd(allNotes)
   })
 
