@@ -1,4 +1,4 @@
-name: OfNotes Deploy
+name: ofnotes
 
 on:
   push:
