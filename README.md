@@ -1,42 +1,93 @@
+
 [![build](https://github.com/jhackshaw/ofnotes/workflows/ofnotes/badge.svg)](https://github.com/jhackshaw/ofnotes/actions)
 [![codecov](https://codecov.io/gh/jhackshaw/ofnotes/branch/master/graph/badge.svg)](https://codecov.io/gh/jhackshaw/ofnotes)
+![GitHub last commit](https://img.shields.io/github/last-commit/jhackshaw/ofnotes)
+[![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://www.ofnote.site)
+![GitHub](https://img.shields.io/github/license/jhackshaw/ofnotes)
 
-## About
+# About
 
-This is an offline note taking app using react, indexeddb, and redux.
-
-Try it at [ofnote.site](https://wwww.ofnote.site).
-
+Ofnote is a note taking application that is completely offline. All notes are stored locally per browser.
 
 ![Screen Shot](https://i.ibb.co/S7YG5fm/Screenshot-2019-11-04-React-App.png)
 
 
 ### Features
 
- - **Markdown**: write your notes in github flavored markdown
- - **Tagging**: tag your notes to make finding them quicker and easier
- - **Indexeddb**: support for a massive amount of notes and fast searching (all notes are indexed)
+ - **Markdown**: notes support [github flavored markdown](https://github.github.com/gfm/)
+ - **Tags**: notes can be tagged to make categorizing and finding them quick and easy
+ - **Indexeddb**: never run out of storage space for notes
+ - **Dark mode**: essential
 
 
-### Design Choices
+### Structure
 
-#### Redux
+    .
+    ├── README.md
+    ├── package.json
+    |
+    ├── .github/
+    |    └── worflows/ofnote.yml    # CI configuration
+    |
+    └── src/
+         ├── __tests__/              # test files
+         ├── containers/             # containers use and manipulate state
+         ├── components/             # components are generally stateless
+         ├── db/                     # IndexedDB access / queries
+         └── store/                  # redux implementation - actions, reducer, selectors
+    
+ 
+ 
+# Design Choices
 
-Designed in a way that adding online syncing functionality can be easily accomplished. Currently visible notes are all stored as redux state, but asynchronous actions ensure that they are up-to-date with the database. API queries could be added alongside DB queries to update online storage in the future.
+### Redux
 
-#### Indexeddb
+Managing state using redux allows for edits to immediately propagate throughout the rest of the application. Asynchronous actions (thunks) ensure they maintain consistancy with the IndexedDB database, and online storage support could be integrated into actions easily in the future.
 
-All notes are indexed by title, tags, and modified date for extremely fast searches. Compared to localStorage, indexeddb searches are asynchronous, indexed, and store notes in their native format (e.g. objects). With localStorage, 10MBs worth of notes is the max. Indexeddb supports up to 999MB with user permission (that's a lot of notes!).
+### IndexedDB
 
-#### testing
+Compared to the localStorage API, IndexedDB is asynchronous and indexed. It supports storage of significantly more data in it's native format (localStorage is strings only). In ofnotes, tags, title, and modified date are all indexed for extremely fast searches regardless of the number of notes, and support for 999MB worth of notes is possible with user permission. Dexie provides a more convenient wrapper around the native IndexedDB api.
 
-Tests are all inside of the __tests__/ directory. React-testing-library is used for rendering components and querying the rendered state. Sinon is used for stubbing out DB queries for unit tests.
+### React router
 
-### Continous Integration
+Ensures notes are accessible by a distinct URL. This makes it possible to bookmark or navigate to a particular note directly.
 
-See .github/workflows/ofnotes.yml for CI configuration. Every merge with master triggers the following:
+### Built with
 
- 1. install dependencies ```(npm ci)```
- 2. run tests ```(npm run test)```
- 3. build production application ```(npm run build)```
- 4. deploy application (use github secrets creds to upload to aws s3 bucket)
+- [ReactJS](https://reactjs.org/)
+- [Material-UI](https://material-ui.com/)
+- [Redux](https://redux.js.org/)
+- [Dexie](https://dexie.org/)
+- [React Router](https://reacttraining.com/react-router/)
+- [Marked](https://marked.js.org/)
+- [MomentJS](https://momentjs.com/)
+
+
+# Continuous Integration
+
+GitHub Actions is used for CI/CD by synchronizing with an AWS s3 static site enabled bucket. CI configuration can be viewed at [.github/workflows/ofnotes.yml](https://github.com/jhackshaw/ofnotes/blob/master/.github/workflows/ofnotes.yml). Every push to master triggers the following steps:
+
+ 1. Install nodejs and dependencies ```(npm ci)```
+ 2. Run tests ```(npm run test -- --coverage)```
+ 3. Upload test coverage to [codecov](https://codecov.io/gh/jhackshaw/ofnotes)
+ 4. Build production application ```(npm run build)```
+ 5. Deploy application to s3 bucket
+
+
+# Local development
+
+[![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)](https://www.ofnote.site)
+
+ - Clone repo: git clone https://github.com/jhackshaw/ofnotes
+ - Install dependencies: ```npm install```
+ - Run tests: ```npm run test```
+ - Run tests with code coverage: ```npm run test -- --coverage```
+ - Run development server: ```npm run start```
+
+
+
+
+
+
+
+
