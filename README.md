@@ -3,7 +3,7 @@
 
 ## About
 
-This project is an offline note taking app using react, indexeddb, and redux.
+This is an offline note taking app using react, indexeddb, and redux.
 
 Try it at [ofnote.site](https://wwww.ofnote.site).
 
@@ -15,7 +15,7 @@ Try it at [ofnote.site](https://wwww.ofnote.site).
 
  - **Markdown**: write your notes in github flavored markdown
  - **Tagging**: tag your notes to make finding them quicker and easier
- - **Indexeddb**: store a plethora of notes without taking a performance hit - all of your notes are indexed
+ - **Indexeddb**: support for a massive amount of notes and fast searching (all notes are indexed)
 
 
 ### Design Choices
