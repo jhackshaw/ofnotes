@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
-import marked from 'marked';
+import Markdown from 'markdown-to-jsx';
 import { Link } from 'react-router-dom';
 import { useParams } from 'react-router-dom';
 import { makeStyles } from '@material-ui/styles';
-import { Chip } from '@material-ui/core';
+import { Chip, Typography } from '@material-ui/core';
 import EditIcon from '@material-ui/icons/Edit';
 
 import { useSelector, useDispatch } from 'react-redux';
@@ -19,7 +19,8 @@ const useStyles = makeStyles(theme => ({
   content: {
     marginTop: theme.spacing(5),
     padding: theme.spacing(),
-    paddingTop: 0
+    paddingTop: 0,
+    lineHeight: '2rem'
   },
   icon: {
     marginLeft: theme.spacing()
@@ -37,6 +38,17 @@ const useStyles = makeStyles(theme => ({
     alignItems: 'flex-start'
   }
 }))
+
+const options = { 
+  overrides: { 
+    h1: { component: props => <Typography gutterBottom variant="h3" {...props} /> }, 
+    h2: { component: props => <Typography gutterBottom variant="h4" {...props} /> }, 
+    h3: { component: props => <Typography gutterBottom variant="h5" {...props} /> }, 
+    h4: { component: props => <Typography gutterBottom variant="h6" paragraph {...props} /> }, 
+    p: { component: props => <Typography gutterBottom variant="body1" paragraph {...props} /> },
+    li: { component: props => <Typography variant="body1" component="li" style={{ marginTop: 2 }} {...props} /> }
+  }, 
+}; 
 
 
 const NoteDisplay = props => {
@@ -63,10 +75,9 @@ const NoteDisplay = props => {
         }
         {...props}
         >
-        <div className={classes.content}
-            dangerouslySetInnerHTML={{
-              __html: marked(note.md)
-            }} />
+        <div className={classes.content}>
+          <Markdown options={options}>{ note.md }</Markdown> 
+        </div>
         
         <div className={classes.tags}>
           { note.tags.map(t => (

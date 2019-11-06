@@ -631,7 +631,9 @@ exports[`containers NoteDisplay matches snapshot 1`] = `
     </div>
     <div
       class="makeStyles-content-473"
-    />
+    >
+      <span />
+    </div>
     <div
       class="makeStyles-tags-476"
     />

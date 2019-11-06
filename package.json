@@ -7,7 +7,7 @@
     "@material-ui/icons": "^4.5.1",
     "@material-ui/styles": "^4.5.2",
     "dexie": "^2.0.4",
-    "marked": "^0.7.0",
+    "markdown-to-jsx": "^6.10.3",
     "moment": "^2.24.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
