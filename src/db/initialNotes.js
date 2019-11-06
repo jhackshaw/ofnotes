@@ -6,20 +6,21 @@ export default [
     "slug": "welcome",
     "md": `
 
+
 [![build](https://github.com/jhackshaw/ofnotes/workflows/ofnotes/badge.svg)](https://github.com/jhackshaw/ofnotes/actions)
 [![codecov](https://codecov.io/gh/jhackshaw/ofnotes/branch/master/graph/badge.svg)](https://codecov.io/gh/jhackshaw/ofnotes)
 ![GitHub last commit](https://img.shields.io/github/last-commit/jhackshaw/ofnotes)
 [![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://www.ofnote.site)
 ![GitHub](https://img.shields.io/github/license/jhackshaw/ofnotes)
 
-## About
+### About
 
 Ofnote is a note taking application that is completely offline. All notes are stored locally per browser.
 
 ![Screen Shot](https://i.ibb.co/S7YG5fm/Screenshot-2019-11-04-React-App.png)
 
 
-### Features
+#### Features
 
   - **Markdown**: notes support [github flavored markdown](https://github.github.com/gfm/)
   - **Tags**: notes can be tagged to make categorizing and finding them quick and easy
@@ -27,7 +28,7 @@ Ofnote is a note taking application that is completely offline. All notes are st
   - **Dark mode**: essential
 
 
-### Structure
+#### Structure
 
     .
     ├── README.md
@@ -43,21 +44,21 @@ Ofnote is a note taking application that is completely offline. All notes are st
           ├── db/                     # IndexedDB access / queries
           └── store/                  # redux implementation - actions, reducer, selectors
     
-## Design Choices
+### Design Choices
 
-### Redux
+#### Redux
 
 Managing state using redux allows for edits to immediately propagate throughout the rest of the application. Asynchronous actions (thunks) ensure they maintain consistancy with the IndexedDB database, and online storage support could be integrated into actions easily in the future.
 
-### IndexedDB
+#### IndexedDB
 
 Compared to the localStorage API, IndexedDB is asynchronous and indexed. It supports storage of significantly more data in it's native format (localStorage is strings only). In ofnotes, tags, title, and modified date are all indexed for extremely fast searches regardless of the number of notes, and support for 999MB worth of notes is possible with user permission. Dexie provides a more convenient wrapper around the native IndexedDB api.
 
-### React router
+#### React router
 
 Ensures notes are accessible by a distinct URL. This makes it possible to bookmark or navigate to a particular note directly.
 
-### Built with
+#### Built with
 
 - [ReactJS](https://reactjs.org/)
 - [Material-UI](https://material-ui.com/)
@@ -68,7 +69,7 @@ Ensures notes are accessible by a distinct URL. This makes it possible to bookma
 - [MomentJS](https://momentjs.com/)
 
 
-## Continuous Integration
+### Continuous Integration
 
 GitHub Actions is used for CI/CD by synchronizing with an AWS s3 static site enabled bucket. CI configuration can be viewed at [.github/workflows/ofnotes.yml](https://github.com/jhackshaw/ofnotes/blob/master/.github/workflows/ofnotes.yml). Every push to master triggers the following steps:
 
@@ -79,7 +80,7 @@ GitHub Actions is used for CI/CD by synchronizing with an AWS s3 static site ena
   5. Deploy application to s3 bucket
 
 
-## Local development
+### Local development
 
 [![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)](https://www.ofnote.site)
 
@@ -88,6 +89,7 @@ GitHub Actions is used for CI/CD by synchronizing with an AWS s3 static site ena
   - Run tests: npm run test
   - Run tests with code coverage: npm run test -- --coverage
   - Run development server: npm run start
+        
     
 `
   }]

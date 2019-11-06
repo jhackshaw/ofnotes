@@ -8,7 +8,7 @@ db.version(1).stores({
 })
 
 db.on('populate', () => {
-  db.notes.add(initialNotes[0])
+  db.notes.bulkAdd(initialNotes)
 })
 
 export default db;
