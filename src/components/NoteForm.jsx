@@ -1,7 +1,6 @@
 import React from 'react';
 import { LinearProgress } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
-import useForm from 'react-hook-form';
 
 import MainPanel from './MainPanel';
 import MainPanelHeader from './MainPanelHeader'
@@ -19,15 +18,18 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const NoteForm = ({ values, loading, onChange, onSave, formActions, toggleMenu }) => {
+const NoteForm = ({ 
+  values,
+  register,
+  errors,
+  panelError,
+  onSubmit,
+  loading,
+  onChange,
+  formActions,
+  toggleMenu 
+}) => {
   const classes = useStyles();
-  const { register,
-          errors,
-          handleSubmit } = useForm({ mode: 'onBlur' });
-
-  const tagsValue = values.tags
-                    ? values.tags.join(' ')
-                    : '';
 
   const onTagsChange = e => {
     e.persist()
@@ -47,7 +49,7 @@ const NoteForm = ({ values, loading, onChange, onSave, formActions, toggleMenu }
       { loading &&
         <LinearProgress classes={{root: classes.progress}} />
       }
-      <form onSubmit={handleSubmit(onSave)}>
+      <form onSubmit={onSubmit}>
         <MainPanelHeader
             title={values.title || 'New Note'}
             actions={formActions}
@@ -56,8 +58,8 @@ const NoteForm = ({ values, loading, onChange, onSave, formActions, toggleMenu }
           <NoteTextField 
               name="title"
               label="Title"
-              error={errors.hasOwnProperty('title')}
-              helperText={errors.title ? "Title is required" : " "}
+              error={Boolean(errors.hasOwnProperty('title') || panelError)}
+              helperText={errors.title ? "Title is required" : panelError ? panelError : " "}
               inputRef={register({required: true, maxLength: 100 })}
               onChange={onChange}
               value={values.title || ''}
@@ -89,7 +91,11 @@ const NoteForm = ({ values, loading, onChange, onSave, formActions, toggleMenu }
               helperText={'Separated by spaces'}
               inputRef={register()}
               onChange={onTagsChange}
-              value={tagsValue}
+              value={
+                values.tags
+                ? values.tags.join(' ')
+                : ''
+              }
               />
         </MainPanelHeader>
       </form>

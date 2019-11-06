@@ -143,7 +143,7 @@ export const editNote = (noteId, note) => async dispatch => {
     dispatch(editNoteSuccess(saved.id, saved))
   }
   catch (e) {
-    dispatch(editNoteFail(e))
+    dispatch(editNoteFail(e.failures ? e.failures[0] : e))
   }
 }
 

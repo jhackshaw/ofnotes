@@ -35,17 +35,20 @@ export const createNote = async note => {
     .add({
       ...note,
       slug: slugify(note.title),
-      modified: Date.now()
+      modified: Date.now(),
+      tags: note.tags.filter(t => Boolean(t))
     })
   return await db.notes.get(id);
 }
 
 export const editNote = async (noteId, note) => {
+  if (!note.title) return
   await db.notes
     .update(noteId, {
       ...note,
       slug: slugify(note.title),
-      modified: Date.now()
+      modified: Date.now(),
+      tags: note.tags.filter(t => Boolean(t))
     })
   return await db.notes.get(noteId)
 }

@@ -4,7 +4,7 @@ import initialNotes from './initialNotes.js'
 const db = new Dexie('NotesDB');
 
 db.version(1).stores({
-  notes: "++id, &title, *tags, modified, slug"
+  notes: "++id, &title, *tags, modified, &slug"
 })
 
 db.on('populate', () => {

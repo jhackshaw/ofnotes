@@ -4,9 +4,11 @@ import { makeStyles } from '@material-ui/styles';
 import ViewIcon from '@material-ui/icons/Visibility';
 import DeleteIcon from '@material-ui/icons/Delete';
 
+import useForm from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectCurrentNote,
-         selectPanelLoading } from '../store/selectors';
+         selectPanelLoading, 
+         selectPanelError} from '../store/selectors';
 import * as actions from '../store/actions';
 
 import NoteForm from '../components/NoteForm';
@@ -27,10 +29,12 @@ const EditNoteForm = props => {
   const { slug } = useParams();
   const dispatch = useDispatch();
   const history = useHistory();
+  const panelError = useSelector(selectPanelError);
   const currentNote = useSelector(selectCurrentNote);
   const loading = useSelector(selectPanelLoading);
   const [values, setValues] = useState(currentNote);
   const [updateTimeout, setUpdateTimeout] = useState(null);
+  const { register, errors } = useForm({ mode: 'onChange' });
 
   useEffect(() => {
     dispatch(actions.setCurrentNote(slug))
@@ -52,6 +56,7 @@ const EditNoteForm = props => {
       }
 
       clearTimeout(updateTimeout);
+
       setUpdateTimeout(setTimeout(() => {
         dispatch(actions.editNote(currentNote.id, updated))
       }, 250))
@@ -74,6 +79,9 @@ const EditNoteForm = props => {
     <NoteForm values={values}
               onChange={onChange}
               loading={loading}
+              register={register}
+              errors={errors}
+              panelError={panelError}
               formActions={
                 <>
                 <NoteFormButton

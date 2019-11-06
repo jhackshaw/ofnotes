@@ -3,7 +3,9 @@ import { useHistory } from 'react-router-dom';
 import SaveIcon from '@material-ui/icons/Save';
 import { makeStyles } from '@material-ui/styles';
 
-import { useDispatch } from 'react-redux';
+import useForm from 'react-hook-form';
+import { useDispatch, useSelector } from 'react-redux';
+import { selectPanelError } from '../store/selectors';
 import * as actions from '../store/actions';
 
 import NoteForm from '../components/NoteForm';
@@ -20,6 +22,10 @@ const CreateNoteForm = props => {
   const classes = useStyles();
   const dispatch = useDispatch();
   const history = useHistory();
+  const panelError = useSelector(selectPanelError)
+  const { register, errors, handleSubmit } = useForm({
+    mode: 'onBlur'
+  });
   const [values, setValues] = useState({
     title: '',
     md: '',
@@ -49,7 +55,11 @@ const CreateNoteForm = props => {
   return (
     <NoteForm values={values}
               onChange={onChange}
+              register={register}
+              errors={errors}
+              onSubmit={handleSubmit(onSave)}
               onSave={onSave}
+              panelError={panelError}
               formActions={
                 <NoteFormButton
                   type="submit"

@@ -44,6 +44,11 @@ describe('component snapshots', () => {
       tags: ['python', 'react']
     }
     const { asFragment } = render(<NoteForm values={values}
+                                            errors={{
+                                              title: 'test error',
+                                              md: 'required'
+                                            }}
+                                            register={() => {}}
                                             formActions={
                                               <div>test element</div>
                                             } />)

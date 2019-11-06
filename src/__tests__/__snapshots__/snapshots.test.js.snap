@@ -123,16 +123,16 @@ exports[`component snapshots NoteForm 1`] = `
         class="MuiFormControl-root MuiTextField-root makeStyles-inp-217 MuiFormControl-fullWidth"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined Mui-error Mui-error MuiFormLabel-filled"
           data-shrink="true"
         >
           Title
         </label>
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+          class="MuiInputBase-root MuiOutlinedInput-root Mui-error Mui-error MuiInputBase-fullWidth MuiInputBase-formControl"
         >
           <input
-            aria-invalid="false"
+            aria-invalid="true"
             class="MuiInputBase-input MuiOutlinedInput-input"
             name="title"
             type="text"
@@ -154,25 +154,25 @@ exports[`component snapshots NoteForm 1`] = `
           </fieldset>
         </div>
         <p
-          class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+          class="MuiFormHelperText-root MuiFormHelperText-contained Mui-error MuiFormHelperText-filled"
         >
-           
+          Title is required
         </p>
       </div>
       <div
         class="MuiFormControl-root MuiTextField-root makeStyles-inp-217 MuiFormControl-fullWidth"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined Mui-error Mui-error MuiFormLabel-filled"
           data-shrink="true"
         >
           Note
         </label>
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline MuiOutlinedInput-multiline"
+          class="MuiInputBase-root MuiOutlinedInput-root Mui-error Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline MuiOutlinedInput-multiline"
         >
           <textarea
-            aria-invalid="false"
+            aria-invalid="true"
             class="MuiInputBase-input MuiOutlinedInput-input undefined makeStyles-textarea-159 MuiInputBase-inputMultiline MuiOutlinedInput-inputMultiline"
             name="md"
             rows="2"
@@ -195,9 +195,9 @@ exports[`component snapshots NoteForm 1`] = `
           </fieldset>
         </div>
         <p
-          class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+          class="MuiFormHelperText-root MuiFormHelperText-contained Mui-error MuiFormHelperText-filled"
         >
-          Supports Github flavored markdown
+          Note is required!
         </p>
       </div>
       <div

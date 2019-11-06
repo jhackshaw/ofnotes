@@ -15,7 +15,8 @@ import { CREATE_NOTE_START,
          DELETE_NOTE_SUCCESS,
          DELETE_NOTE_FAIL,
          TOGGLE_MENU_OPEN,
-         SET_PALETTE_TYPE } from './actions';
+         SET_PALETTE_TYPE, 
+         EDIT_NOTE_FAIL} from './actions';
 
 
 let initialPaletteType = localStorage.getItem('paletteType');
@@ -154,6 +155,12 @@ export default (state=initialState, action) => {
           ...state.notes,
           [action.note.id]: action.note
         }
+      }
+
+    case EDIT_NOTE_FAIL:
+      return {
+        ...state,
+        panelError: action.error
       }
 
     case DELETE_NOTE_START:

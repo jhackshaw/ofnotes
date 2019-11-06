@@ -35,7 +35,6 @@ const useStyles = makeStyles(theme => ({
 const MainPanelHeader = ({ title, actions, toggleMenu, children }) => {
   const classes = useStyles();
 
-
   return (
     <>
     <div className={classes.root}>

@@ -210,6 +210,15 @@ describe('reducer', () => {
     })
   })
 
+  it('sets error on edit fail', () => {
+    expect(reducer({}, {
+      type: actions.EDIT_NOTE_FAIL,
+      error: 'test error message'
+    })).toMatchObject({
+      panelError: 'test error message'
+    })
+  })
+
 
   describe('delete note', () => {
     it('sets loading on delete note start', () => {

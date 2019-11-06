@@ -13,6 +13,8 @@ export const selectListFilter = state => state.listFilter;
 
 export const selectPanelLoading = state => state.panelLoading;
 
+export const selectPanelError = state => state.panelError;
+
 export const selectMenuOpen = state => state.menuOpen;
 
 export const selectPaletteType = state => state.paletteType;
