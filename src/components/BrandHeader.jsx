@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/styles';
 import { Avatar,
          Typography, 
-         IconButton} from '@material-ui/core';
+         IconButton,
+         Hidden} from '@material-ui/core';
 import BrandIcon from '@material-ui/icons/NoteAdd';
 import GithubIcon from '@material-ui/icons/GitHub';
+import CloseIcon from '@material-ui/icons/Close';
 
 
 const useStyles = makeStyles(theme => ({
@@ -34,7 +36,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 
-const BrandHeader = props => {
+const BrandHeader = ({ toggleMenu }) => {
   const classes = useStyles();
 
   return (
@@ -52,9 +54,14 @@ const BrandHeader = props => {
           Offline note taking
         </Typography>
       </div>
-      <IconButton href="https://github.com/jhackshaw/ofnotes">
-        <GithubIcon />
-      </IconButton>
+      <Hidden mdDown>
+        <IconButton href="https://github.com/jhackshaw/ofnotes">
+          <GithubIcon />
+        </IconButton>
+      </Hidden>
+      <Hidden lgUp>
+        <IconButton onClick={toggleMenu}><CloseIcon /></IconButton>
+      </Hidden>
     </div>
   )
 }

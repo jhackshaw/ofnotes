@@ -15,7 +15,6 @@ import { NoteFormButton } from '../components/NoteFormInputs';
 
 const useStyles = makeStyles(theme => ({
   icon: {
-    marginLeft: theme.spacing()
   },
   deleteBtn: {
     backgroundColor: theme.palette.error.main
@@ -81,16 +80,17 @@ const EditNoteForm = props => {
                   onClick={onDelete}
                   classes={{root: classes.deleteBtn}}
                   >
-                  Delete <DeleteIcon className={classes.icon} />
+                  <span className={classes.btnLbl}>Delete </span><DeleteIcon className={classes.icon} />
                 </NoteFormButton>
                 <NoteFormButton
                   component={Link}
                   to={`/${currentNote.slug}`}
                   >
-                  View <ViewIcon className={classes.icon} />
+                  <span className={classes.btnLbl}>View </span><ViewIcon className={classes.icon} />
                 </NoteFormButton>
                 </>
               }
+              {...props}
               />
   )
 }

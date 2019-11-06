@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import SaveIcon from '@material-ui/icons/Save';
 import { makeStyles } from '@material-ui/styles';
@@ -25,6 +25,10 @@ const CreateNoteForm = props => {
     md: '',
     tags: []
   })
+
+  useEffect(() => {
+    dispatch(actions.setCurrentNote(null))
+  }, [dispatch])
 
   const onChange = e => {
     e.persist();
@@ -54,6 +58,7 @@ const CreateNoteForm = props => {
                    Save <SaveIcon className={classes.icon} />
                 </NoteFormButton>
               }
+              {...props}
               />
   )
 }

@@ -18,6 +18,8 @@ const useStyles = makeStyles(theme => ({
   root: {
     flex: '400px 0 0',
     overflowY: 'auto',
+    position: 'relative',
+    display: 'block',
     [theme.breakpoints.down('md')]: {
       position: 'absolute',
       width: '100%',
@@ -29,14 +31,21 @@ const useStyles = makeStyles(theme => ({
         : 'none'
     }
   },
+  isOpen: {
+
+  },
   filter: {
     padding: theme.spacing(3),
     paddingBottom: 0
+  },
+  eh: {
+    position: 'relative'
   }
 }))
 
 const SideBar = props => {
   const classes = useStyles(props);
+  const { toggleMenu } = props;
   const dispatch = useDispatch();
   const notes = useSelector(selectListNotes);
   const filter = useSelector(selectListFilter);
@@ -51,8 +60,10 @@ const SideBar = props => {
   }
 
   return (
-    <Paper classes={{root: classes.root}}>
-      <BrandHeader />
+    <Paper classes={{
+      root: classes.root
+    }}>
+      <BrandHeader toggleMenu={toggleMenu} />
       <div className={classes.filter}>
         <NoteTextField
             name="filter"
@@ -67,7 +78,9 @@ const SideBar = props => {
             />
       </div>
       <Divider />
-      <NoteList notes={notes} />
+      <div className={classes.eh}>
+      <NoteList notes={notes} className={classes.eh} />
+      </div>
     </Paper>
   )
 }

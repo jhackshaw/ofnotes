@@ -13,7 +13,8 @@ import { CREATE_NOTE_START,
          EDIT_NOTE_SUCCESS,
          DELETE_NOTE_START,
          DELETE_NOTE_SUCCESS,
-         DELETE_NOTE_FAIL} from './actions';
+         DELETE_NOTE_FAIL,
+         TOGGLE_MENU_OPEN } from './actions';
 
 
 export const initialState = {
@@ -29,7 +30,9 @@ export const initialState = {
   listFilter: '',
   listPage: 0,
 
-  editNoteSaved: true
+  editNoteSaved: true,
+
+  menuOpen: false
 }
 
 
@@ -102,7 +105,8 @@ export default (state=initialState, action) => {
           ...state,
           panelLoading: true,
           panelError: null,
-          currentNoteId: null
+          currentNoteId: null,
+          menuOpen: false
         }
 
     case GET_CURRENT_NOTE_SUCCESS:
@@ -124,7 +128,8 @@ export default (state=initialState, action) => {
     case CLEAR_CURRENT_NOTE:
       return {
         ...state,
-        currentNoteId: null
+        currentNoteId: null,
+        menuOpen: false
       }
 
     case EDIT_NOTE_START:
@@ -165,6 +170,12 @@ export default (state=initialState, action) => {
         ...state,
         panelLoading: false,
         panelError: action.error
+      }
+
+    case TOGGLE_MENU_OPEN:
+      return {
+        ...state,
+        menuOpen: !state.menuOpen
       }
 
     default:

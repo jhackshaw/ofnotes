@@ -177,3 +177,10 @@ export const deleteNote = (noteId, onSuccess) => async dispatch => {
     dispatch(deleteNoteFail(e))
   }
 }
+
+
+export const TOGGLE_MENU_OPEN = 'TOGGLE_MENU_OPEN';
+
+export const toggleMenu = () => ({
+  type: TOGGLE_MENU_OPEN
+})

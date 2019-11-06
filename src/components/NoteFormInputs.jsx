@@ -8,8 +8,13 @@ const useStyles = makeStyles(theme => ({
     marginBottom: theme.spacing(3)
   },
   btn: {
-    float: 'right',
-    marginLeft: theme.spacing(3)
+    marginLeft: theme.spacing(3),
+    marginBottom: 0,
+    [theme.breakpoints.down('md')]: {
+      marginRight: theme.spacing(3),
+      marginLeft: 0,
+      marginBottom: theme.spacing(4)
+    }
   },
 }))
 

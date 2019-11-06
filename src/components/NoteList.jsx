@@ -32,15 +32,19 @@ const NoteList = ({ notes }) => {
                   button
                   component={ Link }
                   to={`/${note.slug}`}
+                  classes={{root: classes.item}}
                   >
           <ListItemAvatar>
             <Avatar>{ note.title.charAt(0) }</Avatar>
           </ListItemAvatar>
           <ListItemText primary={note.title}
+                        primaryTypographyProps={{
+                          noWrap: false
+                        }}
                         secondary={
                           <span>
                             { moment(note.modified).fromNow() }
-                            { bull }
+                            { note.tags.length ? bull: '' }
                             { note.tags.join(', ') }
                           </span>
                         }

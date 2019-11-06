@@ -3,6 +3,10 @@ import { Route,
          Switch } from 'react-router-dom';
 import { makeStyles } from '@material-ui/styles';
 
+import { useDispatch, useSelector } from 'react-redux';
+import { selectMenuOpen } from '../store/selectors';
+import * as actions from '../store/actions';
+
 import SideBar from './SideBar';
 import CreateNoteForm from './CreateNoteForm';
 import EditNoteForm from './EditNoteForm';
@@ -20,20 +24,27 @@ const useStyles = makeStyles({
 
 const App = () => {
   const classes = useStyles();
+  const dispatch = useDispatch();
+  const menuExpanded = useSelector(selectMenuOpen)
+
+  const toggleMenuOpen = e => {
+    dispatch(actions.toggleMenu())
+  }
 
   return (
     <div className={classes.root}>
-      <SideBar />
+      <SideBar expanded={menuExpanded}
+               toggleMenu={toggleMenuOpen} />
 
       <Switch>
         <Route exact path="/">
-          <CreateNoteForm />
+          <CreateNoteForm toggleMenu={toggleMenuOpen} />
         </Route>
         <Route path="/:slug/edit">
-          <EditNoteForm />
+          <EditNoteForm toggleMenu={toggleMenuOpen} />
         </Route>
         <Route path="/:slug">
-          <NoteDisplay />
+          <NoteDisplay toggleMenu={toggleMenuOpen} />
         </Route>
       </Switch>
     </div>

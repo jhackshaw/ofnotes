@@ -7,7 +7,8 @@ import { setFilter,
          listNotes,
          createNote,
          editNote,
-         deleteNote } from '../store/actions';
+         deleteNote,
+         toggleMenu } from '../store/actions';
 import { initialState } from '../store/reducer';
 
 
@@ -263,6 +264,16 @@ describe('actions', () => {
       await store.dispatch(deleteNote(42, cbSpy))
       sinon.assert.calledOnce(queries.deleteNote)
       sinon.assert.notCalled(cbSpy)
+    })
+  })
+
+  describe('TOGGLE_MENU_OPEN', () => {
+    it('dispatches correct type', async () => {
+      const expected = [
+        { type: 'TOGGLE_MENU_OPEN' }
+      ]
+      await store.dispatch(toggleMenu())
+      expect(store.getActions()).toEqual(expected)
     })
   })
 })
