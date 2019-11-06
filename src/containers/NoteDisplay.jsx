@@ -19,8 +19,7 @@ const useStyles = makeStyles(theme => ({
   content: {
     marginTop: theme.spacing(5),
     padding: theme.spacing(),
-    paddingTop: 0,
-    lineHeight: '2rem'
+    paddingTop: 0
   },
   icon: {
     marginLeft: theme.spacing()
@@ -45,8 +44,8 @@ const options = {
     h2: { component: props => <Typography gutterBottom variant="h4" {...props} /> }, 
     h3: { component: props => <Typography gutterBottom variant="h5" {...props} /> }, 
     h4: { component: props => <Typography gutterBottom variant="h6" paragraph {...props} /> }, 
-    p: { component: props => <Typography gutterBottom variant="body1" paragraph {...props} /> },
-    li: { component: props => <Typography variant="body1" component="li" style={{ marginTop: 2 }} {...props} /> }
+    p:  { component: props => <Typography color="textSecondary" variant="body1" paragraph {...props} /> },
+    li: { component: props => <Typography variant="body1" component="li" color="textSecondary" style={{ marginTop: 2 }} {...props} /> }
   }, 
 }; 
 

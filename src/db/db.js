@@ -1,5 +1,5 @@
 import Dexie from 'dexie';
-import initialNotes from './initialNotes.json'
+import initialNotes from './initialNotes.js'
 
 const db = new Dexie('NotesDB');
 

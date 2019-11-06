@@ -1,9 +1,0 @@
-[
-  {
-    "title": "Welcome",
-    "tags": ["meta", "ofnote"],
-    "md": "## About\n\nThis is an offline note taking app using react, indexeddb, and redux.\n\n### Features\n\n - **Markdown**: write your notes in github flavored markdown\n - **Tagging**: tag your notes to make finding them quicker and easier\n - **Indexeddb**: support for a massive amount of notes and fast searching (all notes are indexed)\n\n### Design Choices\n\n#### Redux\n\nDesigned in a way that adding online syncing functionality can be easily accomplished. Currently visible notes are all stored as redux state, but asynchronous actions ensure that they are up-to-date with the database. API queries could be added alongside DB queries to update online storage in the future.\n\n#### Indexeddb\n\nAll notes are indexed by title, tags, and modified date for extremely fast searches. Compared to localStorage, indexeddb searches are asynchronous, indexed, and store notes in their native format (e.g. objects). With localStorage, 10MBs worth of notes is the max. Indexeddb supports up to 999MB with user permission (that's a lot of notes!).\n\n#### testing\n\nTests are all inside of the __tests__/ directory. React-testing-library is used for rendering components and querying the rendered state. Sinon is used for stubbing out DB queries for unit tests.\n\n### Continous Integration\n\nSee .github/workflows/ofnotes.yml for CI configuration. Every merge with master triggers the following:\n\n 1. install dependencies ```(npm ci)```\n 2. run tests ```(npm run test)```\n 3. build production application ```(npm run build)```\n 4. deploy application (use github secrets creds to upload to aws s3 bucket)",
-    "modified": 1572914983219,
-    "slug": "welcome"
-  }
-]
