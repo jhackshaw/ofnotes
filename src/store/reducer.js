@@ -14,7 +14,14 @@ import { CREATE_NOTE_START,
          DELETE_NOTE_START,
          DELETE_NOTE_SUCCESS,
          DELETE_NOTE_FAIL,
-         TOGGLE_MENU_OPEN } from './actions';
+         TOGGLE_MENU_OPEN,
+         SET_PALETTE_TYPE } from './actions';
+
+
+let initialPaletteType = localStorage.getItem('paletteType');
+if (!initialPaletteType) {
+  initialPaletteType = 'light'
+}
 
 
 export const initialState = {
@@ -32,7 +39,8 @@ export const initialState = {
 
   editNoteSaved: true,
 
-  menuOpen: false
+  menuOpen: false,
+  paletteType: initialPaletteType
 }
 
 
@@ -176,6 +184,12 @@ export default (state=initialState, action) => {
       return {
         ...state,
         menuOpen: !state.menuOpen
+      }
+
+    case SET_PALETTE_TYPE:
+      return {
+        ...state,
+        paletteType: action.paletteType
       }
 
     default:

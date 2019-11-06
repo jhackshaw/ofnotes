@@ -8,6 +8,8 @@ import { Avatar,
 import BrandIcon from '@material-ui/icons/NoteAdd';
 import GithubIcon from '@material-ui/icons/GitHub';
 import CloseIcon from '@material-ui/icons/Close';
+import LightModeIcon from '@material-ui/icons/Brightness7';
+import DarkModeIcon from '@material-ui/icons/Brightness5';
 
 
 const useStyles = makeStyles(theme => ({
@@ -36,7 +38,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 
-const BrandHeader = ({ toggleMenu }) => {
+const BrandHeader = ({ toggleMenu, currentPalette, onTogglePalette }) => {
   const classes = useStyles();
 
   return (
@@ -54,6 +56,12 @@ const BrandHeader = ({ toggleMenu }) => {
           Offline note taking
         </Typography>
       </div>
+      <IconButton onClick={onTogglePalette}>
+        { currentPalette === 'light'
+            ? <DarkModeIcon />
+            : <LightModeIcon />
+        }
+      </IconButton>
       <Hidden mdDown>
         <IconButton href="https://github.com/jhackshaw/ofnotes">
           <GithubIcon />

@@ -6,7 +6,8 @@ import { Paper,
 import { useDispatch, useSelector } from 'react-redux';
 import { selectListNotes, 
          selectListError,
-         selectListFilter } from '../store/selectors';
+         selectListFilter,
+         selectPaletteType } from '../store/selectors';
 import * as actions from '../store/actions';
 
 import BrandHeader from '../components/BrandHeader';
@@ -50,6 +51,7 @@ const SideBar = props => {
   const notes = useSelector(selectListNotes);
   const filter = useSelector(selectListFilter);
   const listError = useSelector(selectListError);
+  const paletteType = useSelector(selectPaletteType)
 
   useEffect(() => {
     dispatch(actions.listNotes());
@@ -59,11 +61,16 @@ const SideBar = props => {
     dispatch(actions.setFilter(e.target.value))
   }
 
+  const onTogglePalette = e => {
+    dispatch(actions.toggleDarkMode())
+  }
+
   return (
-    <Paper classes={{
-      root: classes.root
-    }}>
-      <BrandHeader toggleMenu={toggleMenu} />
+    <Paper classes={{root: classes.root}}>
+      <BrandHeader toggleMenu={toggleMenu}
+                   currentPalette={paletteType}
+                   onTogglePalette={onTogglePalette} 
+                   />
       <div className={classes.filter}>
         <NoteTextField
             name="filter"

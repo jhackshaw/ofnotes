@@ -40,14 +40,30 @@ exports[`component snapshots BrandHeader 1`] = `
         Offline note taking
       </h6>
     </div>
-  </div>
-</DocumentFragment>
-`;
-
-exports[`component snapshots Layout 1`] = `
-<DocumentFragment>
-  <div>
-    test child element
+    <button
+      class="MuiButtonBase-root MuiIconButton-root"
+      tabindex="0"
+      type="button"
+    >
+      <span
+        class="MuiIconButton-label"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M20 8.69V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69zM12 18c-3.31 0-6-2.69-6-6s2.69-6 6-6 6 2.69 6 6-2.69 6-6 6zm0-10c-2.21 0-4 1.79-4 4s1.79 4 4 4 4-1.79 4-4-1.79-4-4-4z"
+          />
+        </svg>
+      </span>
+      <span
+        class="MuiTouchRipple-root"
+      />
+    </button>
   </div>
 </DocumentFragment>
 `;
@@ -55,7 +71,7 @@ exports[`component snapshots Layout 1`] = `
 exports[`component snapshots MainPanel 1`] = `
 <DocumentFragment>
   <div
-    class="makeStyles-root-47"
+    class="makeStyles-root-69"
   >
     <div>
       test child element
@@ -67,14 +83,14 @@ exports[`component snapshots MainPanel 1`] = `
 exports[`component snapshots NoteForm 1`] = `
 <DocumentFragment>
   <div
-    class="makeStyles-root-139"
+    class="makeStyles-root-161"
   >
     <form>
       <div
-        class="makeStyles-root-140"
+        class="makeStyles-root-162"
       >
         <button
-          class="MuiButtonBase-root MuiIconButton-root makeStyles-mobileMenu-141"
+          class="MuiButtonBase-root MuiIconButton-root makeStyles-mobileMenu-163"
           tabindex="0"
           type="button"
         >
@@ -98,13 +114,13 @@ exports[`component snapshots NoteForm 1`] = `
           />
         </button>
         <span
-          class="MuiTypography-root makeStyles-title-143 MuiTypography-h5"
+          class="MuiTypography-root makeStyles-title-165 MuiTypography-h5"
         >
           test note title
         </span>
       </div>
       <div
-        class="MuiFormControl-root MuiTextField-root makeStyles-inp-195 MuiFormControl-fullWidth"
+        class="MuiFormControl-root MuiTextField-root makeStyles-inp-217 MuiFormControl-fullWidth"
       >
         <label
           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
@@ -124,11 +140,11 @@ exports[`component snapshots NoteForm 1`] = `
           />
           <fieldset
             aria-hidden="true"
-            class="PrivateNotchedOutline-root-256 MuiOutlinedInput-notchedOutline"
+            class="PrivateNotchedOutline-root-278 MuiOutlinedInput-notchedOutline"
             style="padding-left: 8px;"
           >
             <legend
-              class="PrivateNotchedOutline-legend-257"
+              class="PrivateNotchedOutline-legend-279"
               style="width: 0px;"
             >
               <span>
@@ -144,7 +160,7 @@ exports[`component snapshots NoteForm 1`] = `
         </p>
       </div>
       <div
-        class="MuiFormControl-root MuiTextField-root makeStyles-inp-195 MuiFormControl-fullWidth"
+        class="MuiFormControl-root MuiTextField-root makeStyles-inp-217 MuiFormControl-fullWidth"
       >
         <label
           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
@@ -157,7 +173,7 @@ exports[`component snapshots NoteForm 1`] = `
         >
           <textarea
             aria-invalid="false"
-            class="MuiInputBase-input MuiOutlinedInput-input undefined makeStyles-textarea-137 MuiInputBase-inputMultiline MuiOutlinedInput-inputMultiline"
+            class="MuiInputBase-input MuiOutlinedInput-input undefined makeStyles-textarea-159 MuiInputBase-inputMultiline MuiOutlinedInput-inputMultiline"
             name="md"
             rows="2"
           >
@@ -165,11 +181,11 @@ exports[`component snapshots NoteForm 1`] = `
           </textarea>
           <fieldset
             aria-hidden="true"
-            class="PrivateNotchedOutline-root-256 MuiOutlinedInput-notchedOutline"
+            class="PrivateNotchedOutline-root-278 MuiOutlinedInput-notchedOutline"
             style="padding-left: 8px;"
           >
             <legend
-              class="PrivateNotchedOutline-legend-257"
+              class="PrivateNotchedOutline-legend-279"
               style="width: 0px;"
             >
               <span>
@@ -185,7 +201,7 @@ exports[`component snapshots NoteForm 1`] = `
         </p>
       </div>
       <div
-        class="MuiFormControl-root MuiTextField-root makeStyles-inp-195 MuiFormControl-fullWidth"
+        class="MuiFormControl-root MuiTextField-root makeStyles-inp-217 MuiFormControl-fullWidth"
       >
         <label
           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
@@ -205,11 +221,11 @@ exports[`component snapshots NoteForm 1`] = `
           />
           <fieldset
             aria-hidden="true"
-            class="PrivateNotchedOutline-root-256 MuiOutlinedInput-notchedOutline"
+            class="PrivateNotchedOutline-root-278 MuiOutlinedInput-notchedOutline"
             style="padding-left: 8px;"
           >
             <legend
-              class="PrivateNotchedOutline-legend-257"
+              class="PrivateNotchedOutline-legend-279"
               style="width: 0px;"
             >
               <span>
@@ -233,7 +249,7 @@ exports[`component snapshots NoteForm 1`] = `
 exports[`component snapshots NoteFormButton 1`] = `
 <DocumentFragment>
   <button
-    class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-btn-321 MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+    class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-btn-343 MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
     tabindex="0"
     type="button"
   >
@@ -287,7 +303,7 @@ exports[`component snapshots NoteList 1`] = `
             <span>
               in 24 years
               <span
-                class="makeStyles-bullet-48"
+                class="makeStyles-bullet-70"
               >
                 •
               </span>
@@ -363,7 +379,7 @@ exports[`component snapshots NoteList 1`] = `
             <span>
               in 24 years
               <span
-                class="makeStyles-bullet-48"
+                class="makeStyles-bullet-70"
               >
                 •
               </span>
@@ -439,7 +455,7 @@ exports[`component snapshots NoteList 1`] = `
             <span>
               in 24 years
               <span
-                class="makeStyles-bullet-48"
+                class="makeStyles-bullet-70"
               >
                 •
               </span>
@@ -515,7 +531,7 @@ exports[`component snapshots NoteList 1`] = `
             <span>
               in 24 years
               <span
-                class="makeStyles-bullet-48"
+                class="makeStyles-bullet-70"
               >
                 •
               </span>
@@ -565,7 +581,7 @@ exports[`component snapshots NoteList 1`] = `
 exports[`component snapshots NoteTextField 1`] = `
 <DocumentFragment>
   <div
-    class="MuiFormControl-root MuiTextField-root makeStyles-inp-276 MuiFormControl-fullWidth"
+    class="MuiFormControl-root MuiTextField-root makeStyles-inp-298 MuiFormControl-fullWidth"
   >
     <div
       class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
@@ -578,11 +594,11 @@ exports[`component snapshots NoteTextField 1`] = `
       />
       <fieldset
         aria-hidden="true"
-        class="PrivateNotchedOutline-root-318 MuiOutlinedInput-notchedOutline"
+        class="PrivateNotchedOutline-root-340 MuiOutlinedInput-notchedOutline"
         style="padding-left: 8px;"
       >
         <legend
-          class="PrivateNotchedOutline-legend-319"
+          class="PrivateNotchedOutline-legend-341"
           style="width: 0px;"
         >
           <span>

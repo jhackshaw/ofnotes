@@ -1,3 +1,4 @@
+import '../test-utils';
 import reducer, { initialState } from '../store/reducer';
 import * as actions from '../store/actions';
 
@@ -290,6 +291,18 @@ describe('reducer', () => {
         type: actions.TOGGLE_MENU_OPEN
       })).toMatchObject({
         menuOpen: false
+      })
+    })
+
+    it('can set palette type', () => {
+      const currentState = {
+        paletteType: 'sdfknsidfoaasodbfn'
+      }
+      expect(reducer(currentState, {
+        type: actions.SET_PALETTE_TYPE,
+        paletteType: 'test new type'
+      })).toMatchObject({
+        paletteType: 'test new type'
       })
     })
   })

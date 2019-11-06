@@ -2,13 +2,15 @@ import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
 import sinon from 'sinon';
 import * as queries from '../db/queries';
+import '../test-utils';
 import { setFilter,
          setCurrentNote,
          listNotes,
          createNote,
          editNote,
          deleteNote,
-         toggleMenu } from '../store/actions';
+         toggleMenu, 
+         toggleDarkMode} from '../store/actions';
 import { initialState } from '../store/reducer';
 
 
@@ -31,6 +33,8 @@ describe('actions', () => {
 
   afterEach(() => {
     sinon.reset()
+    localStorage.clear()
+    localStorage.setItem.mockClear()
   })
 
   afterAll(() => {
@@ -273,6 +277,32 @@ describe('actions', () => {
         { type: 'TOGGLE_MENU_OPEN' }
       ]
       await store.dispatch(toggleMenu())
+      expect(store.getActions()).toEqual(expected)
+    })
+  })
+
+  describe('TOGGLE_DARK_MODE', () => {
+    it('sets to dark if currently light', async () => {
+      const expected = [
+        { type: 'SET_PALETTE_TYPE', paletteType: 'dark' }
+      ]
+      stateMock.returns({ ...initialState, paletteType: 'light' });
+      await store.dispatch(toggleDarkMode())
+      expect(localStorage.setItem).toHaveBeenCalledTimes(1)
+      expect(localStorage.setItem).toHaveBeenLastCalledWith('paletteType', 'dark')
+      expect(localStorage.__STORE__['paletteType']).toBe('dark')
+      expect(store.getActions()).toEqual(expected)
+    })
+
+    it('sets to light mode if currently dark', async () => {
+      const expected = [
+        { type: 'SET_PALETTE_TYPE', paletteType: 'light' }
+      ]
+      stateMock.returns({ ...initialState, paletteType: 'dark' })
+      await store.dispatch(toggleDarkMode())
+      expect(localStorage.setItem).toHaveBeenCalledTimes(1)
+      expect(localStorage.setItem).toHaveBeenLastCalledWith('paletteType', 'light')
+      expect(localStorage.__STORE__['paletteType']).toBe('light')
       expect(store.getActions()).toEqual(expected)
     })
   })

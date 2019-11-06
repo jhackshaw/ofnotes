@@ -15,6 +15,8 @@ export const selectPanelLoading = state => state.panelLoading;
 
 export const selectMenuOpen = state => state.menuOpen;
 
+export const selectPaletteType = state => state.paletteType;
+
 export const selectListNotes = createSelector(
   selectListNoteIds,
   selectNotesById,

@@ -3,7 +3,6 @@ import React from 'react';
 import { render } from '../test-utils';
 
 import BrandHeader from '../components/BrandHeader';
-import Layout from '../components/Layout';
 import MainPanel from '../components/MainPanel';
 import NoteList from '../components/NoteList';
 import NoteForm from '../components/NoteForm';
@@ -16,18 +15,6 @@ describe('component snapshots', () => {
     const { asFragment } = render(<BrandHeader />);
     expect(asFragment()).toMatchSnapshot();
   })
-
-
-  it('Layout', () => {
-    const { getByText, asFragment } = render(
-      <Layout>
-        <div>test child element</div>
-      </Layout>
-    )
-    expect(getByText('test child element')).toBeInTheDocument();
-    expect(asFragment()).toMatchSnapshot();
-  })
-
 
   it('MainPanel', () => {
     const { getByText, asFragment } = render(

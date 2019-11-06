@@ -184,3 +184,24 @@ export const TOGGLE_MENU_OPEN = 'TOGGLE_MENU_OPEN';
 export const toggleMenu = () => ({
   type: TOGGLE_MENU_OPEN
 })
+
+
+
+export const SET_PALETTE_TYPE = 'SET_PALETTE_TYPE';
+
+const setPaletteType = paletteType => ({
+  type: SET_PALETTE_TYPE,
+  paletteType
+})
+
+export const toggleDarkMode = () => (dispatch, getState) => {
+  const { paletteType } = getState();
+  if (paletteType === 'dark') {
+    localStorage.setItem('paletteType', 'light')
+    dispatch(setPaletteType('light'))
+  }
+  else {
+    localStorage.setItem('paletteType', 'dark')
+    dispatch(setPaletteType('dark'))
+  }
+}

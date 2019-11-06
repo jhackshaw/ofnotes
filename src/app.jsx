@@ -1,12 +1,9 @@
 import React from 'react';
 import moment from 'moment';
 import { HashRouter as Router } from 'react-router-dom';
-import { ThemeProvider } from '@material-ui/styles';
 import { Provider } from 'react-redux';
 import App from './containers/App';
-import Layout from './components/Layout';
 import store from './store';
-import theme from './theme';
 
 
 moment.locale('en', {
@@ -28,11 +25,7 @@ const AppRoot = props => {
   return (
     <Provider store={store}>
       <Router>
-        <ThemeProvider theme={theme}>
-          <Layout>
-            <App />
-          </Layout>
-        </ThemeProvider>
+        <App />
       </Router>
     </Provider>
   )
