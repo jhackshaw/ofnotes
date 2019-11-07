@@ -53,6 +53,7 @@ const SideBar = props => {
   const listError = useSelector(selectListError);
   const paletteType = useSelector(selectPaletteType)
 
+  // load the initial list of notes on first mount
   useEffect(() => {
     dispatch(actions.listNotes());
   }, [dispatch])

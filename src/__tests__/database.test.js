@@ -1,6 +1,6 @@
 import 'fake-indexeddb/auto';
 
-import db from '../db';
+import db from '../db/db';
 import * as queries from '../db/queries';
 
 

@@ -33,7 +33,14 @@ const EditNoteForm = props => {
   const currentNote = useSelector(selectCurrentNote);
   const loading = useSelector(selectPanelLoading);
   const [updateTimeout, setUpdateTimeout] = useState(null);
+  const [initialValues, setInitialValues] = useState({
+    title: currentNote.title,
+    md: currentNote.md,
+    tags: currentNote.tags
+  })
 
+  // set current note when based on the slug when
+  // the page changes
   useEffect(() => {
     dispatch(actions.setCurrentNote(slug, () => {
       history.push('/')
@@ -44,7 +51,7 @@ const EditNoteForm = props => {
   }, [dispatch, slug, history])
 
   const formik = useFormik({
-    initialValues: currentNote,
+    initialValues,
     enableReinitialize: true,
     validateOnChange: true,
     validate: values => {
@@ -59,18 +66,32 @@ const EditNoteForm = props => {
         errors.tags = 'Something went wrong here..'
       }
 
+      // debounce updating the database
+      // no need to save on every keystroke if someone
+      // is a fast typer
       if (Object.keys(errors).length === 0) {
         clearTimeout(updateTimeout)
         setUpdateTimeout(setTimeout(() => {
           dispatch(actions.editNote(currentNote.id, values))
-        }))
+        }, 500))
       }
 
       return errors;
     }
   })
 
+  // reset the form values based on current note
+  // *only* when the id changes. 
+  useEffect(() => {
+    setInitialValues({
+      title: currentNote.title,
+      md: currentNote.md,
+      tags: currentNote.tags
+    })
+  }, [currentNote.id]) // eslint-disable-line
 
+
+  // delete the note and navigate home on success
   const onDelete = e => {
     e.persist();
     const { id } = currentNote;

@@ -38,6 +38,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
+// render markdown components using Mui typography
 const options = { 
   overrides: { 
     h1: { component: props => <Typography gutterBottom variant="h3" {...props} /> }, 

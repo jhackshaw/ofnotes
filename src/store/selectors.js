@@ -27,6 +27,9 @@ export const selectListNotes = createSelector(
   )
 )
 
+// select current note or a basic empty one
+// empty one is necessary so that first renders
+// of components that are expecting a note don't break
 export const selectCurrentNote = createSelector(
   selectCurrentNoteId,
   selectNotesById,

@@ -6,6 +6,8 @@ import App from './containers/App';
 import store from './store';
 
 
+// instead of saying 5 days ago
+// say 5d ago
 moment.locale('en', {
   relativeTime: {
     s: '1s',

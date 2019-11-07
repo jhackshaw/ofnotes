@@ -42,15 +42,19 @@ const App = () => {
         <SideBar expanded={menuExpanded}
                  toggleMenu={toggleMenuOpen} />
         <Switch>
+
           <Route exact path="/">
             <CreateNoteForm toggleMenu={toggleMenuOpen} />
           </Route>
+
           <Route path="/:slug/edit">
             <EditNoteForm toggleMenu={toggleMenuOpen} />
           </Route>
+
           <Route path="/:slug">
             <NoteDisplay toggleMenu={toggleMenuOpen} />
           </Route>
+          
         </Switch>
       </div>
     </ProvideTheme>

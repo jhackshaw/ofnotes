@@ -24,7 +24,6 @@ if (!initialPaletteType) {
   initialPaletteType = 'light'
 }
 
-
 export const initialState = {
   notes: {},
   noteListIds: [],

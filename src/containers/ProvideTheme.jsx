@@ -10,6 +10,8 @@ import { selectPaletteType } from '../store/selectors';
 const ProvideTheme = ({ children }) => {
   const paletteType = useSelector(selectPaletteType);
 
+  // memoize so not creating a new theme on every
+  // render if the paletteType hasn't changed
   const theme = useMemo(() => (
     createMuiTheme({
       palette: {

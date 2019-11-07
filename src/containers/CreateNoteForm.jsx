@@ -28,15 +28,31 @@ const CreateNoteForm = props => {
     initialValues: {
       title: '',
       md: '',
-      tags: ''
+      tags: []
     },
     onSubmit: values => {
       dispatch(actions.createNote(values, () =>{
         history.push('/')
       }))
+    },
+    validate: values => {
+      const errors = {};
+      if (!values.title) {
+        errors.title = 'Title is required!'
+      }
+      if(!values.md) {
+        errors.md = 'Note is required!'
+      }
+      if (!Array.isArray(values.tags)) {
+        errors.tags = 'Something went wrong here..'
+      }
+      return errors;
     }
   })
 
+  // if we are on this page, there should not be a current
+  // not selected in the store. do this whenever this
+  // component mounts
   useEffect(() => {
     dispatch(actions.setCurrentNote(null))
   }, [dispatch])

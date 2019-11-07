@@ -1,3 +1,9 @@
+/*
+
+  Load these in for new users
+
+*/ 
+
 export default [
   {
     "title": "Welcome",

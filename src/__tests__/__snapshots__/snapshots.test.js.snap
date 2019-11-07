@@ -304,7 +304,7 @@ exports[`component snapshots NoteList 1`] = `
             class="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
           >
             <span>
-              in 24 years
+              in 50 years
               <span
                 class="makeStyles-bullet-70"
               >
@@ -380,7 +380,7 @@ exports[`component snapshots NoteList 1`] = `
             class="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
           >
             <span>
-              in 24 years
+              in 50 years
               <span
                 class="makeStyles-bullet-70"
               >
@@ -456,7 +456,7 @@ exports[`component snapshots NoteList 1`] = `
             class="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
           >
             <span>
-              in 24 years
+              in 50 years
               <span
                 class="makeStyles-bullet-70"
               >
@@ -532,7 +532,7 @@ exports[`component snapshots NoteList 1`] = `
             class="MuiTypography-root MuiListItemText-secondary MuiTypography-body2 MuiTypography-colorTextSecondary"
           >
             <span>
-              in 24 years
+              in 50 years
               <span
                 class="makeStyles-bullet-70"
               >
