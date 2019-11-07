@@ -133,6 +133,7 @@ exports[`component snapshots NoteForm 1`] = `
         >
           <input
             aria-invalid="true"
+            autocomplete="off"
             class="MuiInputBase-input MuiOutlinedInput-input"
             name="title"
             type="text"
@@ -156,7 +157,7 @@ exports[`component snapshots NoteForm 1`] = `
         <p
           class="MuiFormHelperText-root MuiFormHelperText-contained Mui-error MuiFormHelperText-filled"
         >
-          Title is required
+           
         </p>
       </div>
       <div
@@ -173,6 +174,7 @@ exports[`component snapshots NoteForm 1`] = `
         >
           <textarea
             aria-invalid="true"
+            autocomplete="off"
             class="MuiInputBase-input MuiOutlinedInput-input undefined makeStyles-textarea-159 MuiInputBase-inputMultiline MuiOutlinedInput-inputMultiline"
             name="md"
             rows="2"
@@ -197,7 +199,7 @@ exports[`component snapshots NoteForm 1`] = `
         <p
           class="MuiFormHelperText-root MuiFormHelperText-contained Mui-error MuiFormHelperText-filled"
         >
-          Note is required!
+          Supports github flavored markdown
         </p>
       </div>
       <div
@@ -214,6 +216,7 @@ exports[`component snapshots NoteForm 1`] = `
         >
           <input
             aria-invalid="false"
+            autocomplete="off"
             class="MuiInputBase-input MuiOutlinedInput-input"
             name="tags"
             type="text"
@@ -588,6 +591,7 @@ exports[`component snapshots NoteTextField 1`] = `
     >
       <input
         aria-invalid="false"
+        autocomplete="off"
         class="MuiInputBase-input MuiOutlinedInput-input"
         type="text"
         value="test value"

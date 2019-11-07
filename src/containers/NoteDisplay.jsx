@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Markdown from 'markdown-to-jsx';
 import { Link } from 'react-router-dom';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import { makeStyles } from '@material-ui/styles';
 import { Chip, Typography } from '@material-ui/core';
 import EditIcon from '@material-ui/icons/Edit';
@@ -52,13 +52,16 @@ const options = {
 
 const NoteDisplay = props => {
   const classes = useStyles();
-  const dispatch = useDispatch();
   const { slug } = useParams();
+  const history = useHistory();
+  const dispatch = useDispatch();
   const note = useSelector(selectCurrentNote)
 
   useEffect(() => {
-    dispatch(actions.setCurrentNote(slug))
-  }, [dispatch, slug])
+    dispatch(actions.setCurrentNote(slug, () => {
+      history.push('/')
+    }))
+  }, [dispatch, slug, history])
 
   return (
     <MainPanel>

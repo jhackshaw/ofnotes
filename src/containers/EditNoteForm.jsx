@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useHistory, Link } from 'react-router-dom';
 import { makeStyles } from '@material-ui/styles';
+import { useFormik } from 'formik';
 import ViewIcon from '@material-ui/icons/Visibility';
 import DeleteIcon from '@material-ui/icons/Delete';
 
-import useForm from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectCurrentNote,
          selectPanelLoading, 
@@ -32,55 +32,56 @@ const EditNoteForm = props => {
   const panelError = useSelector(selectPanelError);
   const currentNote = useSelector(selectCurrentNote);
   const loading = useSelector(selectPanelLoading);
-  const [values, setValues] = useState(currentNote);
   const [updateTimeout, setUpdateTimeout] = useState(null);
-  const { register, errors } = useForm({ mode: 'onChange' });
 
   useEffect(() => {
-    dispatch(actions.setCurrentNote(slug))
+    dispatch(actions.setCurrentNote(slug, () => {
+      history.push('/')
+    }))
     return () => {
       dispatch(actions.setCurrentNote(null))
     }
-  }, [dispatch, slug])
+  }, [dispatch, slug, history])
 
-  useEffect(() => {
-    setValues(currentNote)
-  }, [currentNote.id]) // eslint-disable-line
-
-  const onChange = e => {
-    e.persist();
-    setValues(previous => {
-      const updated = {
-        ...previous,
-        [e.target.name]: e.target.value
+  const formik = useFormik({
+    initialValues: currentNote,
+    enableReinitialize: true,
+    validateOnChange: true,
+    validate: values => {
+      const errors = {};
+      if (!values.title) {
+        errors.title = 'Title is required!'
+      }
+      if(!values.md) {
+        errors.md = 'Note is required!'
+      }
+      if (!Array.isArray(values.tags)) {
+        errors.tags = 'Something went wrong here..'
       }
 
-      clearTimeout(updateTimeout);
+      if (Object.keys(errors).length === 0) {
+        clearTimeout(updateTimeout)
+        setUpdateTimeout(setTimeout(() => {
+          dispatch(actions.editNote(currentNote.id, values))
+        }))
+      }
 
-      setUpdateTimeout(setTimeout(() => {
-        dispatch(actions.editNote(currentNote.id, updated))
-      }, 250))
-  
-      return updated;
-    })
-  }
+      return errors;
+    }
+  })
 
-  const onDeleteSuccess = () => {
-    history.push('/')
-  }
 
   const onDelete = e => {
     e.persist();
-    const { id } = values;
-    dispatch(actions.deleteNote(id, onDeleteSuccess))
+    const { id } = currentNote;
+    dispatch(actions.deleteNote(id, () => {
+      history.push('/')
+    }))
   }
 
   return (
-    <NoteForm values={values}
-              onChange={onChange}
+    <NoteForm {...formik}
               loading={loading}
-              register={register}
-              errors={errors}
               panelError={panelError}
               formActions={
                 <>

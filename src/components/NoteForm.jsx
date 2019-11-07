@@ -20,20 +20,21 @@ const useStyles = makeStyles(theme => ({
 
 const NoteForm = ({ 
   values,
-  register,
   errors,
+  touched,
   panelError,
-  onSubmit,
-  loading,
-  onChange,
+  handleSubmit,
+  handleChange,
+  handleBlur,
   formActions,
-  toggleMenu 
+  toggleMenu,
+  loading
 }) => {
   const classes = useStyles();
 
   const onTagsChange = e => {
     e.persist()
-    onChange({
+    handleChange({
       ...e,
       target: {
         ...e.target,
@@ -49,7 +50,7 @@ const NoteForm = ({
       { loading &&
         <LinearProgress classes={{root: classes.progress}} />
       }
-      <form onSubmit={onSubmit}>
+      <form onSubmit={handleSubmit}>
         <MainPanelHeader
             title={values.title || 'New Note'}
             actions={formActions}
@@ -58,11 +59,17 @@ const NoteForm = ({
           <NoteTextField 
               name="title"
               label="Title"
-              error={Boolean(errors.hasOwnProperty('title') || panelError)}
-              helperText={errors.title ? "Title is required" : panelError ? panelError : " "}
-              inputRef={register({required: true, maxLength: 100 })}
-              onChange={onChange}
-              value={values.title || ''}
+              error={Boolean(errors.hasOwnProperty('title') || Boolean(panelError))}
+              helperText={
+                errors.title && touched.title
+                ? "Title is required" 
+                : panelError 
+                  ? panelError 
+                  : " "
+              }
+              value={values.title}
+              onChange={handleChange}
+              onBlur={handleBlur}
               />
           <NoteTextField
               name="md"
@@ -76,26 +83,30 @@ const NoteForm = ({
               }}
               error={errors.hasOwnProperty('md')}
               helperText={
-                errors.md 
-                ? "Note is required!" 
-                : "Supports Github flavored markdown"
+                errors.md && touched.md
+                ? errors.md
+                : 'Supports github flavored markdown'
               }
-              inputRef={register({required: true})}
-              onChange={onChange}
               value={values.md || ''}
+              onChange={handleChange}
+              onBlur={handleBlur}
               />
           <NoteTextField
               name="tags"
               label="Tags"
               error={errors.hasOwnProperty('tags')}
-              helperText={'Separated by spaces'}
-              inputRef={register()}
-              onChange={onTagsChange}
+              helperText={
+                errors.tags && touched.tags
+                ? errors.tags
+                : "Separated by spaces"
+              }
               value={
                 values.tags
                 ? values.tags.join(' ')
                 : ''
               }
+              onChange={onTagsChange}
+              onBlur={handleBlur}
               />
         </MainPanelHeader>
       </form>

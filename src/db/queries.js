@@ -42,7 +42,12 @@ export const createNote = async note => {
 }
 
 export const editNote = async (noteId, note) => {
-  if (!note.title) return
+  if (!note.title) {
+    throw new Error('title is required')
+  }
+  if (!noteId) {
+    throw new Error('invalid note id')
+  }
   await db.notes
     .update(noteId, {
       ...note,

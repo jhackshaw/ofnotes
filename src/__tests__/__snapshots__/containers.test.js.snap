@@ -88,6 +88,7 @@ exports[`containers App matches snapshot 1`] = `
           >
             <input
               aria-invalid="false"
+              autocomplete="off"
               class="MuiInputBase-input-143 MuiOutlinedInput-input-127"
               name="filter"
               type="text"
@@ -177,6 +178,7 @@ exports[`containers App matches snapshot 1`] = `
           >
             <input
               aria-invalid="false"
+              autocomplete="off"
               class="MuiInputBase-input-143 MuiOutlinedInput-input-127"
               name="title"
               type="text"
@@ -217,6 +219,7 @@ exports[`containers App matches snapshot 1`] = `
           >
             <textarea
               aria-invalid="false"
+              autocomplete="off"
               class="MuiInputBase-input-143 MuiOutlinedInput-input-127 undefined makeStyles-textarea-175 MuiInputBase-inputMultiline-148 MuiOutlinedInput-inputMultiline-130"
               name="md"
               rows="2"
@@ -239,7 +242,7 @@ exports[`containers App matches snapshot 1`] = `
           <p
             class="MuiFormHelperText-root-155 MuiFormHelperText-contained-159"
           >
-            Supports Github flavored markdown
+            Supports github flavored markdown
           </p>
         </div>
         <div
@@ -256,6 +259,7 @@ exports[`containers App matches snapshot 1`] = `
           >
             <input
               aria-invalid="false"
+              autocomplete="off"
               class="MuiInputBase-input-143 MuiOutlinedInput-input-127"
               name="tags"
               type="text"
@@ -342,6 +346,7 @@ exports[`containers CreateNoteForm matches snapshot 1`] = `
         >
           <input
             aria-invalid="false"
+            autocomplete="off"
             class="MuiInputBase-input MuiOutlinedInput-input"
             name="title"
             type="text"
@@ -382,6 +387,7 @@ exports[`containers CreateNoteForm matches snapshot 1`] = `
         >
           <textarea
             aria-invalid="false"
+            autocomplete="off"
             class="MuiInputBase-input MuiOutlinedInput-input undefined makeStyles-textarea-193 MuiInputBase-inputMultiline MuiOutlinedInput-inputMultiline"
             name="md"
             rows="2"
@@ -404,7 +410,7 @@ exports[`containers CreateNoteForm matches snapshot 1`] = `
         <p
           class="MuiFormHelperText-root MuiFormHelperText-contained"
         >
-          Supports Github flavored markdown
+          Supports github flavored markdown
         </p>
       </div>
       <div
@@ -421,6 +427,7 @@ exports[`containers CreateNoteForm matches snapshot 1`] = `
         >
           <input
             aria-invalid="false"
+            autocomplete="off"
             class="MuiInputBase-input MuiOutlinedInput-input"
             name="tags"
             type="text"
@@ -506,6 +513,7 @@ exports[`containers EditNoteForm matches snapshot 1`] = `
         >
           <input
             aria-invalid="false"
+            autocomplete="off"
             class="MuiInputBase-input MuiOutlinedInput-input"
             name="title"
             type="text"
@@ -546,6 +554,7 @@ exports[`containers EditNoteForm matches snapshot 1`] = `
         >
           <textarea
             aria-invalid="false"
+            autocomplete="off"
             class="MuiInputBase-input MuiOutlinedInput-input undefined makeStyles-textarea-334 MuiInputBase-inputMultiline MuiOutlinedInput-inputMultiline"
             name="md"
             rows="2"
@@ -568,7 +577,7 @@ exports[`containers EditNoteForm matches snapshot 1`] = `
         <p
           class="MuiFormHelperText-root MuiFormHelperText-contained"
         >
-          Supports Github flavored markdown
+          Supports github flavored markdown
         </p>
       </div>
       <div
@@ -585,6 +594,7 @@ exports[`containers EditNoteForm matches snapshot 1`] = `
         >
           <input
             aria-invalid="false"
+            autocomplete="off"
             class="MuiInputBase-input MuiOutlinedInput-input"
             name="tags"
             type="text"
@@ -751,6 +761,7 @@ exports[`containers SideBar matches snapshot 1`] = `
         >
           <input
             aria-invalid="false"
+            autocomplete="off"
             class="MuiInputBase-input MuiOutlinedInput-input"
             name="filter"
             type="text"

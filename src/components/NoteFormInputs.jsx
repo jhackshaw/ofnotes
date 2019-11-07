@@ -25,6 +25,7 @@ export const NoteTextField = props => {
     <TextField 
       variant="outlined"
       fullWidth
+      autoComplete="off"
       className={classes.inp}
       InputLabelProps={{
         shrink: Boolean(props.value)

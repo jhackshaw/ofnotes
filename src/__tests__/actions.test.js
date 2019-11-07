@@ -82,15 +82,17 @@ describe('actions', () => {
   
     it('catches query errors', async () => {
       const err = new Error('test error');
+      const errCb = sinon.spy();
       const expected = [
         { type: 'GET_CURRENT_NOTE_START' },
         { type: 'GET_CURRENT_NOTE_FAIL', error: err.toString() }
       ]
       queries.getNoteBySlug.rejects(err);
-      await store.dispatch(setCurrentNote('test-slug'))
+      await store.dispatch(setCurrentNote('test-slug', errCb))
       expect(store.getActions()).toEqual(expected)
       sinon.assert.calledOnce(queries.getNoteBySlug)
       sinon.assert.calledWith(queries.getNoteBySlug, 'test-slug')
+      sinon.assert.calledOnce(errCb)
     })
   })
 

@@ -38,7 +38,7 @@ const clearCurrentNote = () => ({
   type: CLEAR_CURRENT_NOTE
 })
 
-export const setCurrentNote = slug => async dispatch => {
+export const setCurrentNote = (slug, errCb) => async dispatch => {
   if (!slug) {
     return dispatch(clearCurrentNote())
   }
@@ -49,6 +49,7 @@ export const setCurrentNote = slug => async dispatch => {
   }
   catch (e) {
     dispatch(getCurrentNoteFail(e))
+    errCb()
   }
 }
 

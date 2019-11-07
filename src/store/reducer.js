@@ -122,6 +122,7 @@ export default (state=initialState, action) => {
       return {
         ...state,
         panelLoading: false,
+        panelError: null,
         currentNoteId: action.note.id,
         noteListIds: 
           state.noteListIds.findIndex(noteId => noteId === action.note.id) < 0
@@ -138,7 +139,8 @@ export default (state=initialState, action) => {
       return {
         ...state,
         currentNoteId: null,
-        menuOpen: false
+        menuOpen: false,
+        panelError: null
       }
 
     case EDIT_NOTE_START:

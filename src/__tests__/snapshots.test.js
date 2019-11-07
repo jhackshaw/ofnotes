@@ -48,7 +48,7 @@ describe('component snapshots', () => {
                                               title: 'test error',
                                               md: 'required'
                                             }}
-                                            register={() => {}}
+                                            touched={{}}
                                             formActions={
                                               <div>test element</div>
                                             } />)

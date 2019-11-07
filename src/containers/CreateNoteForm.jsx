@@ -1,9 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
-import SaveIcon from '@material-ui/icons/Save';
 import { makeStyles } from '@material-ui/styles';
+import { useFormik } from 'formik';
+import SaveIcon from '@material-ui/icons/Save';
 
-import useForm from 'react-hook-form';
 import { useDispatch, useSelector } from 'react-redux';
 import { selectPanelError } from '../store/selectors';
 import * as actions from '../store/actions';
@@ -23,42 +23,26 @@ const CreateNoteForm = props => {
   const dispatch = useDispatch();
   const history = useHistory();
   const panelError = useSelector(selectPanelError)
-  const { register, errors, handleSubmit } = useForm({
-    mode: 'onBlur'
-  });
-  const [values, setValues] = useState({
-    title: '',
-    md: '',
-    tags: []
+
+  const formik = useFormik({
+    initialValues: {
+      title: '',
+      md: '',
+      tags: ''
+    },
+    onSubmit: values => {
+      dispatch(actions.createNote(values, () =>{
+        history.push('/')
+      }))
+    }
   })
 
   useEffect(() => {
     dispatch(actions.setCurrentNote(null))
   }, [dispatch])
 
-  const onChange = e => {
-    e.persist();
-    setValues(previous => ({
-      ...previous,
-      [e.target.name]: e.target.value
-    }))
-  }
-
-  const onSaveSuccess = slug => {
-    history.push(`/${slug}`)
-  }
-
-  const onSave = () => {
-    dispatch(actions.createNote(values, onSaveSuccess))
-  }
-
   return (
-    <NoteForm values={values}
-              onChange={onChange}
-              register={register}
-              errors={errors}
-              onSubmit={handleSubmit(onSave)}
-              onSave={onSave}
+    <NoteForm {...formik}
               panelError={panelError}
               formActions={
                 <NoteFormButton
