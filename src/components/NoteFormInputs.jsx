@@ -23,6 +23,7 @@ export const NoteTextField = props => {
   const classes = useStyles();
   return (
     <TextField 
+      id={props.name}
       variant="outlined"
       fullWidth
       autoComplete="off"

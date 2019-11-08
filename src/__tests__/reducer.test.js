@@ -126,8 +126,7 @@ describe('reducer', () => {
       })).toMatchObject({
         panelLoading: true,
         panelError: null,
-        currentNoteId: null,
-        menuOpen: false
+        currentNoteId: null
       })
     })
 
@@ -281,12 +280,13 @@ describe('reducer', () => {
       })
     })
 
-    it('sets menu open to false if already open', () => {
+    it('sets menu open to false', () => {
       const currentState = {
         menuOpen: false
       }
       expect(reducer(currentState, {
-        type: actions.TOGGLE_MENU_OPEN
+        type: actions.SET_MENU_OPEN,
+        open: true
       })).toMatchObject({
         menuOpen: true
       })
@@ -297,7 +297,8 @@ describe('reducer', () => {
         menuOpen: true
       }
       expect(reducer(currentState, {
-        type: actions.TOGGLE_MENU_OPEN
+        type: actions.SET_MENU_OPEN,
+        open: false
       })).toMatchObject({
         menuOpen: false
       })

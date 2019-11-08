@@ -31,8 +31,8 @@ const CreateNoteForm = props => {
       tags: []
     },
     onSubmit: values => {
-      dispatch(actions.createNote(values, () =>{
-        history.push('/')
+      dispatch(actions.createNote(values, slug =>{
+        history.push(`/${slug}`)
       }))
     },
     validate: values => {

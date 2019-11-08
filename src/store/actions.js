@@ -180,10 +180,11 @@ export const deleteNote = (noteId, onSuccess) => async dispatch => {
 }
 
 
-export const TOGGLE_MENU_OPEN = 'TOGGLE_MENU_OPEN';
+export const SET_MENU_OPEN = 'TOGGLE_MENU_OPEN';
 
-export const toggleMenu = () => ({
-  type: TOGGLE_MENU_OPEN
+export const setMenuOpen = open => ({
+  type: SET_MENU_OPEN,
+  open
 })
 
 

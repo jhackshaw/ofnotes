@@ -11,6 +11,7 @@ import store from './store';
 import '@testing-library/jest-dom/extend-expect'
 import 'jest-localstorage-mock';
 import 'mutationobserver-shim';
+import 'fake-indexeddb/auto';
 
 
 // it is now the beginning of time
@@ -18,7 +19,9 @@ moment.now = () => {
   return new Date('January 1, 1970 00:00:00')
 }
 
-const theme = createMuiTheme({});
+const theme = createMuiTheme({ props: {
+  MuiWithWidth: { initialWidth: 'lg' }
+}});
 
 export const render = element => {
   //

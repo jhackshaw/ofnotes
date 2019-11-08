@@ -38,14 +38,15 @@ const useStyles = makeStyles(theme => ({
 }))
 
 
-const BrandHeader = ({ toggleMenu, currentPalette, onTogglePalette }) => {
+const BrandHeader = ({ toggleMenu, currentPalette, onTogglePalette, onNavigated }) => {
   const classes = useStyles();
 
   return (
     <div className={classes.root}>
       <Avatar classes={{root: classes.avatar}}
               component={Link}
-              to="/">
+              to="/"
+              onClick={onNavigated}>
         <BrandIcon />
       </Avatar>
       <div className={classes.titleWrap}>

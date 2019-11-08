@@ -20,7 +20,7 @@ const useStyles = makeStyles(theme => ({
   }
 }))
 
-const NoteList = ({ notes }) => {
+const NoteList = ({ notes, onNavigated }) => {
   const classes = useStyles()
 
   const bull = <span className={classes.bullet}>•</span>
@@ -33,6 +33,7 @@ const NoteList = ({ notes }) => {
                   component={ Link }
                   to={`/${note.slug}`}
                   classes={{root: classes.item}}
+                  onClick={onNavigated}
                   >
           <ListItemAvatar>
             <Avatar>{ note.title.charAt(0) }</Avatar>
@@ -51,7 +52,8 @@ const NoteList = ({ notes }) => {
                         />
           <ListItemSecondaryAction>
             <IconButton component={Link}
-                        to={`/${note.slug}/edit`}>
+                        to={`/${note.slug}/edit`}
+                        onClick={onNavigated}>
               <EditIcon />
             </IconButton>
           </ListItemSecondaryAction>

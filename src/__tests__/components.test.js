@@ -1,16 +1,18 @@
 import 'fake-indexeddb/auto';
 import React from 'react';
 import { render } from '../test-utils';
+import sinon from 'sinon';
 
 import BrandHeader from '../components/BrandHeader';
 import MainPanel from '../components/MainPanel';
 import NoteList from '../components/NoteList';
 import NoteForm from '../components/NoteForm';
 import { NoteTextField, NoteFormButton } from '../components/NoteFormInputs';
+import { fireEvent, wait } from '@testing-library/dom';
 
 
 
-describe('component snapshots', () => {
+describe('components', () => {
   it('BrandHeader', () => {
     const { asFragment } = render(<BrandHeader />);
     expect(asFragment()).toMatchSnapshot();
@@ -53,6 +55,35 @@ describe('component snapshots', () => {
                                               <div>test element</div>
                                             } />)
     expect(asFragment()).toMatchSnapshot()
+  })
+
+  it('NoteForm converts tags to array before calling onChange', async () => {
+    const onChange = sinon.spy()
+    const { getByLabelText } = render(
+      <NoteForm values={{
+                title: '',
+                md: '',
+                tags: []
+                }}
+                errors={{}}
+                touched={{}}
+                handleChange={onChange}
+                />
+    )
+    fireEvent.change(getByLabelText('Tags'), {
+      target: { value: 'some space separated tags'}
+    })
+    await wait(() => {
+      sinon.assert.calledOnce(onChange)
+      sinon.assert.calledWithMatch(onChange, {
+        target: {
+          name: 'tags',
+          value: [
+            'some', 'space', 'separated', 'tags'
+          ]
+        }
+      })
+    })
   })
 
   it('NoteTextField', () => {

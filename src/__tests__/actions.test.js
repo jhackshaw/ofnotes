@@ -9,8 +9,8 @@ import { setFilter,
          createNote,
          editNote,
          deleteNote,
-         toggleMenu, 
-         toggleDarkMode} from '../store/actions';
+         toggleDarkMode,
+         setMenuOpen } from '../store/actions';
 import { initialState } from '../store/reducer';
 
 
@@ -276,9 +276,9 @@ describe('actions', () => {
   describe('TOGGLE_MENU_OPEN', () => {
     it('dispatches correct type', async () => {
       const expected = [
-        { type: 'TOGGLE_MENU_OPEN' }
+        { type: 'TOGGLE_MENU_OPEN', open: true }
       ]
-      await store.dispatch(toggleMenu())
+      await store.dispatch(setMenuOpen(true))
       expect(store.getActions()).toEqual(expected)
     })
   })

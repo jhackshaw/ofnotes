@@ -14,9 +14,9 @@ import { CREATE_NOTE_START,
          DELETE_NOTE_START,
          DELETE_NOTE_SUCCESS,
          DELETE_NOTE_FAIL,
-         TOGGLE_MENU_OPEN,
          SET_PALETTE_TYPE, 
-         EDIT_NOTE_FAIL} from './actions';
+         EDIT_NOTE_FAIL,
+         SET_MENU_OPEN} from './actions';
 
 
 let initialPaletteType = localStorage.getItem('paletteType');
@@ -39,7 +39,7 @@ export const initialState = {
 
   editNoteSaved: true,
 
-  menuOpen: false,
+  menuOpen: true,
   paletteType: initialPaletteType
 }
 
@@ -113,8 +113,7 @@ export default (state=initialState, action) => {
           ...state,
           panelLoading: true,
           panelError: null,
-          currentNoteId: null,
-          menuOpen: false
+          currentNoteId: null
         }
 
     case GET_CURRENT_NOTE_SUCCESS:
@@ -138,7 +137,6 @@ export default (state=initialState, action) => {
       return {
         ...state,
         currentNoteId: null,
-        menuOpen: false,
         panelError: null
       }
 
@@ -188,10 +186,10 @@ export default (state=initialState, action) => {
         panelError: action.error
       }
 
-    case TOGGLE_MENU_OPEN:
+    case SET_MENU_OPEN:
       return {
         ...state,
-        menuOpen: !state.menuOpen
+        menuOpen: action.open
       }
 
     case SET_PALETTE_TYPE:

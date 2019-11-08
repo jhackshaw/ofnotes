@@ -50,7 +50,7 @@ const NoteForm = ({
       { loading &&
         <LinearProgress classes={{root: classes.progress}} />
       }
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} data-testid="form">
         <MainPanelHeader
             title={values.title || 'New Note'}
             actions={formActions}
@@ -59,10 +59,13 @@ const NoteForm = ({
           <NoteTextField 
               name="title"
               label="Title"
-              error={Boolean(errors.hasOwnProperty('title') || Boolean(panelError))}
+              error={
+                (Boolean(errors.hasOwnProperty('title') && touched.title)
+                || Boolean(panelError))
+              }
               helperText={
                 errors.title && touched.title
-                ? "Title is required" 
+                ? errors.title
                 : panelError 
                   ? panelError 
                   : " "
@@ -81,7 +84,7 @@ const NoteForm = ({
                   input: `${classes.inp} ${classes.textarea}` 
                 }
               }}
-              error={errors.hasOwnProperty('md')}
+              error={errors.hasOwnProperty('md') && touched.md}
               helperText={
                 errors.md && touched.md
                 ? errors.md
@@ -94,7 +97,7 @@ const NoteForm = ({
           <NoteTextField
               name="tags"
               label="Tags"
-              error={errors.hasOwnProperty('tags')}
+              error={errors.hasOwnProperty('tags') && touched.tags}
               helperText={
                 errors.tags && touched.tags
                 ? errors.tags

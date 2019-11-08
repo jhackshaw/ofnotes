@@ -6,18 +6,18 @@ exports[`containers App matches snapshot 1`] = `
     class="makeStyles-root-1"
   >
     <div
-      class="MuiPaper-root-7 makeStyles-root-2 makeStyles-root-6 MuiPaper-elevation1-10 MuiPaper-rounded-8"
+      class="MuiPaper-root-5 makeStyles-root-2 makeStyles-root-4 MuiPaper-elevation1-8 MuiPaper-rounded-6"
     >
       <div
-        class="makeStyles-root-35"
+        class="makeStyles-root-33"
       >
         <a
-          class="MuiAvatar-root-38 makeStyles-avatar-34 MuiAvatar-colorDefault-39"
+          class="MuiAvatar-root-36 makeStyles-avatar-32 MuiAvatar-colorDefault-37"
           href="#/"
         >
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root-41"
+            class="MuiSvgIcon-root-39"
             focusable="false"
             role="presentation"
             viewBox="0 0 24 24"
@@ -28,10 +28,10 @@ exports[`containers App matches snapshot 1`] = `
           </svg>
         </a>
         <div
-          class="makeStyles-titleWrap-36"
+          class="makeStyles-titleWrap-34"
         >
           <h5
-            class="MuiTypography-root-50 makeStyles-brandFont-37 MuiTypography-h5-59"
+            class="MuiTypography-root-48 makeStyles-brandFont-35 MuiTypography-h5-57"
           >
             Of Note
             <small>
@@ -41,22 +41,22 @@ exports[`containers App matches snapshot 1`] = `
             </small>
           </h5>
           <h6
-            class="MuiTypography-root-50 makeStyles-brandFont-37 MuiTypography-subtitle2-62 MuiTypography-colorTextSecondary-76"
+            class="MuiTypography-root-48 makeStyles-brandFont-35 MuiTypography-subtitle2-60 MuiTypography-colorTextSecondary-74"
           >
             Offline note taking
           </h6>
         </div>
         <button
-          class="MuiButtonBase-root-89 MuiIconButton-root-80"
+          class="MuiButtonBase-root-87 MuiIconButton-root-78"
           tabindex="0"
           type="button"
         >
           <span
-            class="MuiIconButton-label-88"
+            class="MuiIconButton-label-86"
           >
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root-41"
+              class="MuiSvgIcon-root-39"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -67,41 +67,45 @@ exports[`containers App matches snapshot 1`] = `
             </svg>
           </span>
           <span
-            class="MuiTouchRipple-root-182"
+            class="MuiTouchRipple-root-180"
           />
         </button>
       </div>
       <div
-        class="makeStyles-filter-4"
+        class="makeStyles-filter-3"
       >
         <div
-          class="MuiFormControl-root-95 MuiTextField-root-94 makeStyles-inp-92 MuiFormControl-fullWidth-98"
+          class="MuiFormControl-root-93 MuiTextField-root-92 makeStyles-inp-90 MuiFormControl-fullWidth-96"
         >
           <label
-            class="MuiFormLabel-root-111 MuiInputLabel-root-99 MuiInputLabel-formControl-105 MuiInputLabel-animated-108 MuiInputLabel-shrink-107 MuiInputLabel-outlined-110"
+            class="MuiFormLabel-root-109 MuiInputLabel-root-97 MuiInputLabel-formControl-103 MuiInputLabel-animated-106 MuiInputLabel-shrink-105 MuiInputLabel-outlined-108"
             data-shrink="true"
+            for="filter"
+            id="filter-label"
           >
             Filter
           </label>
           <div
-            class="MuiInputBase-root-133 MuiOutlinedInput-root-118 MuiInputBase-fullWidth-142 MuiInputBase-formControl-134"
+            class="MuiInputBase-root-131 MuiOutlinedInput-root-116 MuiInputBase-fullWidth-140 MuiInputBase-formControl-132"
           >
             <input
+              aria-describedby="filter-helper-text"
               aria-invalid="false"
               autocomplete="off"
-              class="MuiInputBase-input-143 MuiOutlinedInput-input-127"
+              class="MuiInputBase-input-141 MuiOutlinedInput-input-125"
+              id="filter"
               name="filter"
               type="text"
               value=""
             />
             <fieldset
               aria-hidden="true"
-              class="PrivateNotchedOutline-root-153 MuiOutlinedInput-notchedOutline-126"
+              class="PrivateNotchedOutline-root-151 MuiOutlinedInput-notchedOutline-124"
               style="padding-left: 8px;"
             >
               <legend
-                class="PrivateNotchedOutline-legend-154"
-                style="width: 0px;"
+                class="PrivateNotchedOutline-legend-152"
+                style="width: 38px;"
               >
                 <span>
                   ​
@@ -110,41 +114,42 @@ exports[`containers App matches snapshot 1`] = `
             </fieldset>
           </div>
           <p
-            class="MuiFormHelperText-root-155 MuiFormHelperText-contained-159"
+            class="MuiFormHelperText-root-153 MuiFormHelperText-contained-157"
+            id="filter-helper-text"
           >
             Search tags or titles
           </p>
         </div>
       </div>
       <hr
-        class="MuiDivider-root-163"
+        class="MuiDivider-root-161"
       />
-      <div
-        class="makeStyles-eh-5"
-      >
+      <div>
         <ul
-          class="MuiList-root-170 MuiList-padding-171"
+          class="MuiList-root-168 MuiList-padding-169"
         />
       </div>
     </div>
     <div
-      class="makeStyles-root-177"
+      class="makeStyles-root-175"
     >
-      <form>
+      <form
+        data-testid="form"
+      >
         <div
-          class="makeStyles-root-178"
+          class="makeStyles-root-176"
         >
           <button
-            class="MuiButtonBase-root-89 MuiIconButton-root-80 makeStyles-mobileMenu-179"
+            class="MuiButtonBase-root-87 MuiIconButton-root-78 makeStyles-mobileMenu-177"
             tabindex="0"
             type="button"
           >
             <span
-              class="MuiIconButton-label-88"
+              class="MuiIconButton-label-86"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root-41"
+                class="MuiSvgIcon-root-39"
                 focusable="false"
                 role="presentation"
                 viewBox="0 0 24 24"
@@ -155,42 +160,46 @@ exports[`containers App matches snapshot 1`] = `
               </svg>
             </span>
             <span
-              class="MuiTouchRipple-root-182"
+              class="MuiTouchRipple-root-180"
             />
           </button>
           <span
-            class="MuiTypography-root-50 makeStyles-title-181 MuiTypography-h5-59"
+            class="MuiTypography-root-48 makeStyles-title-179 MuiTypography-h5-57"
           >
             New Note
           </span>
         </div>
         <div
-          class="MuiFormControl-root-95 MuiTextField-root-94 makeStyles-inp-92 MuiFormControl-fullWidth-98"
+          class="MuiFormControl-root-93 MuiTextField-root-92 makeStyles-inp-90 MuiFormControl-fullWidth-96"
         >
           <label
-            class="MuiFormLabel-root-111 MuiInputLabel-root-99 MuiInputLabel-formControl-105 MuiInputLabel-animated-108 MuiInputLabel-outlined-110"
+            class="MuiFormLabel-root-109 MuiInputLabel-root-97 MuiInputLabel-formControl-103 MuiInputLabel-animated-106 MuiInputLabel-outlined-108"
             data-shrink="false"
+            for="title"
+            id="title-label"
           >
             Title
           </label>
           <div
-            class="MuiInputBase-root-133 MuiOutlinedInput-root-118 MuiInputBase-fullWidth-142 MuiInputBase-formControl-134"
+            class="MuiInputBase-root-131 MuiOutlinedInput-root-116 MuiInputBase-fullWidth-140 MuiInputBase-formControl-132"
           >
             <input
+              aria-describedby="title-helper-text"
               aria-invalid="false"
               autocomplete="off"
-              class="MuiInputBase-input-143 MuiOutlinedInput-input-127"
+              class="MuiInputBase-input-141 MuiOutlinedInput-input-125"
+              id="title"
               name="title"
               type="text"
               value=""
             />
             <fieldset
               aria-hidden="true"
-              class="PrivateNotchedOutline-root-153 MuiOutlinedInput-notchedOutline-126"
+              class="PrivateNotchedOutline-root-151 MuiOutlinedInput-notchedOutline-124"
               style="padding-left: 8px;"
             >
               <legend
-                class="PrivateNotchedOutline-legend-154"
+                class="PrivateNotchedOutline-legend-152"
                 style="width: 0.01px;"
               >
                 <span>
@@ -200,37 +209,42 @@ exports[`containers App matches snapshot 1`] = `
             </fieldset>
           </div>
           <p
-            class="MuiFormHelperText-root-155 MuiFormHelperText-contained-159"
+            class="MuiFormHelperText-root-153 MuiFormHelperText-contained-157"
+            id="title-helper-text"
           >
              
           </p>
         </div>
         <div
-          class="MuiFormControl-root-95 MuiTextField-root-94 makeStyles-inp-92 MuiFormControl-fullWidth-98"
+          class="MuiFormControl-root-93 MuiTextField-root-92 makeStyles-inp-90 MuiFormControl-fullWidth-96"
         >
           <label
-            class="MuiFormLabel-root-111 MuiInputLabel-root-99 MuiInputLabel-formControl-105 MuiInputLabel-animated-108 MuiInputLabel-outlined-110"
+            class="MuiFormLabel-root-109 MuiInputLabel-root-97 MuiInputLabel-formControl-103 MuiInputLabel-animated-106 MuiInputLabel-outlined-108"
             data-shrink="false"
+            for="md"
+            id="md-label"
           >
             Note
           </label>
           <div
-            class="MuiInputBase-root-133 MuiOutlinedInput-root-118 MuiInputBase-fullWidth-142 MuiInputBase-formControl-134 MuiInputBase-multiline-141 MuiOutlinedInput-multiline-125"
+            class="MuiInputBase-root-131 MuiOutlinedInput-root-116 MuiInputBase-fullWidth-140 MuiInputBase-formControl-132 MuiInputBase-multiline-139 MuiOutlinedInput-multiline-123"
           >
             <textarea
+              aria-describedby="md-helper-text"
               aria-invalid="false"
               autocomplete="off"
-              class="MuiInputBase-input-143 MuiOutlinedInput-input-127 undefined makeStyles-textarea-175 MuiInputBase-inputMultiline-148 MuiOutlinedInput-inputMultiline-130"
+              class="MuiInputBase-input-141 MuiOutlinedInput-input-125 undefined makeStyles-textarea-173 MuiInputBase-inputMultiline-146 MuiOutlinedInput-inputMultiline-128"
+              id="md"
               name="md"
               rows="2"
             />
             <fieldset
               aria-hidden="true"
-              class="PrivateNotchedOutline-root-153 MuiOutlinedInput-notchedOutline-126"
+              class="PrivateNotchedOutline-root-151 MuiOutlinedInput-notchedOutline-124"
               style="padding-left: 8px;"
             >
               <legend
-                class="PrivateNotchedOutline-legend-154"
+                class="PrivateNotchedOutline-legend-152"
                 style="width: 0.01px;"
               >
                 <span>
@@ -240,38 +254,43 @@ exports[`containers App matches snapshot 1`] = `
             </fieldset>
           </div>
           <p
-            class="MuiFormHelperText-root-155 MuiFormHelperText-contained-159"
+            class="MuiFormHelperText-root-153 MuiFormHelperText-contained-157"
+            id="md-helper-text"
           >
             Supports github flavored markdown
           </p>
         </div>
         <div
-          class="MuiFormControl-root-95 MuiTextField-root-94 makeStyles-inp-92 MuiFormControl-fullWidth-98"
+          class="MuiFormControl-root-93 MuiTextField-root-92 makeStyles-inp-90 MuiFormControl-fullWidth-96"
         >
           <label
-            class="MuiFormLabel-root-111 MuiInputLabel-root-99 MuiInputLabel-formControl-105 MuiInputLabel-animated-108 MuiInputLabel-outlined-110"
+            class="MuiFormLabel-root-109 MuiInputLabel-root-97 MuiInputLabel-formControl-103 MuiInputLabel-animated-106 MuiInputLabel-outlined-108"
             data-shrink="false"
+            for="tags"
+            id="tags-label"
           >
             Tags
           </label>
           <div
-            class="MuiInputBase-root-133 MuiOutlinedInput-root-118 MuiInputBase-fullWidth-142 MuiInputBase-formControl-134"
+            class="MuiInputBase-root-131 MuiOutlinedInput-root-116 MuiInputBase-fullWidth-140 MuiInputBase-formControl-132"
           >
             <input
+              aria-describedby="tags-helper-text"
               aria-invalid="false"
               autocomplete="off"
-              class="MuiInputBase-input-143 MuiOutlinedInput-input-127"
+              class="MuiInputBase-input-141 MuiOutlinedInput-input-125"
+              id="tags"
               name="tags"
               type="text"
               value=""
             />
             <fieldset
               aria-hidden="true"
-              class="PrivateNotchedOutline-root-153 MuiOutlinedInput-notchedOutline-126"
+              class="PrivateNotchedOutline-root-151 MuiOutlinedInput-notchedOutline-124"
               style="padding-left: 8px;"
             >
               <legend
-                class="PrivateNotchedOutline-legend-154"
+                class="PrivateNotchedOutline-legend-152"
                 style="width: 0.01px;"
               >
                 <span>
@@ -281,7 +300,8 @@ exports[`containers App matches snapshot 1`] = `
             </fieldset>
           </div>
           <p
-            class="MuiFormHelperText-root-155 MuiFormHelperText-contained-159"
+            class="MuiFormHelperText-root-153 MuiFormHelperText-contained-157"
+            id="tags-helper-text"
           >
             Separated by spaces
           </p>
@@ -296,14 +316,16 @@ exports[`containers App matches snapshot 1`] = `
 exports[`containers CreateNoteForm matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="makeStyles-root-195"
+    class="makeStyles-root-193"
   >
-    <form>
+    <form
+      data-testid="form"
+    >
       <div
-        class="makeStyles-root-196"
+        class="makeStyles-root-194"
       >
         <button
-          class="MuiButtonBase-root MuiIconButton-root makeStyles-mobileMenu-197"
+          class="MuiButtonBase-root MuiIconButton-root makeStyles-mobileMenu-195"
           tabindex="0"
           type="button"
         >
@@ -327,17 +349,49 @@ exports[`containers CreateNoteForm matches snapshot 1`] = `
           />
         </button>
         <span
-          class="MuiTypography-root makeStyles-title-199 MuiTypography-h5"
+          class="MuiTypography-root makeStyles-title-197 MuiTypography-h5"
         >
           New Note
         </span>
+        <div
+          class="makeStyles-actions-196"
+        >
+          <button
+            aria-label="save note"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-btn-250 MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+            tabindex="0"
+            type="submit"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              Save 
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root makeStyles-icon-190"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M17 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V7l-4-4zm-5 16c-1.66 0-3-1.34-3-3s1.34-3 3-3 3 1.34 3 3-1.34 3-3 3zm3-10H5V5h10v4z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
       </div>
       <div
-        class="MuiFormControl-root MuiTextField-root makeStyles-inp-251 MuiFormControl-fullWidth"
+        class="MuiFormControl-root MuiTextField-root makeStyles-inp-249 MuiFormControl-fullWidth"
       >
         <label
           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
           data-shrink="false"
+          for="title"
+          id="title-label"
         >
           Title
         </label>
@@ -345,20 +399,22 @@ exports[`containers CreateNoteForm matches snapshot 1`] = `
           class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
         >
           <input
+            aria-describedby="title-helper-text"
             aria-invalid="false"
             autocomplete="off"
             class="MuiInputBase-input MuiOutlinedInput-input"
+            id="title"
             name="title"
             type="text"
             value=""
           />
           <fieldset
             aria-hidden="true"
-            class="PrivateNotchedOutline-root-312 MuiOutlinedInput-notchedOutline"
+            class="PrivateNotchedOutline-root-338 MuiOutlinedInput-notchedOutline"
             style="padding-left: 8px;"
           >
             <legend
-              class="PrivateNotchedOutline-legend-313"
+              class="PrivateNotchedOutline-legend-339"
               style="width: 0.01px;"
             >
               <span>
@@ -369,16 +425,19 @@ exports[`containers CreateNoteForm matches snapshot 1`] = `
         </div>
         <p
           class="MuiFormHelperText-root MuiFormHelperText-contained"
+          id="title-helper-text"
         >
            
         </p>
       </div>
       <div
-        class="MuiFormControl-root MuiTextField-root makeStyles-inp-251 MuiFormControl-fullWidth"
+        class="MuiFormControl-root MuiTextField-root makeStyles-inp-249 MuiFormControl-fullWidth"
       >
         <label
           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
           data-shrink="false"
+          for="md"
+          id="md-label"
         >
           Note
         </label>
@@ -386,19 +445,21 @@ exports[`containers CreateNoteForm matches snapshot 1`] = `
           class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline MuiOutlinedInput-multiline"
         >
           <textarea
+            aria-describedby="md-helper-text"
             aria-invalid="false"
             autocomplete="off"
-            class="MuiInputBase-input MuiOutlinedInput-input undefined makeStyles-textarea-193 MuiInputBase-inputMultiline MuiOutlinedInput-inputMultiline"
+            class="MuiInputBase-input MuiOutlinedInput-input undefined makeStyles-textarea-191 MuiInputBase-inputMultiline MuiOutlinedInput-inputMultiline"
+            id="md"
             name="md"
             rows="2"
           />
           <fieldset
             aria-hidden="true"
-            class="PrivateNotchedOutline-root-312 MuiOutlinedInput-notchedOutline"
+            class="PrivateNotchedOutline-root-338 MuiOutlinedInput-notchedOutline"
             style="padding-left: 8px;"
           >
             <legend
-              class="PrivateNotchedOutline-legend-313"
+              class="PrivateNotchedOutline-legend-339"
               style="width: 0.01px;"
             >
               <span>
@@ -409,16 +470,19 @@ exports[`containers CreateNoteForm matches snapshot 1`] = `
         </div>
         <p
           class="MuiFormHelperText-root MuiFormHelperText-contained"
+          id="md-helper-text"
         >
           Supports github flavored markdown
         </p>
       </div>
       <div
-        class="MuiFormControl-root MuiTextField-root makeStyles-inp-251 MuiFormControl-fullWidth"
+        class="MuiFormControl-root MuiTextField-root makeStyles-inp-249 MuiFormControl-fullWidth"
       >
         <label
           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
           data-shrink="false"
+          for="tags"
+          id="tags-label"
         >
           Tags
         </label>
@@ -426,20 +490,22 @@ exports[`containers CreateNoteForm matches snapshot 1`] = `
           class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
         >
           <input
+            aria-describedby="tags-helper-text"
             aria-invalid="false"
             autocomplete="off"
             class="MuiInputBase-input MuiOutlinedInput-input"
+            id="tags"
             name="tags"
             type="text"
             value=""
           />
           <fieldset
             aria-hidden="true"
-            class="PrivateNotchedOutline-root-312 MuiOutlinedInput-notchedOutline"
+            class="PrivateNotchedOutline-root-338 MuiOutlinedInput-notchedOutline"
             style="padding-left: 8px;"
           >
             <legend
-              class="PrivateNotchedOutline-legend-313"
+              class="PrivateNotchedOutline-legend-339"
               style="width: 0.01px;"
             >
               <span>
@@ -450,6 +516,7 @@ exports[`containers CreateNoteForm matches snapshot 1`] = `
         </div>
         <p
           class="MuiFormHelperText-root MuiFormHelperText-contained"
+          id="tags-helper-text"
         >
           Separated by spaces
         </p>
@@ -463,14 +530,16 @@ exports[`containers CreateNoteForm matches snapshot 1`] = `
 exports[`containers EditNoteForm matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="makeStyles-root-336"
+    class="makeStyles-root-1370"
   >
-    <form>
+    <form
+      data-testid="form"
+    >
       <div
-        class="makeStyles-root-337"
+        class="makeStyles-root-1371"
       >
         <button
-          class="MuiButtonBase-root MuiIconButton-root makeStyles-mobileMenu-338"
+          class="MuiButtonBase-root MuiIconButton-root makeStyles-mobileMenu-1372"
           tabindex="0"
           type="button"
         >
@@ -494,17 +563,79 @@ exports[`containers EditNoteForm matches snapshot 1`] = `
           />
         </button>
         <span
-          class="MuiTypography-root makeStyles-title-340 MuiTypography-h5"
+          class="MuiTypography-root makeStyles-title-1374 MuiTypography-h5"
         >
-          New Note
+          test title
         </span>
+        <div
+          class="makeStyles-actions-1373"
+        >
+          <button
+            class="MuiButtonBase-root MuiButton-root makeStyles-deleteBtn-1367 MuiButton-contained makeStyles-btn-1427 MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              <span>
+                Delete 
+              </span>
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root makeStyles-icon-1366"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+          <a
+            aria-disabled="false"
+            class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-btn-1427 MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+            href="#/undefined"
+            role="button"
+            tabindex="0"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              <span>
+                View 
+              </span>
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root makeStyles-icon-1366"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </a>
+        </div>
       </div>
       <div
-        class="MuiFormControl-root MuiTextField-root makeStyles-inp-392 MuiFormControl-fullWidth"
+        class="MuiFormControl-root MuiTextField-root makeStyles-inp-1426 MuiFormControl-fullWidth"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-          data-shrink="false"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+          data-shrink="true"
+          for="title"
+          id="title-label"
         >
           Title
         </label>
@@ -512,21 +643,23 @@ exports[`containers EditNoteForm matches snapshot 1`] = `
           class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
         >
           <input
+            aria-describedby="title-helper-text"
             aria-invalid="false"
             autocomplete="off"
             class="MuiInputBase-input MuiOutlinedInput-input"
+            id="title"
             name="title"
             type="text"
-            value=""
+            value="test title"
           />
           <fieldset
             aria-hidden="true"
-            class="PrivateNotchedOutline-root-453 MuiOutlinedInput-notchedOutline"
+            class="PrivateNotchedOutline-root-1515 MuiOutlinedInput-notchedOutline"
             style="padding-left: 8px;"
           >
             <legend
-              class="PrivateNotchedOutline-legend-454"
-              style="width: 0.01px;"
+              class="PrivateNotchedOutline-legend-1516"
+              style="width: 0px;"
             >
               <span>
                 ​
@@ -535,17 +668,20 @@ exports[`containers EditNoteForm matches snapshot 1`] = `
           </fieldset>
         </div>
         <p
-          class="MuiFormHelperText-root MuiFormHelperText-contained"
+          class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+          id="title-helper-text"
         >
            
         </p>
       </div>
       <div
-        class="MuiFormControl-root MuiTextField-root makeStyles-inp-392 MuiFormControl-fullWidth"
+        class="MuiFormControl-root MuiTextField-root makeStyles-inp-1426 MuiFormControl-fullWidth"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-          data-shrink="false"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+          data-shrink="true"
+          for="md"
+          id="md-label"
         >
           Note
         </label>
@@ -553,20 +689,24 @@ exports[`containers EditNoteForm matches snapshot 1`] = `
           class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline MuiOutlinedInput-multiline"
         >
           <textarea
+            aria-describedby="md-helper-text"
             aria-invalid="false"
             autocomplete="off"
-            class="MuiInputBase-input MuiOutlinedInput-input undefined makeStyles-textarea-334 MuiInputBase-inputMultiline MuiOutlinedInput-inputMultiline"
+            class="MuiInputBase-input MuiOutlinedInput-input undefined makeStyles-textarea-1368 MuiInputBase-inputMultiline MuiOutlinedInput-inputMultiline"
+            id="md"
             name="md"
             rows="2"
-          />
+          >
+            test markdown
+          </textarea>
           <fieldset
             aria-hidden="true"
-            class="PrivateNotchedOutline-root-453 MuiOutlinedInput-notchedOutline"
+            class="PrivateNotchedOutline-root-1515 MuiOutlinedInput-notchedOutline"
             style="padding-left: 8px;"
           >
             <legend
-              class="PrivateNotchedOutline-legend-454"
-              style="width: 0.01px;"
+              class="PrivateNotchedOutline-legend-1516"
+              style="width: 0px;"
             >
               <span>
                 ​
@@ -575,17 +715,20 @@ exports[`containers EditNoteForm matches snapshot 1`] = `
           </fieldset>
         </div>
         <p
-          class="MuiFormHelperText-root MuiFormHelperText-contained"
+          class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+          id="md-helper-text"
         >
           Supports github flavored markdown
         </p>
       </div>
       <div
-        class="MuiFormControl-root MuiTextField-root makeStyles-inp-392 MuiFormControl-fullWidth"
+        class="MuiFormControl-root MuiTextField-root makeStyles-inp-1426 MuiFormControl-fullWidth"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
-          data-shrink="false"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+          data-shrink="true"
+          for="tags"
+          id="tags-label"
         >
           Tags
         </label>
@@ -593,21 +736,23 @@ exports[`containers EditNoteForm matches snapshot 1`] = `
           class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
         >
           <input
+            aria-describedby="tags-helper-text"
             aria-invalid="false"
             autocomplete="off"
             class="MuiInputBase-input MuiOutlinedInput-input"
+            id="tags"
             name="tags"
             type="text"
-            value=""
+            value="testtag testtag2"
           />
           <fieldset
             aria-hidden="true"
-            class="PrivateNotchedOutline-root-453 MuiOutlinedInput-notchedOutline"
+            class="PrivateNotchedOutline-root-1515 MuiOutlinedInput-notchedOutline"
             style="padding-left: 8px;"
           >
             <legend
-              class="PrivateNotchedOutline-legend-454"
-              style="width: 0.01px;"
+              class="PrivateNotchedOutline-legend-1516"
+              style="width: 0px;"
             >
               <span>
                 ​
@@ -616,7 +761,8 @@ exports[`containers EditNoteForm matches snapshot 1`] = `
           </fieldset>
         </div>
         <p
-          class="MuiFormHelperText-root MuiFormHelperText-contained"
+          class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+          id="tags-helper-text"
         >
           Separated by spaces
         </p>
@@ -630,13 +776,13 @@ exports[`containers EditNoteForm matches snapshot 1`] = `
 exports[`containers NoteDisplay matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="makeStyles-root-478"
+    class="makeStyles-root-2385"
   >
     <div
-      class="makeStyles-root-479"
+      class="makeStyles-root-2386"
     >
       <button
-        class="MuiButtonBase-root MuiIconButton-root makeStyles-mobileMenu-480"
+        class="MuiButtonBase-root MuiIconButton-root makeStyles-mobileMenu-2387"
         tabindex="0"
         type="button"
       >
@@ -660,17 +806,69 @@ exports[`containers NoteDisplay matches snapshot 1`] = `
         />
       </button>
       <span
-        class="MuiTypography-root makeStyles-title-482 MuiTypography-h5"
-      />
+        class="MuiTypography-root makeStyles-title-2389 MuiTypography-h5"
+      >
+        test title
+      </span>
+      <div
+        class="makeStyles-actions-2388"
+      >
+        <a
+          aria-disabled="false"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained makeStyles-btn-2442 MuiButton-containedPrimary MuiButton-containedSizeSmall MuiButton-sizeSmall"
+          href="#/undefined/edit"
+          role="button"
+          tabindex="0"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            Edit 
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root makeStyles-icon-2381"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 00-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
+              />
+            </svg>
+          </span>
+          <span
+            class="MuiTouchRipple-root"
+          />
+        </a>
+      </div>
     </div>
-    <div
-      class="makeStyles-content-473"
+    <span
+      class="makeStyles-content-2380"
     >
-      <span />
-    </div>
+      asdfasdf
+    </span>
     <div
-      class="makeStyles-tags-476"
-    />
+      class="makeStyles-tags-2383"
+    >
+      <div
+        class="MuiChip-root makeStyles-chip-2382 MuiChip-outlined"
+      >
+        <span
+          class="MuiChip-label"
+        >
+          test1
+        </span>
+      </div>
+      <div
+        class="MuiChip-root makeStyles-chip-2382 MuiChip-outlined"
+      >
+        <span
+          class="MuiChip-label"
+        >
+          test2
+        </span>
+      </div>
+    </div>
     <div />
   </div>
 </DocumentFragment>
@@ -679,13 +877,13 @@ exports[`containers NoteDisplay matches snapshot 1`] = `
 exports[`containers SideBar matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="MuiPaper-root makeStyles-root-544 makeStyles-root-548 MuiPaper-elevation1 MuiPaper-rounded"
+    class="MuiPaper-root makeStyles-root-2642 makeStyles-root-2644 MuiPaper-elevation1 MuiPaper-rounded"
   >
     <div
-      class="makeStyles-root-577"
+      class="makeStyles-root-2673"
     >
       <a
-        class="MuiAvatar-root makeStyles-avatar-576 MuiAvatar-colorDefault"
+        class="MuiAvatar-root makeStyles-avatar-2672 MuiAvatar-colorDefault"
         href="#/"
       >
         <svg
@@ -701,10 +899,10 @@ exports[`containers SideBar matches snapshot 1`] = `
         </svg>
       </a>
       <div
-        class="makeStyles-titleWrap-578"
+        class="makeStyles-titleWrap-2674"
       >
         <h5
-          class="MuiTypography-root makeStyles-brandFont-579 MuiTypography-h5"
+          class="MuiTypography-root makeStyles-brandFont-2675 MuiTypography-h5"
         >
           Of Note
           <small>
@@ -714,7 +912,7 @@ exports[`containers SideBar matches snapshot 1`] = `
           </small>
         </h5>
         <h6
-          class="MuiTypography-root makeStyles-brandFont-579 MuiTypography-subtitle2 MuiTypography-colorTextSecondary"
+          class="MuiTypography-root makeStyles-brandFont-2675 MuiTypography-subtitle2 MuiTypography-colorTextSecondary"
         >
           Offline note taking
         </h6>
@@ -743,16 +941,43 @@ exports[`containers SideBar matches snapshot 1`] = `
           class="MuiTouchRipple-root"
         />
       </button>
+      <a
+        aria-disabled="false"
+        class="MuiButtonBase-root MuiIconButton-root"
+        href="https://github.com/jhackshaw/ofnotes"
+        tabindex="0"
+      >
+        <span
+          class="MuiIconButton-label"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.5 1 0-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8 0 3.2.9.8 1.3 1.9 1.3 3.2 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"
+            />
+          </svg>
+        </span>
+        <span
+          class="MuiTouchRipple-root"
+        />
+      </a>
     </div>
     <div
-      class="makeStyles-filter-546"
+      class="makeStyles-filter-2643"
     >
       <div
-        class="MuiFormControl-root MuiTextField-root makeStyles-inp-634 MuiFormControl-fullWidth"
+        class="MuiFormControl-root MuiTextField-root makeStyles-inp-2730 MuiFormControl-fullWidth"
       >
         <label
           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined"
           data-shrink="true"
+          for="filter"
+          id="filter-label"
         >
           Filter
         </label>
@@ -760,21 +985,23 @@ exports[`containers SideBar matches snapshot 1`] = `
           class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
         >
           <input
+            aria-describedby="filter-helper-text"
             aria-invalid="false"
             autocomplete="off"
             class="MuiInputBase-input MuiOutlinedInput-input"
+            id="filter"
             name="filter"
             type="text"
             value=""
           />
           <fieldset
             aria-hidden="true"
-            class="PrivateNotchedOutline-root-695 MuiOutlinedInput-notchedOutline"
+            class="PrivateNotchedOutline-root-2791 MuiOutlinedInput-notchedOutline"
             style="padding-left: 8px;"
           >
             <legend
-              class="PrivateNotchedOutline-legend-696"
-              style="width: 0px;"
+              class="PrivateNotchedOutline-legend-2792"
+              style="width: 38px;"
             >
               <span>
                 ​
@@ -784,6 +1011,7 @@ exports[`containers SideBar matches snapshot 1`] = `
         </div>
         <p
           class="MuiFormHelperText-root MuiFormHelperText-contained"
+          id="filter-helper-text"
         >
           Search tags or titles
         </p>
@@ -792,9 +1020,7 @@ exports[`containers SideBar matches snapshot 1`] = `
     <hr
       class="MuiDivider-root"
     />
-    <div
-      class="makeStyles-eh-547"
-    >
+    <div>
       <ul
         class="MuiList-root MuiList-padding"
       />

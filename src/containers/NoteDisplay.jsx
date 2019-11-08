@@ -19,7 +19,9 @@ const useStyles = makeStyles(theme => ({
   content: {
     marginTop: theme.spacing(5),
     padding: theme.spacing(),
-    paddingTop: 0
+    paddingTop: 0,
+    zIndex: -10,
+    position: 'relative'
   },
   icon: {
     marginLeft: theme.spacing()
@@ -39,6 +41,7 @@ const useStyles = makeStyles(theme => ({
 }))
 
 // render markdown components using Mui typography
+/* istanbul ignore next */
 const options = { 
   overrides: { 
     h1: { component: props => <Typography gutterBottom variant="h3" {...props} /> }, 
@@ -46,7 +49,9 @@ const options = {
     h3: { component: props => <Typography gutterBottom variant="h5" {...props} /> }, 
     h4: { component: props => <Typography gutterBottom variant="h6" paragraph {...props} /> }, 
     p:  { component: props => <Typography color="textSecondary" variant="body1" paragraph {...props} /> },
-    li: { component: props => <Typography variant="body1" component="li" color="textSecondary" style={{ marginTop: 2 }} {...props} /> }
+    li: { component: props => <Typography variant="body1" component="li" color="textSecondary" style={{ marginTop: 2 }} {...props} /> },
+    img: { component: props => <img style={{maxWidth: '100%', maxHeight: '100%'}} alt="" {...props} />},
+    pre: { component: props => <pre style={{overflowX: 'auto', paddingBottom: 20, zIndex: -10}} {...props} />}
   }, 
 }; 
 
@@ -78,9 +83,7 @@ const NoteDisplay = props => {
         }
         {...props}
         >
-        <div className={classes.content}>
-          <Markdown options={options}>{ note.md }</Markdown> 
-        </div>
+        <Markdown className={classes.content} options={options}>{ note.md }</Markdown> 
         
         <div className={classes.tags}>
           { note.tags.map(t => (

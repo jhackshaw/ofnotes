@@ -7,6 +7,8 @@ const useStyles = makeStyles(theme => ({
     flexGrow: 1,
     flexShrink: 1,
     overflowY: 'auto',
+    position: 'relative',
+    zIndex: 0,
     padding: theme.spacing(4),
     [theme.breakpoints.down('md')]: {
       padding: theme.spacing()

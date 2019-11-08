@@ -19,12 +19,11 @@ const useStyles = makeStyles(theme => ({
   root: {
     flex: '400px 0 0',
     overflowY: 'auto',
-    position: 'relative',
     display: 'block',
+    zIndex: '1000',
     [theme.breakpoints.down('md')]: {
       position: 'absolute',
       width: '100%',
-      zIndex: '1000',
       height: '100%',
       display: props =>
         props.expanded
@@ -32,15 +31,9 @@ const useStyles = makeStyles(theme => ({
         : 'none'
     }
   },
-  isOpen: {
-
-  },
   filter: {
     padding: theme.spacing(3),
     paddingBottom: 0
-  },
-  eh: {
-    position: 'relative'
   }
 }))
 
@@ -66,11 +59,16 @@ const SideBar = props => {
     dispatch(actions.toggleDarkMode())
   }
 
+  const onNavigated = e => {
+    dispatch(actions.setMenuOpen(false))
+  }
+
   return (
     <Paper classes={{root: classes.root}}>
       <BrandHeader toggleMenu={toggleMenu}
                    currentPalette={paletteType}
-                   onTogglePalette={onTogglePalette} 
+                   onTogglePalette={onTogglePalette}
+                   onNavigated={onNavigated} 
                    />
       <div className={classes.filter}>
         <NoteTextField
@@ -83,11 +81,15 @@ const SideBar = props => {
             InputLabelProps={{
               shrink: true
             }}
+            InputProps={{
+              labelWidth: 40
+            }}
+        
             />
       </div>
       <Divider />
       <div className={classes.eh}>
-      <NoteList notes={notes} className={classes.eh} />
+      <NoteList notes={notes} onNavigated={onNavigated} />
       </div>
     </Paper>
   )

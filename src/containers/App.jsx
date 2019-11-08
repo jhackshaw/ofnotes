@@ -30,7 +30,7 @@ const App = () => {
   const menuExpanded = useSelector(selectMenuOpen)
 
   const toggleMenuOpen = e => {
-    dispatch(actions.toggleMenu())
+    dispatch(actions.setMenuOpen(!menuExpanded))
   }
 
 
