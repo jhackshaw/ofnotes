@@ -1,94 +1,44 @@
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-[![build](https://github.com/jhackshaw/ofnotes/workflows/ofnotes/badge.svg)](https://github.com/jhackshaw/ofnotes/actions)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/42239f40-f5d3-49df-ae4a-84748d62eed3/deploy-status)](https://app.netlify.com/sites/ofnotes/deploys)
-[![codecov](https://codecov.io/gh/jhackshaw/ofnotes/branch/master/graph/badge.svg)](https://codecov.io/gh/jhackshaw/ofnotes)
-![GitHub last commit](https://img.shields.io/github/last-commit/jhackshaw/ofnotes)
-[![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://www.ofnote.site)
-![GitHub](https://img.shields.io/github/license/jhackshaw/ofnotes)
+## Available Scripts
 
-# About
+In the project directory, you can run:
 
-Ofnote is a note taking application that is completely offline. All notes are stored locally per browser.
+### `npm start`
 
-![Screen Shot](https://i.ibb.co/S7YG5fm/Screenshot-2019-11-04-React-App.png)
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-### Features
+### `npm test`
 
- - **Markdown**: notes support [github flavored markdown](https://github.github.com/gfm/)
- - **Tags**: notes can be tagged to make categorizing and finding them quick and easy
- - **Indexeddb**: never run out of storage space for notes
- - **Dark mode**: essential
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+### `npm run build`
 
-### Structure
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-    .
-    ├── README.md
-    ├── package.json
-    |
-    ├── .github/
-    |    └── worflows/ofnote.yml    # CI configuration
-    |
-    └── src/
-         ├── __tests__/              # test files
-         ├── containers/             # containers use and manipulate state
-         ├── components/             # components are generally stateless
-         ├── db/                     # IndexedDB access / queries
-         └── store/                  # redux implementation - actions, reducer, selectors
-    
- 
- 
-# Design Choices
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-### Redux
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-Managing state using redux allows for edits to immediately propagate throughout the rest of the application. Asynchronous actions (thunks) ensure they maintain consistancy with the IndexedDB database, and online storage support could be integrated into actions easily in the future.
+### `npm run eject`
 
-### IndexedDB
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-Compared to the localStorage API, IndexedDB is asynchronous and indexed. It supports storage of significantly more data in it's native format (localStorage is strings only). In ofnotes, tags, title, and modified date are all indexed for extremely fast searches regardless of the number of notes, and support for 999MB worth of notes is possible with user permission. Dexie provides a more convenient wrapper around the native IndexedDB api.
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-### React router
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-Ensures notes are accessible by a distinct URL. This makes it possible to bookmark or navigate to a particular note directly.
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-### Built with
+## Learn More
 
-- [ReactJS](https://reactjs.org/)
-- [Material-UI](https://material-ui.com/)
-- [Redux](https://redux.js.org/)
-- [Dexie](https://dexie.org/)
-- [React Router](https://reacttraining.com/react-router/)
-- [Marked](https://marked.js.org/)
-- [MomentJS](https://momentjs.com/)
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-
-# Continuous Integration
-
-GitHub Actions is used for CI/CD by synchronizing with an AWS s3 static site enabled bucket. CI configuration can be viewed at [.github/workflows/ofnotes.yml](https://github.com/jhackshaw/ofnotes/blob/master/.github/workflows/ofnotes.yml). Every push to master triggers the following steps:
-
- 1. Install nodejs and dependencies ```(npm ci)```
- 2. Run tests ```(npm run test -- --coverage)```
- 3. Upload test coverage to [codecov](https://codecov.io/gh/jhackshaw/ofnotes)
- 4. Build production application ```(npm run build)```
- 5. Deploy application to s3 bucket
-
-
-# Local development
-
-[![forthebadge](https://forthebadge.com/images/badges/check-it-out.svg)](https://www.ofnote.site)
-
- - Clone repo: git clone https://github.com/jhackshaw/ofnotes
- - Install dependencies: ```npm install```
- - Run tests: ```npm run test```
- - Run tests with code coverage: ```npm run test -- --coverage```
- - Run development server: ```npm run start```
-
-
-
-
-
-
-
-
+To learn React, check out the [React documentation](https://reactjs.org/).

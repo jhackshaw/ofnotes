@@ -3,30 +3,39 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^4.5.2",
-    "@material-ui/icons": "^4.5.1",
-    "@material-ui/styles": "^4.5.2",
+    "@material-ui/core": "^4.9.10",
+    "@material-ui/icons": "^4.9.1",
+    "@material-ui/styles": "^4.9.10",
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.5.0",
+    "@testing-library/user-event": "^7.2.1",
+    "@types/jest": "^24.9.1",
+    "@types/node": "^12.12.35",
+    "@types/react": "^16.9.34",
+    "@types/react-dom": "^16.9.6",
+    "clsx": "^1.1.0",
     "dexie": "^2.0.4",
-    "formik": "^2.0.3",
-    "markdown-to-jsx": "^6.10.3",
+    "highlight.js": "^9.18.1",
+    "markdown-to-jsx": "^6.11.1",
     "moment": "^2.24.0",
-    "react": "^16.11.0",
-    "react-dom": "^16.11.0",
-    "react-redux": "^7.1.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-markdown": "^4.3.1",
+    "react-router": "^5.1.2",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0",
-    "redux": "^4.0.4",
-    "redux-logger": "^3.0.6",
-    "redux-thunk": "^2.3.0",
-    "reselect": "^4.0.0",
-    "slugify": "^1.3.5",
+    "react-scripts": "3.4.1",
+    "react-swipeable": "^5.5.1",
+    "slugify": "^1.4.0",
+    "ts-jest": "^25.4.0",
     "typeface-mclaren": "0.0.72",
-    "typeface-roboto": "0.0.75"
+    "typeface-roboto": "0.0.75",
+    "typescript": "^3.7.5"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test"
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -44,18 +53,32 @@
     ]
   },
   "devDependencies": {
-    "@testing-library/jest-dom": "^4.2.3",
-    "@testing-library/react": "^9.3.1",
-    "fake-indexeddb": "^2.1.1",
-    "jest-localstorage-mock": "^2.4.0",
-    "mutationobserver-shim": "^0.3.3",
-    "redux-mock-store": "^1.5.3",
-    "sinon": "^7.5.0"
+    "@types/highlight.js": "^9.12.3",
+    "@types/markdown-to-jsx": "^6.11.0",
+    "@types/react-router-dom": "^5.1.4",
+    "@types/showdown": "^1.9.3",
+    "fake-indexeddb": "^3.0.0",
+    "prettier": "^2.0.4"
   },
   "jest": {
     "coveragePathIgnorePatterns": [
       "/node_modules/",
-      "src/serviceWorker.js"
-    ]
+      "serviceWorker.ts",
+      "react-app-env.d.ts",
+      "src/index.tsx",
+      "src/test-utils.tsx",
+      "src/pages/App.tsx",
+      "src/db/initialNotes.ts",
+      "src/components/.*index.ts",
+      "src/hooks/index.ts",
+      "src/pages/index.ts",
+      "src/db/index.ts"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "lines": 90
+      }
+    }
   }
 }

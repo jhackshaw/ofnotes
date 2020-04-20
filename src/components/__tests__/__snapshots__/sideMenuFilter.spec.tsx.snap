@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SideMenuFilter component matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="makeStyles-root-1"
+  >
+    <div
+      class="MuiFormControl-root MuiTextField-root makeStyles-inp-2 MuiFormControl-fullWidth"
+    >
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+        data-shrink="true"
+        for="filter"
+        id="filter-label"
+      >
+        Filter
+      </label>
+      <div
+        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+      >
+        <input
+          aria-describedby="filter-helper-text"
+          aria-invalid="false"
+          autocomplete="off"
+          class="MuiInputBase-input MuiOutlinedInput-input"
+          id="filter"
+          name="filter"
+          type="text"
+          value="test value"
+        />
+        <fieldset
+          aria-hidden="true"
+          class="PrivateNotchedOutline-root-61 MuiOutlinedInput-notchedOutline"
+        >
+          <legend
+            class="PrivateNotchedOutline-legendLabelled-63 PrivateNotchedOutline-legendNotched-64"
+          >
+            <span>
+              Filter
+            </span>
+          </legend>
+        </fieldset>
+      </div>
+      <p
+        class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+        id="filter-helper-text"
+      >
+        Search tags or titles
+      </p>
+    </div>
+  </div>
+</DocumentFragment>
+`;

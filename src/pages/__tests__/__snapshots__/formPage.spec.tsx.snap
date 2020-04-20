@@ -1,0 +1,264 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Form page navigation matches snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="makeStyles-root-1"
+  >
+    <div
+      class="makeStyles-tabs-2"
+    >
+      <div
+        class="MuiTabs-root"
+      >
+        <div
+          class="MuiTabs-scroller MuiTabs-fixed"
+          style="overflow: hidden;"
+        >
+          <div
+            class="MuiTabs-flexContainer MuiTabs-centered"
+            role="tablist"
+          >
+            <button
+              aria-selected="true"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit Mui-selected"
+              role="tab"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiTab-wrapper"
+              >
+                Write
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+            <button
+              aria-selected="false"
+              class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit"
+              role="tab"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiTab-wrapper"
+              >
+                Preview
+              </span>
+              <span
+                class="MuiTouchRipple-root"
+              />
+            </button>
+          </div>
+          <span
+            class="PrivateTabIndicator-root-28 PrivateTabIndicator-colorSecondary-30 MuiTabs-indicator"
+            style="left: 0px; width: 0px;"
+          />
+        </div>
+      </div>
+      <hr
+        class="MuiDivider-root"
+      />
+    </div>
+    <div
+      class="makeStyles-content-3"
+      data-testid="form-container"
+    >
+      <div
+        class="makeStyles-root-39"
+      >
+        <div
+          class="makeStyles-root-40"
+        >
+          <div
+            class="MuiFormControl-root MuiTextField-root makeStyles-inp-44 MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="title"
+              id="title-label"
+            >
+              Title
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            >
+              <input
+                aria-invalid="false"
+                autocomplete="off"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="title"
+                name="title"
+                type="text"
+                value="test two"
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-103 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-105 PrivateNotchedOutline-legendNotched-106"
+                >
+                  <span>
+                    Title
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+          </div>
+          <div
+            class="MuiFormControl-root MuiTextField-root makeStyles-inp-44 MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="md"
+              id="md-label"
+            >
+              Note
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-multiline MuiOutlinedInput-multiline"
+            >
+              <textarea
+                aria-describedby="md-helper-text"
+                aria-invalid="false"
+                autocomplete="off"
+                class="MuiInputBase-input MuiOutlinedInput-input makeStyles-textarea-41 MuiInputBase-inputMultiline MuiOutlinedInput-inputMultiline"
+                id="md"
+                name="md"
+                rows="20"
+              >
+                # test note 2
+              </textarea>
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-103 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-105 PrivateNotchedOutline-legendNotched-106"
+                >
+                  <span>
+                    Note
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="md-helper-text"
+            >
+              Supports github flavored markdown
+            </p>
+          </div>
+          <div
+            class="MuiFormControl-root MuiTextField-root makeStyles-inp-44 MuiFormControl-fullWidth"
+          >
+            <label
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
+              data-shrink="true"
+              for="tags"
+              id="tags-label"
+            >
+              Tags
+            </label>
+            <div
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-fullWidth MuiInputBase-formControl"
+            >
+              <input
+                aria-describedby="tags-helper-text"
+                aria-invalid="false"
+                autocomplete="off"
+                class="MuiInputBase-input MuiOutlinedInput-input"
+                id="tags"
+                name="tags"
+                type="text"
+                value="python"
+              />
+              <fieldset
+                aria-hidden="true"
+                class="PrivateNotchedOutline-root-103 MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="PrivateNotchedOutline-legendLabelled-105 PrivateNotchedOutline-legendNotched-106"
+                >
+                  <span>
+                    Tags
+                  </span>
+                </legend>
+              </fieldset>
+            </div>
+            <p
+              class="MuiFormHelperText-root MuiFormHelperText-contained MuiFormHelperText-filled"
+              id="tags-helper-text"
+            >
+              Separated by spaces
+            </p>
+          </div>
+          <button
+            class="MuiButtonBase-root MuiButton-root makeStyles-delete-43 MuiButton-outlined MuiButton-outlinedSizeSmall MuiButton-sizeSmall"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiButton-label"
+            >
+              <span
+                class="MuiButton-startIcon MuiButton-iconSizeSmall"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z"
+                  />
+                </svg>
+              </span>
+              Delete
+            </span>
+            <span
+              class="MuiTouchRipple-root"
+            />
+          </button>
+        </div>
+      </div>
+      <div
+        class="makeStyles-root-39"
+      >
+        <h1
+          class="MuiTypography-root makeStyles-title-115 MuiTypography-h3"
+        >
+          test two
+        </h1>
+        <div>
+          <h1
+            class="MuiTypography-root makeStyles-content-116 MuiTypography-h3 MuiTypography-gutterBottom"
+            id="test-note-2"
+          >
+            test note 2
+          </h1>
+        </div>
+        <div
+          class="makeStyles-tags-118"
+        >
+          <div
+            class="MuiChip-root makeStyles-chip-117 MuiChip-outlined"
+          >
+            <span
+              class="MuiChip-label"
+            >
+              python
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
