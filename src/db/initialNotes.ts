@@ -12,7 +12,6 @@ export default [
 [![build](https://github.com/jhackshaw/ofnotes/workflows/ofnotes/badge.svg)](https://github.com/jhackshaw/ofnotes/actions)
 [![codecov](https://codecov.io/gh/jhackshaw/ofnotes/branch/master/graph/badge.svg)](https://codecov.io/gh/jhackshaw/ofnotes)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-![GitHub last commit](https://img.shields.io/github/last-commit/jhackshaw/ofnotes)
 [![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://www.ofnote.site)
 ![GitHub](https://img.shields.io/github/license/jhackshaw/ofnotes)
 
