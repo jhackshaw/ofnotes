@@ -14,9 +14,9 @@ const useStyles = makeStyles((theme) =>
       flexDirection: "column",
     },
     textarea: {
-      height: "calc(100vh - 390px)",
+      height: "calc(100vh - 400px)",
       [theme.breakpoints.up("lg")]: {
-        height: "calc(100vh - 350px)",
+        height: "calc(100vh - 360px)",
       },
     },
     progress: {

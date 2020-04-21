@@ -8,13 +8,16 @@ const newNote: UserNoteFields = {
   tags: [],
 };
 
-type Timer = ReturnType<typeof setTimeout> | number | undefined;
+type Errors = {
+  [K in keyof UserNoteFields]?: string;
+};
 
 export const useNoteForm = (slug: string | undefined) => {
   const { createNote, updateNote, deleteNote } = useNoteContext();
   const { note } = useNote(slug);
   const [values, setValues] = useState<UserNoteFields>(newNote);
   const [savedValues, setSavedValues] = useState<UnsavedNote>(newNote);
+  const [errors, setErrors] = useState<Errors>({});
   const shouldUpdate = useRef(false);
 
   const noteId = savedValues?.id;
@@ -31,12 +34,21 @@ export const useNoteForm = (slug: string | undefined) => {
     []
   );
 
-  // if creating, attempt to save note in DB on title field blur
   const onBlur: React.FocusEventHandler<HTMLInputElement> = useCallback(
     async (e) => {
       if (e.target.name === "title" && !noteId) {
-        const result = await createNote(values);
-        setSavedValues(result);
+        setErrors({});
+        try {
+          const result = await createNote(values);
+          setSavedValues(result);
+        } catch (e) {
+          setErrors({
+            title:
+              e.name === "ConstraintError"
+                ? "Title must be unique"
+                : e.message || "Something went wrong creating this note",
+          });
+        }
       }
     },
     [createNote, noteId, values]
@@ -55,8 +67,20 @@ export const useNoteForm = (slug: string | undefined) => {
       return;
     }
     const handleUpdate = async () => {
-      const result = await updateNote(noteId, values);
-      setSavedValues(result);
+      setErrors({});
+      try {
+        const result = await updateNote(noteId, values);
+        setSavedValues(result);
+      } catch (e) {
+        const isConstraintError = e.failures?.some(
+          (f: any) => f.name === "ConstraintError"
+        );
+        setErrors({
+          title: isConstraintError
+            ? "Title must be unique"
+            : e.message || "Something went wrong updating this note",
+        });
+      }
     };
     const timeout = setTimeout(handleUpdate, 200);
     return () => clearTimeout(timeout);
@@ -68,6 +92,7 @@ export const useNoteForm = (slug: string | undefined) => {
       md: note?.md ?? "",
       tags: note?.tags ?? [],
     });
+    setErrors({});
     setSavedValues(note ?? newNote);
     shouldUpdate.current = false;
   }, [note]);
@@ -75,6 +100,7 @@ export const useNoteForm = (slug: string | undefined) => {
   return {
     values,
     savedValues,
+    errors,
     onChange,
     onBlur,
     onDelete,

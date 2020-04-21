@@ -215,6 +215,72 @@ describe("Form Page edit note", () => {
     });
   });
 
+  it("update title handles uniqueness error", async () => {
+    const err = new Error();
+    Object.assign(err, {
+      failures: [{ name: "ConstraintError" }],
+    });
+    mockNoteCtx.updateNote.mockRejectedValue(err);
+    const { getByLabelText, getByText } = await renderEditing();
+    await wait(() => {
+      expect(getByLabelText("Title")).toHaveValue(fakeNote.title);
+    });
+    fireEvent.change(getByLabelText("Title"), {
+      target: { value: "duplicate title" },
+    });
+    await wait(() => {
+      jest.runAllTimers();
+      expect(getByLabelText("Title")).toHaveValue("duplicate title");
+      expect(mockNoteCtx.updateNote).toHaveBeenCalled();
+      expect(mockNoteCtx.updateNote.mock.calls[0][0]).toEqual(fakeNote.id);
+      expect(mockNoteCtx.updateNote.mock.calls[0][1]).toMatchObject({
+        title: "duplicate title",
+      });
+      expect(getByText("Title must be unique")).toBeInTheDocument();
+    });
+  });
+
+  it("update handles error with a message set", async () => {
+    const err = new Error();
+    err.message = "test other error message";
+    mockNoteCtx.updateNote.mockRejectedValue(err);
+    const { getByLabelText, getByText } = await renderEditing();
+    await wait(() => {
+      expect(getByLabelText("Title")).toHaveValue(fakeNote.title);
+    });
+    fireEvent.change(getByLabelText("Title"), {
+      target: { value: "new title" },
+    });
+    await wait(() => {
+      jest.runAllTimers();
+      expect(getByLabelText("Title")).toHaveValue("new title");
+      expect(mockNoteCtx.updateNote).toHaveBeenCalled();
+      expect(getByText("test other error message")).toBeInTheDocument();
+    });
+  });
+
+  it("update handles other errors", async () => {
+    const err = new Error();
+    mockNoteCtx.updateNote.mockRejectedValue(err);
+    const { getByLabelText, getByText } = await renderEditing();
+    await wait(() => {
+      expect(getByLabelText("Title")).toHaveValue(fakeNote.title);
+    });
+    fireEvent.change(getByLabelText("Title"), {
+      target: { value: "other title" },
+    });
+    await wait(() => {
+      expect(getByLabelText("Title")).toHaveValue("other title");
+    });
+    await wait(() => {
+      jest.runAllTimers();
+      expect(mockNoteCtx.updateNote).toHaveBeenCalled();
+      expect(
+        getByText("Something went wrong updating this note")
+      ).toBeInTheDocument();
+    });
+  }, 10000);
+
   it("can update note markdown", async () => {
     mockNoteCtx.updateNote.mockResolvedValue({
       ...fakeNote,
@@ -295,6 +361,63 @@ describe("Form page create note", () => {
     fireEvent.blur(getByLabelText("Note"));
     await wait(() => {
       expect(mockNoteCtx.createNote).not.toHaveBeenCalled();
+    });
+  });
+
+  it("handles uniqueness error for title on create", async () => {
+    const err = new Error();
+    err.name = "ConstraintError";
+    mockNoteCtx.createNote.mockRejectedValue(err);
+    const { getByLabelText, getByText } = await renderCreating();
+    fireEvent.change(getByLabelText("Title"), {
+      target: { value: "duplicate title" },
+    });
+    await wait(() => {
+      expect(getByLabelText("Title")).toHaveValue("duplicate title");
+    });
+    fireEvent.blur(getByLabelText("Title"));
+    await wait(() => {
+      expect(mockNoteCtx.createNote).toHaveBeenCalled();
+      expect(mockNoteCtx.createNote.mock.calls[0][0]).toMatchObject({
+        title: "duplicate title",
+      });
+      expect(getByText("Title must be unique")).toBeInTheDocument();
+    });
+  });
+
+  it("handles other errors that have a message set", async () => {
+    const err = new Error("Some other error message");
+    mockNoteCtx.createNote.mockRejectedValue(err);
+    const { getByLabelText, getByText } = await renderCreating();
+    fireEvent.change(getByLabelText("Title"), {
+      target: { value: "duplicate title" },
+    });
+    await wait(() => {
+      expect(getByLabelText("Title")).toHaveValue("duplicate title");
+    });
+    fireEvent.blur(getByLabelText("Title"));
+    await wait(() => {
+      expect(mockNoteCtx.createNote).toHaveBeenCalled();
+      expect(getByText("Some other error message")).toBeInTheDocument();
+    });
+  });
+
+  it("handles other errors with no message set", async () => {
+    const err = new Error();
+    mockNoteCtx.createNote.mockRejectedValue(err);
+    const { getByLabelText, getByText } = await renderCreating();
+    fireEvent.change(getByLabelText("Title"), {
+      target: { value: "duplicate title" },
+    });
+    await wait(() => {
+      expect(getByLabelText("Title")).toHaveValue("duplicate title");
+    });
+    fireEvent.blur(getByLabelText("Title"));
+    await wait(() => {
+      expect(mockNoteCtx.createNote).toHaveBeenCalled();
+      expect(
+        getByText("Something went wrong creating this note")
+      ).toBeInTheDocument();
     });
   });
 });

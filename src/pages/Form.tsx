@@ -91,7 +91,6 @@ export const Form: React.FC = () => {
               {...formState}
               showDelete={Boolean(savedValues?.id)}
               onDelete={() => setDeleteOpen(true)}
-              errors={{}}
             />
           </MainPanel>
         )}
