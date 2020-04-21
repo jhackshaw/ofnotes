@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RenderedNote component matches snapshot 1`] = `
+<DocumentFragment>
+  <h1
+    class="MuiTypography-root makeStyles-title-1 MuiTypography-h3"
+  >
+    Test Note
+  </h1>
+  <div>
+    <h1
+      class="MuiTypography-root makeStyles-content-2 MuiTypography-h3 MuiTypography-gutterBottom"
+      id="test-note-header"
+    >
+      test note header
+    </h1>
+  </div>
+  <div
+    class="makeStyles-tags-4"
+  />
+</DocumentFragment>
+`;
