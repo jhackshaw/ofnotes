@@ -36,24 +36,24 @@ const renderTestComponent = async () => {
 describe("Theme context Provider", () => {
   it("has a default", async () => {
     const { getByTestId } = await renderTestComponent();
-    expect(getByTestId("palette")).toHaveTextContent("light");
+    expect(getByTestId("palette")).toHaveTextContent("dark");
   });
 
   it("saves theme to local storage on change", async () => {
     const { getByTestId } = await renderTestComponent();
     fireEvent.click(getByTestId("togglePalette"));
     await wait(() => {
-      expect(getByTestId("palette")).toHaveTextContent("dark");
+      expect(getByTestId("palette")).toHaveTextContent("light");
       expect(setItemMock).toHaveBeenCalledTimes(1);
       expect(setItemMock.mock.calls[0][0]).toEqual("paletteType");
-      expect(setItemMock.mock.calls[0][1]).toEqual("dark");
+      expect(setItemMock.mock.calls[0][1]).toEqual("light");
     });
     fireEvent.click(getByTestId("togglePalette"));
     await wait(() => {
-      expect(getByTestId("palette")).toHaveTextContent("light");
+      expect(getByTestId("palette")).toHaveTextContent("dark");
       expect(setItemMock).toHaveBeenCalledTimes(2);
       expect(setItemMock.mock.calls[1][0]).toEqual("paletteType");
-      expect(setItemMock.mock.calls[1][1]).toEqual("light");
+      expect(setItemMock.mock.calls[1][1]).toEqual("dark");
     });
   });
 

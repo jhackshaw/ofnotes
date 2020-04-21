@@ -21,7 +21,7 @@ export const ThemeContext = createContext<ThemeContextType | undefined>(
 let palettePreference = localStorage.getItem("paletteType") as PaletteType;
 /* istanbul ignore next */
 if (!palettePreference || !["light", "dark"].includes(palettePreference)) {
-  palettePreference = "light";
+  palettePreference = "dark";
 }
 
 export const ProvideThemeContext: React.FC = ({ children }) => {

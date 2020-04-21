@@ -8,22 +8,32 @@ exports[`Home page matches snapshot 1`] = `
     <h1
       class="MuiTypography-root makeStyles-title-3 MuiTypography-h3"
     >
-      test one
+      test two
     </h1>
     <div>
       <h1
         class="MuiTypography-root makeStyles-content-4 MuiTypography-h3 MuiTypography-gutterBottom"
-        id="test-note-1"
+        id="test-note-2"
       >
-        test note 1
+        test note 2
       </h1>
     </div>
     <div
       class="makeStyles-tags-6"
-    />
+    >
+      <div
+        class="MuiChip-root makeStyles-chip-5 MuiChip-outlined"
+      >
+        <span
+          class="MuiChip-label"
+        >
+          python
+        </span>
+      </div>
+    </div>
     <a
       aria-disabled="false"
-      class="MuiButtonBase-root MuiFab-root makeStyles-root-37 MuiFab-extended MuiFab-primary"
+      class="MuiButtonBase-root MuiFab-root makeStyles-root-67 MuiFab-extended MuiFab-primary"
       href="/create"
       role="button"
       tabindex="0"

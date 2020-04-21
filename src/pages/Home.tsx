@@ -21,7 +21,7 @@ const useStyles = makeStyles((theme) =>
 
 export const Home: React.FC = () => {
   const classes = useStyles();
-  const { note, loading } = useNote("Welcome");
+  const { note, loading } = useNote("welcome");
 
   return (
     <MainPanel>

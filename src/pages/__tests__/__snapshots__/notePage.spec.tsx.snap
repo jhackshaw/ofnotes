@@ -3,26 +3,26 @@
 exports[`Note page matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="makeStyles-root-1"
+    class="makeStyles-root-2"
   >
     <h1
-      class="MuiTypography-root makeStyles-title-35 MuiTypography-h3"
+      class="MuiTypography-root makeStyles-title-36 MuiTypography-h3"
     >
       test two
     </h1>
     <div>
       <h1
-        class="MuiTypography-root makeStyles-content-36 MuiTypography-h3 MuiTypography-gutterBottom"
+        class="MuiTypography-root makeStyles-content-37 MuiTypography-h3 MuiTypography-gutterBottom"
         id="test-note-2"
       >
         test note 2
       </h1>
     </div>
     <div
-      class="makeStyles-tags-38"
+      class="makeStyles-tags-39"
     >
       <div
-        class="MuiChip-root makeStyles-chip-37 MuiChip-outlined"
+        class="MuiChip-root makeStyles-chip-38 MuiChip-outlined"
       >
         <span
           class="MuiChip-label"
@@ -33,7 +33,7 @@ exports[`Note page matches snapshot 1`] = `
     </div>
     <a
       aria-disabled="false"
-      class="MuiButtonBase-root MuiFab-root makeStyles-root-2 MuiFab-extended MuiFab-primary"
+      class="MuiButtonBase-root MuiFab-root makeStyles-root-3 MuiFab-extended MuiFab-primary"
       href="/create"
       role="button"
       tabindex="0"
