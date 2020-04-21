@@ -34,8 +34,12 @@ describe("Home page", () => {
     noteMock.mockReturnValue({ noteId: undefined, note: null, loading: false });
     const { getByText } = render(<Home />);
     expect(getByText(/Select a note/)).toBeInTheDocument();
-    expect(noteMock).toHaveBeenCalled();
-    expect(noteMock.mock.calls[0][0]).toEqual("welcome");
+  });
+
+  it("renders nothing while loading", () => {
+    noteMock.mockReturnValue({ noteId: undefined, note: null, loading: true });
+    const { queryByText } = render(<Home />);
+    expect(queryByText(/Select a note/)).not.toBeInTheDocument();
   });
 
   it("renders nothing when attempting to load welcome note", () => {
@@ -45,6 +49,6 @@ describe("Home page", () => {
       loading: false,
     });
     const { queryByText } = render(<Home />);
-    expect(queryByText(/Select a note/)).not.toBeInTheDocument();
+    expect(queryByText(fakeNote.title)).toBeInTheDocument();
   });
 });
