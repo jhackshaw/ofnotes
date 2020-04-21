@@ -7,9 +7,21 @@ import {
   ProvidSideBarContext,
   ProvideNoteContext,
 } from "hooks";
-
 import moment from "moment";
-import { HashRouter as Router } from "react-router-dom";
+import { createBrowserHistory } from "history";
+import { Router } from "react-router-dom";
+import ReactGA from "react-ga";
+
+const history = createBrowserHistory();
+
+if (process.env.NODE_ENV === "production") {
+  ReactGA.initialize("UA-164169628-1");
+  ReactGA.pageview(window.location.pathname + window.location.search);
+  history.listen((location) => {
+    ReactGA.set({ page: location.pathname });
+    ReactGA.pageview(location.pathname);
+  });
+}
 
 moment.updateLocale("en", {
   relativeTime: {
@@ -27,7 +39,7 @@ moment.updateLocale("en", {
 });
 
 export const App = () => (
-  <Router>
+  <Router history={history}>
     <ProvideNoteContext>
       <ProvideThemeContext>
         <ProvidSideBarContext>
