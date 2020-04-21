@@ -2,36 +2,44 @@ name: ofnotes
 
 on:
   push:
-    branches: 
+    branches:
+      - master
+  pull_request:
+    branches:
       - master
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
+      - uses: actions/checkout@v1
 
-    - name: Use Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: '10.16'
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.14"
 
-    - name: Install Dependencies
-      run: |
-        npm ci
-      env:
-        CI: true
-  
-    - name: Run Tests
-      run: |
-        npm run test -- --watchAll=false --coverage
-      env:
-        CI: true
-  
-    - name: Upload coverage report
-      uses: codecov/codecov-action@v1.0.3
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
-        file: ./coverage/clover.xml
+      - name: Install Dependencies
+        run: |
+          npm ci
+        env:
+          CI: true
+
+      - name: Check Code style
+        run: |
+          npm run format:check
+        env:
+          CI: true
+
+      - name: Run Tests
+        run: |
+          npm run test -- --watchAll=false --coverage
+        env:
+          CI: true
+
+      - name: Upload coverage report
+        uses: codecov/codecov-action@v1.0.3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          file: ./coverage/clover.xml

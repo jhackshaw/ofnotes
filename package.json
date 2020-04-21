@@ -3,14 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^4.9.10",
+    "@material-ui/core": "^4.9.11",
     "@material-ui/icons": "^4.9.1",
     "@material-ui/styles": "^4.9.10",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "@types/jest": "^24.9.1",
-    "@types/node": "^12.12.35",
+    "@types/node": "^12.12.36",
     "@types/react": "^16.9.34",
     "@types/react-dom": "^16.9.6",
     "clsx": "^1.1.0",
@@ -29,13 +29,14 @@
     "ts-jest": "^25.4.0",
     "typeface-mclaren": "0.0.72",
     "typeface-roboto": "0.0.75",
-    "typescript": "^3.7.5"
+    "typescript": "^3.8.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "format": "prettier --write \"**/*.+(ts|tsx|js|jsx|json|yml|yaml|css|md)\"",
+    "format:check": "prettier --check \"**/*.+(ts|tsx|js|jsx|json|yml|yaml|css|md)\""
   },
   "eslintConfig": {
     "extends": "react-app"
