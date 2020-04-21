@@ -52,7 +52,7 @@ describe("Note page", () => {
     await wait(() => {
       expect(mockGetNote).toHaveBeenCalled();
       expect(mockGetNote.mock.calls[0][0]).toEqual("not-found-slug");
-      expect(getByText("not found")).toBeInTheDocument();
+      expect(getByText("Not Found")).toBeInTheDocument();
     });
   });
 
@@ -62,7 +62,7 @@ describe("Note page", () => {
     const { getByText } = render(<Note />);
     await wait(() => {
       expect(mockGetNote).not.toHaveBeenCalled();
-      expect(getByText("not found")).toBeInTheDocument();
+      expect(getByText("Not Found")).toBeInTheDocument();
     });
   });
 });

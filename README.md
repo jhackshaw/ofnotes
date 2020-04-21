@@ -7,7 +7,7 @@
 
 ### About
 
-Ofnote is a note taking application that is completely offline. All notes are stored locally per browser.
+Ofnotes is a note taking application that is completely offline with support for live editing markdown and material-design. All notes are stored locally per browser.
 
 ![Screen Shot](https://ofnote.site/preview.png)
 
