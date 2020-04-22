@@ -70,6 +70,10 @@ const useStyles = makeStyles((theme) =>
       paddingTop: theme.spacing(3),
       paddingBottom: theme.spacing(3),
     },
+    wrapper: {
+      maxWidth: 600,
+      margin: "0 auto",
+    },
   })
 );
 
@@ -124,7 +128,7 @@ export const RenderedNote: React.FC<Props> = ({ note }) => {
   }, [note.md]);
 
   return (
-    <>
+    <div className={classes.wrapper}>
       <Typography component="h1" variant="h3" classes={{ root: classes.title }}>
         {note.title}
       </Typography>
@@ -138,6 +142,6 @@ export const RenderedNote: React.FC<Props> = ({ note }) => {
           <Chip key={t} variant="outlined" label={t} className={classes.chip} />
         ))}
       </div>
-    </>
+    </div>
   );
 };

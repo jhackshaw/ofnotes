@@ -5,30 +5,34 @@ exports[`Note page matches snapshot 1`] = `
   <div
     class="makeStyles-root-2"
   >
-    <h1
-      class="MuiTypography-root makeStyles-title-36 MuiTypography-h3"
-    >
-      test two
-    </h1>
-    <div>
-      <h1
-        class="MuiTypography-root makeStyles-content-37 MuiTypography-h3 MuiTypography-gutterBottom"
-        id="test-note-2"
-      >
-        test note 2
-      </h1>
-    </div>
     <div
-      class="makeStyles-tags-39"
+      class="makeStyles-wrapper-40"
     >
-      <div
-        class="MuiChip-root makeStyles-chip-38 MuiChip-outlined"
+      <h1
+        class="MuiTypography-root makeStyles-title-36 MuiTypography-h3"
       >
-        <span
-          class="MuiChip-label"
+        test two
+      </h1>
+      <div>
+        <h1
+          class="MuiTypography-root makeStyles-content-37 MuiTypography-h3 MuiTypography-gutterBottom"
+          id="test-note-2"
         >
-          python
-        </span>
+          test note 2
+        </h1>
+      </div>
+      <div
+        class="makeStyles-tags-39"
+      >
+        <div
+          class="MuiChip-root makeStyles-chip-38 MuiChip-outlined"
+        >
+          <span
+            class="MuiChip-label"
+          >
+            python
+          </span>
+        </div>
       </div>
     </div>
     <a

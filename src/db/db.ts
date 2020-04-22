@@ -43,7 +43,7 @@ export class NotesDB extends Dexie {
   async create(note: UserNoteFields) {
     const id = await this.notes.add({
       ...note,
-      slug: slugify(note.title),
+      slug: slugify(note.title, { lower: true }),
       modified: Date.now(),
       tags: note.tags.filter((t) => Boolean(t)),
     });
@@ -79,7 +79,7 @@ export class NotesDB extends Dexie {
     }
     await this.notes.update(noteId, {
       ...note,
-      slug: slugify(note.title),
+      slug: slugify(note.title, { lower: true }),
       modified: Date.now(),
       tags: note.tags.filter((t) => Boolean(t)),
     });

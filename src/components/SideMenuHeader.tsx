@@ -4,12 +4,15 @@ import {
   createStyles,
   IconButton,
   Typography,
+  Hidden,
 } from "@material-ui/core";
+import { Link } from "react-router-dom";
 import GithubIcon from "@material-ui/icons/GitHub";
 import CloseIcon from "@material-ui/icons/Close";
 import OpenIcon from "@material-ui/icons/Menu";
 import LightModeIcon from "@material-ui/icons/Brightness7";
 import DarkModeIcon from "@material-ui/icons/Brightness5";
+import CreateNoteIcon from "@material-ui/icons/NoteAdd";
 import { useThemeContext } from "hooks";
 
 const useStyles = makeStyles((theme) =>
@@ -50,6 +53,13 @@ export const SideMenuHeader: React.FC<Props> = ({
 
   return (
     <div className={classes.root}>
+      {!expanded && (
+        <Hidden smDown>
+          <IconButton component={Link} to="/create">
+            <CreateNoteIcon />
+          </IconButton>
+        </Hidden>
+      )}
       {expanded && (
         <div className={classes.header}>
           <Typography variant="h5">

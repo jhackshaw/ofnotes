@@ -6,7 +6,7 @@ exports[`NoteForm component matches snapshot 1`] = `
     class="makeStyles-root-1"
   >
     <div
-      class="MuiFormControl-root MuiTextField-root makeStyles-inp-5 MuiFormControl-fullWidth"
+      class="MuiFormControl-root MuiTextField-root makeStyles-inp-8 MuiFormControl-fullWidth"
     >
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
@@ -30,10 +30,10 @@ exports[`NoteForm component matches snapshot 1`] = `
         />
         <fieldset
           aria-hidden="true"
-          class="PrivateNotchedOutline-root-64 MuiOutlinedInput-notchedOutline"
+          class="PrivateNotchedOutline-root-67 MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="PrivateNotchedOutline-legendLabelled-66"
+            class="PrivateNotchedOutline-legendLabelled-69"
           >
             <span>
               Title
@@ -43,7 +43,7 @@ exports[`NoteForm component matches snapshot 1`] = `
       </div>
     </div>
     <div
-      class="MuiFormControl-root MuiTextField-root makeStyles-inp-5 MuiFormControl-fullWidth"
+      class="MuiFormControl-root MuiTextField-root makeStyles-inp-8 MuiFormControl-fullWidth"
     >
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
@@ -67,10 +67,10 @@ exports[`NoteForm component matches snapshot 1`] = `
         />
         <fieldset
           aria-hidden="true"
-          class="PrivateNotchedOutline-root-64 MuiOutlinedInput-notchedOutline"
+          class="PrivateNotchedOutline-root-67 MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="PrivateNotchedOutline-legendLabelled-66"
+            class="PrivateNotchedOutline-legendLabelled-69"
           >
             <span>
               Note
@@ -86,7 +86,7 @@ exports[`NoteForm component matches snapshot 1`] = `
       </p>
     </div>
     <div
-      class="MuiFormControl-root MuiTextField-root makeStyles-inp-5 MuiFormControl-fullWidth"
+      class="MuiFormControl-root MuiTextField-root makeStyles-inp-8 MuiFormControl-fullWidth"
     >
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined"
@@ -111,10 +111,10 @@ exports[`NoteForm component matches snapshot 1`] = `
         />
         <fieldset
           aria-hidden="true"
-          class="PrivateNotchedOutline-root-64 MuiOutlinedInput-notchedOutline"
+          class="PrivateNotchedOutline-root-67 MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="PrivateNotchedOutline-legendLabelled-66"
+            class="PrivateNotchedOutline-legendLabelled-69"
           >
             <span>
               Tags
