@@ -41,6 +41,10 @@ export class NotesDB extends Dexie {
   }
 
   async create(note: UserNoteFields) {
+    if (!note.title) {
+      throw new Error("title is required");
+    }
+
     const id = await this.notes.add({
       ...note,
       slug: slugify(note.title, { lower: true }),
