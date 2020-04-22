@@ -231,30 +231,34 @@ exports[`Form page navigation matches snapshot 1`] = `
       <div
         class="makeStyles-root-39"
       >
-        <h1
-          class="MuiTypography-root makeStyles-title-115 MuiTypography-h3"
-        >
-          test two
-        </h1>
-        <div>
-          <h1
-            class="MuiTypography-root makeStyles-content-116 MuiTypography-h3 MuiTypography-gutterBottom"
-            id="test-note-2"
-          >
-            test note 2
-          </h1>
-        </div>
         <div
-          class="makeStyles-tags-118"
+          class="makeStyles-wrapper-119"
         >
-          <div
-            class="MuiChip-root makeStyles-chip-117 MuiChip-outlined"
+          <h1
+            class="MuiTypography-root makeStyles-title-115 MuiTypography-h3"
           >
-            <span
-              class="MuiChip-label"
+            test two
+          </h1>
+          <div>
+            <h1
+              class="MuiTypography-root makeStyles-content-116 MuiTypography-h3 MuiTypography-gutterBottom"
+              id="test-note-2"
             >
-              python
-            </span>
+              test note 2
+            </h1>
+          </div>
+          <div
+            class="makeStyles-tags-118"
+          >
+            <div
+              class="MuiChip-root makeStyles-chip-117 MuiChip-outlined"
+            >
+              <span
+                class="MuiChip-label"
+              >
+                python
+              </span>
+            </div>
           </div>
         </div>
       </div>
