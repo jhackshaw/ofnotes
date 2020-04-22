@@ -2,21 +2,31 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import { useNote, useNoteContext } from "hooks";
 import { UserNoteFields, UnsavedNote } from "db";
 
+type Errors = {
+  [K in keyof UserNoteFields]?: string;
+};
+
+type WithTimestamp<T extends {}> = T & {
+  modified: number;
+};
+
 const newNote: UserNoteFields = {
   title: "",
   md: "",
   tags: [],
 };
 
-type Errors = {
-  [K in keyof UserNoteFields]?: string;
-};
-
 export const useNoteForm = (slug: string | undefined) => {
   const { createNote, updateNote, deleteNote } = useNoteContext();
   const { note } = useNote(slug);
-  const [values, setValues] = useState<UserNoteFields>(newNote);
-  const [savedValues, setSavedValues] = useState<UnsavedNote>(newNote);
+  const [values, setValues] = useState<WithTimestamp<UserNoteFields>>({
+    ...newNote,
+    modified: 0,
+  });
+  const [savedValues, setSavedValues] = useState<WithTimestamp<UnsavedNote>>({
+    ...newNote,
+    modified: 0,
+  });
   const [errors, setErrors] = useState<Errors>({});
   const shouldUpdate = useRef(false);
 
@@ -27,6 +37,7 @@ export const useNoteForm = (slug: string | undefined) => {
       e.persist();
       setValues((previous) => ({
         ...previous,
+        modified: Date.now(),
         [e.target.name]:
           e.target.name === "tags" ? e.target.value.split(" ") : e.target.value,
       }));
@@ -40,7 +51,7 @@ export const useNoteForm = (slug: string | undefined) => {
         setErrors({});
         try {
           const result = await createNote(values);
-          setSavedValues(result);
+          setSavedValues({ ...result, modified: Date.now() });
         } catch (e) {
           setErrors({
             title:
@@ -70,7 +81,7 @@ export const useNoteForm = (slug: string | undefined) => {
       setErrors({});
       try {
         const result = await updateNote(noteId, values);
-        setSavedValues(result);
+        setSavedValues({ ...result, modified: Date.now() });
       } catch (e) {
         const isConstraintError = e.failures?.some(
           (f: any) => f.name === "ConstraintError"
@@ -91,11 +102,15 @@ export const useNoteForm = (slug: string | undefined) => {
       title: note?.title ?? "",
       md: note?.md ?? "",
       tags: note?.tags ?? [],
+      modified: 0,
     });
     setErrors({});
-    setSavedValues(note ?? newNote);
+    setSavedValues({ ...(note ?? newNote), modified: 0 });
     shouldUpdate.current = false;
   }, [note]);
+
+  const { modified: changed } = values;
+  const { modified: saved } = savedValues;
 
   return {
     values,
@@ -104,5 +119,6 @@ export const useNoteForm = (slug: string | undefined) => {
     onChange,
     onBlur,
     onDelete,
+    saved: changed === 0 || saved >= changed,
   };
 };

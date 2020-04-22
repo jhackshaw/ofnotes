@@ -1,7 +1,15 @@
 import React from "react";
 import { makeStyles, createStyles } from "@material-ui/core/styles";
-import { OutlinedTextFieldProps, Button } from "@material-ui/core";
+import {
+  OutlinedTextFieldProps,
+  Button,
+  InputAdornment,
+} from "@material-ui/core";
+import green from "@material-ui/core/colors/green";
+import yellow from "@material-ui/core/colors/yellow";
 import DeleteIcon from "@material-ui/icons/DeleteForever";
+import SavedIcon from "@material-ui/icons/Check";
+import UnsavedIcon from "@material-ui/icons/HourglassFullRounded";
 
 import { UserNoteFields } from "db";
 import { NoteTextField } from "./NoteTextField";
@@ -28,11 +36,27 @@ const useStyles = makeStyles((theme) =>
       color: theme.palette.error.main,
       width: 200,
     },
+    "@keyframes spin": {
+      from: {
+        transform: "rotate(0deg)",
+      },
+      to: {
+        transform: "rotate(360deg)",
+      },
+    },
+    savedIcon: {
+      color: green[500],
+    },
+    unsavedIcon: {
+      color: yellow[200],
+      // animation: "$spin 2000ms infinite"
+    },
   })
 );
 
 interface Props extends Partial<OutlinedTextFieldProps> {
   values: UserNoteFields;
+  saved: boolean;
   showDelete?: boolean;
   errors: {
     [K in keyof UserNoteFields]?: string | null;
@@ -47,9 +71,22 @@ export const NoteForm: React.FC<Props> = ({
   errors,
   showDelete = false,
   onDelete,
+  saved,
   ...rest
 }) => {
   const classes = useStyles();
+
+  const LoadingAdornment: React.FC = () => (
+    <InputAdornment position="end">
+      <UnsavedIcon classes={{ root: classes.unsavedIcon }} />
+    </InputAdornment>
+  );
+
+  const SavedAdornment: React.FC = () => (
+    <InputAdornment position="end">
+      <SavedIcon classes={{ root: classes.savedIcon }} />
+    </InputAdornment>
+  );
 
   return (
     <div className={classes.root}>
@@ -59,6 +96,9 @@ export const NoteForm: React.FC<Props> = ({
         error={!!errors.title}
         helperText={errors.title}
         value={values.title}
+        InputProps={{
+          endAdornment: saved ? <SavedAdornment /> : <LoadingAdornment />,
+        }}
         {...rest}
       />
 
