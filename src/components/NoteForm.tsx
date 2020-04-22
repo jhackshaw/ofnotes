@@ -56,7 +56,7 @@ const useStyles = makeStyles((theme) =>
 
 interface Props extends Partial<OutlinedTextFieldProps> {
   values: UserNoteFields;
-  saved: boolean;
+  saved?: boolean;
   showDelete?: boolean;
   errors: {
     [K in keyof UserNoteFields]?: string | null;
@@ -88,6 +88,13 @@ export const NoteForm: React.FC<Props> = ({
     </InputAdornment>
   );
 
+  const adorn =
+    saved === undefined ? undefined : saved ? (
+      <SavedAdornment />
+    ) : (
+      <LoadingAdornment />
+    );
+
   return (
     <div className={classes.root}>
       <NoteTextField
@@ -97,7 +104,7 @@ export const NoteForm: React.FC<Props> = ({
         helperText={errors.title}
         value={values.title}
         InputProps={{
-          endAdornment: saved ? <SavedAdornment /> : <LoadingAdornment />,
+          endAdornment: adorn,
         }}
         {...rest}
       />

@@ -9,7 +9,7 @@ import { useSidebarContext, useNoteContext } from "hooks";
 const useStyles = makeStyles((theme) =>
   createStyles({
     container: {
-      flex: (expanded: boolean) => (expanded ? "0 0 400px" : "0 0 auto"),
+      flex: (expanded: boolean) => (expanded ? "0 0 350px" : "0 0 auto"),
       overflowY: "auto",
 
       zIndex: 1000,
@@ -17,13 +17,13 @@ const useStyles = makeStyles((theme) =>
       [theme.breakpoints.down("sm")]: {
         position: "absolute",
         transition: "left 0.5s",
-        maxWidth: "400px",
+        maxWidth: "350px",
         width: "100%",
-        left: (expanded: boolean) => (expanded ? "0" : "-400px"),
+        left: (expanded: boolean) => (expanded ? "0" : "-350px"),
       },
     },
     swipe: {
-      width: 60,
+      width: 40,
       height: "100%",
       position: "absolute",
       zIndex: 20,

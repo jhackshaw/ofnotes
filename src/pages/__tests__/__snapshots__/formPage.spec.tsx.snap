@@ -111,10 +111,10 @@ exports[`Form page navigation matches snapshot 1`] = `
               </div>
               <fieldset
                 aria-hidden="true"
-                class="PrivateNotchedOutline-root-122 MuiOutlinedInput-notchedOutline"
+                class="PrivateNotchedOutline-root-106 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  class="PrivateNotchedOutline-legendLabelled-124 PrivateNotchedOutline-legendNotched-125"
+                  class="PrivateNotchedOutline-legendLabelled-108 PrivateNotchedOutline-legendNotched-109"
                 >
                   <span>
                     Title
@@ -150,10 +150,10 @@ exports[`Form page navigation matches snapshot 1`] = `
               </textarea>
               <fieldset
                 aria-hidden="true"
-                class="PrivateNotchedOutline-root-122 MuiOutlinedInput-notchedOutline"
+                class="PrivateNotchedOutline-root-106 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  class="PrivateNotchedOutline-legendLabelled-124 PrivateNotchedOutline-legendNotched-125"
+                  class="PrivateNotchedOutline-legendLabelled-108 PrivateNotchedOutline-legendNotched-109"
                 >
                   <span>
                     Note
@@ -194,10 +194,10 @@ exports[`Form page navigation matches snapshot 1`] = `
               />
               <fieldset
                 aria-hidden="true"
-                class="PrivateNotchedOutline-root-122 MuiOutlinedInput-notchedOutline"
+                class="PrivateNotchedOutline-root-106 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  class="PrivateNotchedOutline-legendLabelled-124 PrivateNotchedOutline-legendNotched-125"
+                  class="PrivateNotchedOutline-legendLabelled-108 PrivateNotchedOutline-legendNotched-109"
                 >
                   <span>
                     Tags
@@ -246,26 +246,26 @@ exports[`Form page navigation matches snapshot 1`] = `
         class="makeStyles-root-39"
       >
         <div
-          class="makeStyles-wrapper-138"
+          class="makeStyles-wrapper-122"
         >
           <h1
-            class="MuiTypography-root makeStyles-title-134 MuiTypography-h3"
+            class="MuiTypography-root makeStyles-title-118 MuiTypography-h3"
           >
             test two
           </h1>
           <div>
             <h1
-              class="MuiTypography-root makeStyles-content-135 MuiTypography-h3 MuiTypography-gutterBottom"
+              class="MuiTypography-root makeStyles-content-119 MuiTypography-h3 MuiTypography-gutterBottom"
               id="test-note-2"
             >
               test note 2
             </h1>
           </div>
           <div
-            class="makeStyles-tags-137"
+            class="makeStyles-tags-121"
           >
             <div
-              class="MuiChip-root makeStyles-chip-136 MuiChip-outlined"
+              class="MuiChip-root makeStyles-chip-120 MuiChip-outlined"
             >
               <span
                 class="MuiChip-label"

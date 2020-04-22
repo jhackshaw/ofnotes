@@ -109,8 +109,12 @@ export const useNoteForm = (slug: string | undefined) => {
     shouldUpdate.current = false;
   }, [note]);
 
-  const { modified: changed } = values;
-  const { modified: saved } = savedValues;
+  const { modified: changedMod } = values;
+  const { modified: savedMod } = savedValues;
+
+  let saved;
+  if (savedValues.id || changedMod !== 0)
+    saved = Boolean(changedMod === 0 || savedMod >= changedMod);
 
   return {
     values,
@@ -119,6 +123,6 @@ export const useNoteForm = (slug: string | undefined) => {
     onChange,
     onBlur,
     onDelete,
-    saved: changed === 0 || saved >= changed,
+    saved,
   };
 };
