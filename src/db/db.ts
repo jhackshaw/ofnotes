@@ -42,7 +42,7 @@ export class NotesDB extends Dexie {
 
   async create(note: UserNoteFields) {
     const id = await this.notes.add({
-      ...note,
+      ...(await this.validate(note)),
       slug: slugify(note.title, { lower: true }),
       modified: Date.now(),
       tags: note.tags.filter((t) => Boolean(t)),
@@ -71,14 +71,11 @@ export class NotesDB extends Dexie {
   }
 
   async update(noteId: number, note: UserNoteFields) {
-    if (!note.title) {
-      throw new Error("title is required");
-    }
     if (!noteId) {
       throw new Error("invalid note id");
     }
     await this.notes.update(noteId, {
-      ...note,
+      ...(await this.validate(note)),
       slug: slugify(note.title, { lower: true }),
       modified: Date.now(),
       tags: note.tags.filter((t) => Boolean(t)),
@@ -88,6 +85,14 @@ export class NotesDB extends Dexie {
 
   async remove(noteId: number) {
     return await this.notes.delete(noteId);
+  }
+
+  async validate(note: UserNoteFields) {
+    if (!note.title) {
+      throw new Error("title is required");
+    }
+
+    return note;
   }
 }
 

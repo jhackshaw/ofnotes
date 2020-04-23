@@ -59,6 +59,17 @@ describe("idempotent db", () => {
   it("title is required to update note", async () => {
     expect.assertions(1);
     return expect(
+      db.create({
+        title: "",
+        md: "",
+        tags: [],
+      })
+    ).rejects.toEqual(new Error("title is required"));
+  });
+
+  it("title is required to update note", async () => {
+    expect.assertions(1);
+    return expect(
       db.update(1, {
         title: "",
         md: "",
