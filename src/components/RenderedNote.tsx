@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import Markdown, { MarkdownOptions } from "markdown-to-jsx";
+import { Swipeable } from "react-swipeable";
 import hljs from "highlight.js";
 import "highlight.js/styles/atom-one-dark.css";
 import {
@@ -29,7 +30,6 @@ const useStyles = makeStyles((theme) =>
       padding: theme.spacing(),
       paddingTop: 0,
       zIndex: -10,
-      position: "relative",
       fontFamily: theme.typography.fontFamily,
 
       "& p": {
@@ -42,10 +42,6 @@ const useStyles = makeStyles((theme) =>
       },
       "& ol, ul": {
         ...theme.typography.body1,
-      },
-      "& pre": {
-        width: "100%",
-        overflowX: "auto",
       },
       "& dl": {
         margin: theme.spacing(),
@@ -114,6 +110,16 @@ const options: MarkdownOptions = {
       <Typography variant="body1" component="p" paragraph {...props} />
     ),
     input: ({ type, ...rest }) => <Checkbox {...rest} />,
+    code: (props) => (
+      <Swipeable
+        onSwiping={(e) => {
+          /* istanbul ignore next */
+          e.event.stopPropagation();
+        }}
+      >
+        <code {...props} />
+      </Swipeable>
+    ),
   },
 };
 
