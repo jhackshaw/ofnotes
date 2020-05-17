@@ -39,7 +39,7 @@ exports[`Form page navigation matches snapshot 1`] = `
               aria-selected="false"
               class="MuiButtonBase-root MuiTab-root MuiTab-textColorInherit"
               role="tab"
-              tabindex="0"
+              tabindex="-1"
               type="button"
             >
               <span
