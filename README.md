@@ -37,7 +37,7 @@ GitHub Actions is used for CI/CD by synchronizing with an AWS s3 static site ena
 3. Run tests (npm run test -- --coverage)
 4. Upload test coverage to [codecov](https://codecov.io/gh/jhackshaw/ofnotes)
 5. Build production application (npm run build)
-6. Deploy application to s3 bucket
+6. Deploy application to netlify
 
 #### development
 
@@ -56,4 +56,4 @@ GitHub Actions is used for CI/CD by synchronizing with an AWS s3 static site ena
 - Format source:  
   `npm run format`.
 
-Pull requests are always appreciated.
+Pull requests welcome.
