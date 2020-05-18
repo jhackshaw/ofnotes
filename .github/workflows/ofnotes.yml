@@ -4,14 +4,18 @@ on:
   push:
     branches:
       - master
+
   pull_request:
     branches:
       - master
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+env:
+  NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+  NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
 
+jobs:
+  test:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
 
@@ -21,24 +25,42 @@ jobs:
           node-version: "12.14"
 
       - name: Install Dependencies
-        run: |
-          npm ci
-        env:
-          CI: true
+        run: npm ci
 
       - name: Check Code style
-        run: |
-          npm run format:check
-        env:
-          CI: true
+        run: npm run format:check
 
       - name: Run Tests
-        run: |
-          npm run test -- --watchAll=false --coverage
-        env:
-          CI: true
+        run: npm run test -- --watchAll=false --coverage
 
       - name: Upload coverage report
         uses: codecov/codecov-action@v1.0.3
+        if: ${{ !contains(github.actor, 'dependabot') }}
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
+  
+  deploy-preview:
+    runs-on: ubuntu-latest
+    needs: test
+    if: ${{ !contains(github.actor, 'dependabot') && github.event_name == 'pull_request' }}
+
+    steps:
+      - name: Build
+        run: npm run build
+      - name: Deploy Preview
+        run: |
+          npm i -g netlify
+          netlify deploy --dir=./public
+  
+  deploy-prod:
+    runs-on: ubuntu-latest
+    needs: test
+    if: ${{ !contains(github.actor, 'dependabot') && github.event_name == 'push' }}
+
+    steps:
+      - name: Build
+        run: npm run build
+      - name: Deploy to prod
+        run: |
+          npm i -g netlify
+          netlify deploy --dir=./public --prod
