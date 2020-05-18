@@ -34,7 +34,7 @@
     "react-scripts": "3.4.1",
     "react-swipeable": "^5.5.1",
     "slugify": "^1.4.0",
-    "ts-jest": "^25.5.1",
+    "ts-jest": "^26.0.0",
     "typeface-mclaren": "0.0.72",
     "typeface-roboto": "0.0.75",
     "typescript": "^3.9.2"
