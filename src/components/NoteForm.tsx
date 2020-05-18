@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) =>
   })
 );
 
-interface Props extends Partial<OutlinedTextFieldProps> {
+interface Props extends Omit<Partial<OutlinedTextFieldProps>, "value"> {
   values: UserNoteFields;
   saved?: boolean;
   showDelete?: boolean;

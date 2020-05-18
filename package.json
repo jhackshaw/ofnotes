@@ -43,8 +43,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "format": "prettier  --loglevel warn --write \"**/*.+(ts|tsx|js|jsx|json|yml|yaml|css|md)\"",
-    "format:check": "prettier --loglevel warn --check \"**/*.+(ts|tsx|js|jsx|json|yml|yaml|css|md)\""
+    "format": "prettier  --loglevel warn --write \"src/**/*.+(ts|tsx|js|jsx|json|yml|yaml|css|md)\"",
+    "format:check": "prettier --check \"src/**/*.+(ts|tsx|js|jsx|json|yml|yaml|css|md)\""
   },
   "eslintConfig": {
     "extends": "react-app"
