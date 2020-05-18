@@ -24,6 +24,14 @@ jobs:
         with:
           node-version: "12.14"
 
+      - name: Restore Npm Cache
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
       - name: Install Dependencies
         run: npm ci
 
@@ -38,29 +46,17 @@ jobs:
         if: ${{ !contains(github.actor, 'dependabot') }}
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-  
-  deploy-preview:
-    runs-on: ubuntu-latest
-    needs: test
-    if: ${{ !contains(github.actor, 'dependabot') && github.event_name == 'pull_request' }}
 
-    steps:
       - name: Build
-        run: npm run build
-      - name: Deploy Preview
+        if: ${{ !contains(github.actor, 'dependabot') }}
         run: |
-          npm i -g netlify
-          netlify deploy --dir=./public
-  
-  deploy-prod:
-    runs-on: ubuntu-latest
-    needs: test
-    if: ${{ !contains(github.actor, 'dependabot') && github.event_name == 'push' }}
+          npm i -g netlify-cli
+          netlify build
 
-    steps:
-      - name: Build
-        run: npm run build
-      - name: Deploy to prod
-        run: |
-          npm i -g netlify
-          netlify deploy --dir=./public --prod
+      - name: Deploy Preview to Netlify
+        if: ${{ !contains(github.actor, 'dependabot') && github.event_name == 'pull_request' }}
+        run: netlify deploy --dir=./public
+
+      - name: Deploy Prod to Netlify
+        if: ${{ !contains(github.actor, 'dependabot') && github.event_name == 'push' }}
+        run: netlify deploy --dir=./public --prod
