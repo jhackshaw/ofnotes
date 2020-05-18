@@ -1,9 +1,7 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/42239f40-f5d3-49df-ae4a-84748d62eed3/deploy-status)](https://app.netlify.com/sites/ofnotes/deploys)
 [![build](https://github.com/jhackshaw/ofnotes/workflows/ofnotes/badge.svg)](https://github.com/jhackshaw/ofnotes/actions)
 [![codecov](https://codecov.io/gh/jhackshaw/ofnotes/branch/master/graph/badge.svg)](https://codecov.io/gh/jhackshaw/ofnotes)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
 [![Live Demo](https://img.shields.io/badge/demo-online-green.svg)](https://www.ofnote.site)
-[![Contributors](https://img.shields.io/github/contributors/jhackshaw/ofnotes)](https://github.com/jhackshaw/ofnotes/graphs/contributors)
 ![GitHub](https://img.shields.io/github/license/jhackshaw/ofnotes)
 
 ### About
