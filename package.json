@@ -37,7 +37,7 @@
     "ts-jest": "^26.0.0",
     "typeface-mclaren": "0.0.72",
     "typeface-roboto": "0.0.75",
-    "typescript": "^3.9.2"
+    "typescript": "^3.9.3"
   },
   "scripts": {
     "start": "react-scripts start",
