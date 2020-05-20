@@ -22,7 +22,7 @@
     "dexie": "^3.0.1",
     "fake-indexeddb": "^3.0.0",
     "highlight.js": "^10.0.3",
-    "markdown-to-jsx": "^6.11.1",
+    "markdown-to-jsx": "^6.11.2",
     "moment": "^2.26.0",
     "prettier": "^2.0.5",
     "react": "^16.13.1",
