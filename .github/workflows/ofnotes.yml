@@ -55,8 +55,8 @@ jobs:
 
       - name: Deploy Preview to Netlify
         if: ${{ !contains(github.actor, 'dependabot') && github.event_name == 'pull_request' }}
-        run: netlify deploy --dir=./public
+        run: netlify deploy --dir=./build
 
       - name: Deploy Prod to Netlify
         if: ${{ !contains(github.actor, 'dependabot') && github.event_name == 'push' }}
-        run: netlify deploy --dir=./public --prod
+        run: netlify deploy --dir=./build --prod
