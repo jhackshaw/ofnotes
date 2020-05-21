@@ -30,7 +30,7 @@ Ofnotes is a note taking application that is completely offline with support for
 
 #### Continuous Integration
 
-GitHub Actions is used for CI/CD by synchronizing with an AWS s3 static site enabled bucket. CI configuration can be viewed at [.github/workflows/ofnotes.yml](https://github.com/jhackshaw/ofnotes/blob/master/.github/workflows/ofnotes.yml). Every push to master triggers the following steps:
+GitHub Actions is used for CI/CD and the site is deployed to netlify. CI configuration can be viewed at [.github/workflows/ofnotes.yml](https://github.com/jhackshaw/ofnotes/blob/master/.github/workflows/ofnotes.yml). Every push to master triggers the following steps:
 
 1. Install nodejs and dependencies (npm ci)
 2. Ensure prettier code style (npm format:check)
