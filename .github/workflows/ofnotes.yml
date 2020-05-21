@@ -36,6 +36,7 @@ jobs:
         run: npm ci
 
       - name: Check Code style
+        if: ${{ !contains(github.actor, 'dependabot') }}
         run: npm run format:check
 
       - name: Run Tests
