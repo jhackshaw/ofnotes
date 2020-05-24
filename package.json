@@ -5,7 +5,7 @@
   "dependencies": {
     "@material-ui/core": "^4.9.14",
     "@material-ui/icons": "^4.9.1",
-    "@material-ui/styles": "^4.9.14",
+    "@material-ui/styles": "^4.10.0",
     "@testing-library/jest-dom": "^5.8.0",
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^10.3.5",
@@ -42,8 +42,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
-    "format": "prettier  --loglevel warn --write \"src/**/*.+(ts|tsx|js|jsx|json|yml|yaml|css|md)\"",
+    "test": "react-scripts test --watchAll=false",
+    "format": "prettier --loglevel warn --write \"src/**/*.+(ts|tsx|js|jsx|json|yml|yaml|css|md)\"",
     "format:check": "prettier --check \"src/**/*.+(ts|tsx|js|jsx|json|yml|yaml|css|md)\""
   },
   "eslintConfig": {
