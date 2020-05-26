@@ -67,8 +67,8 @@ const useStyles = makeStyles((theme) =>
       paddingBottom: theme.spacing(3),
     },
     wrapper: {
-      maxWidth: 600,
-      margin: "0 auto",
+      maxWidth: 700,
+      margin: "0 auto 0 10px",
     },
   })
 );
