@@ -37,7 +37,7 @@ exports[`Home page matches snapshot 1`] = `
     </div>
     <a
       aria-disabled="false"
-      class="MuiButtonBase-root MuiFab-root makeStyles-root-68 MuiFab-extended MuiFab-primary"
+      class="MuiButtonBase-root MuiFab-root makeStyles-root-8 MuiFab-extended MuiFab-primary"
       href="/create"
       role="button"
       tabindex="0"

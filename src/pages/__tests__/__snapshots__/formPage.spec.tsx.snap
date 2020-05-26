@@ -53,7 +53,7 @@ exports[`Form page navigation matches snapshot 1`] = `
             </button>
           </div>
           <span
-            class="PrivateTabIndicator-root-28 PrivateTabIndicator-colorSecondary-30 MuiTabs-indicator"
+            class="PrivateTabIndicator-root-4 PrivateTabIndicator-colorSecondary-6 MuiTabs-indicator"
             style="left: 0px; width: 0px;"
           />
         </div>
@@ -67,13 +67,13 @@ exports[`Form page navigation matches snapshot 1`] = `
       data-testid="form-container"
     >
       <div
-        class="makeStyles-root-39"
+        class="makeStyles-root-8"
       >
         <div
-          class="makeStyles-root-40"
+          class="makeStyles-root-9"
         >
           <div
-            class="MuiFormControl-root MuiTextField-root makeStyles-inp-47 MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root makeStyles-inp-16 MuiFormControl-fullWidth"
           >
             <label
               class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
@@ -100,7 +100,7 @@ exports[`Form page navigation matches snapshot 1`] = `
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root makeStyles-savedIcon-45"
+                  class="MuiSvgIcon-root makeStyles-savedIcon-14"
                   focusable="false"
                   viewBox="0 0 24 24"
                 >
@@ -111,10 +111,10 @@ exports[`Form page navigation matches snapshot 1`] = `
               </div>
               <fieldset
                 aria-hidden="true"
-                class="PrivateNotchedOutline-root-106 MuiOutlinedInput-notchedOutline"
+                class="PrivateNotchedOutline-root-17 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  class="PrivateNotchedOutline-legendLabelled-108 PrivateNotchedOutline-legendNotched-109"
+                  class="PrivateNotchedOutline-legendLabelled-19 PrivateNotchedOutline-legendNotched-20"
                 >
                   <span>
                     Title
@@ -124,7 +124,7 @@ exports[`Form page navigation matches snapshot 1`] = `
             </div>
           </div>
           <div
-            class="MuiFormControl-root MuiTextField-root makeStyles-inp-47 MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root makeStyles-inp-16 MuiFormControl-fullWidth"
           >
             <label
               class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
@@ -141,7 +141,7 @@ exports[`Form page navigation matches snapshot 1`] = `
                 aria-describedby="md-helper-text"
                 aria-invalid="false"
                 autocomplete="off"
-                class="MuiInputBase-input MuiOutlinedInput-input makeStyles-textarea-41 MuiInputBase-inputMultiline MuiOutlinedInput-inputMultiline"
+                class="MuiInputBase-input MuiOutlinedInput-input makeStyles-textarea-10 MuiInputBase-inputMultiline MuiOutlinedInput-inputMultiline"
                 id="md"
                 name="md"
                 rows="20"
@@ -150,10 +150,10 @@ exports[`Form page navigation matches snapshot 1`] = `
               </textarea>
               <fieldset
                 aria-hidden="true"
-                class="PrivateNotchedOutline-root-106 MuiOutlinedInput-notchedOutline"
+                class="PrivateNotchedOutline-root-17 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  class="PrivateNotchedOutline-legendLabelled-108 PrivateNotchedOutline-legendNotched-109"
+                  class="PrivateNotchedOutline-legendLabelled-19 PrivateNotchedOutline-legendNotched-20"
                 >
                   <span>
                     Note
@@ -169,7 +169,7 @@ exports[`Form page navigation matches snapshot 1`] = `
             </p>
           </div>
           <div
-            class="MuiFormControl-root MuiTextField-root makeStyles-inp-47 MuiFormControl-fullWidth"
+            class="MuiFormControl-root MuiTextField-root makeStyles-inp-16 MuiFormControl-fullWidth"
           >
             <label
               class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-filled"
@@ -194,10 +194,10 @@ exports[`Form page navigation matches snapshot 1`] = `
               />
               <fieldset
                 aria-hidden="true"
-                class="PrivateNotchedOutline-root-106 MuiOutlinedInput-notchedOutline"
+                class="PrivateNotchedOutline-root-17 MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  class="PrivateNotchedOutline-legendLabelled-108 PrivateNotchedOutline-legendNotched-109"
+                  class="PrivateNotchedOutline-legendLabelled-19 PrivateNotchedOutline-legendNotched-20"
                 >
                   <span>
                     Tags
@@ -213,7 +213,7 @@ exports[`Form page navigation matches snapshot 1`] = `
             </p>
           </div>
           <button
-            class="MuiButtonBase-root MuiButton-root makeStyles-delete-43 MuiButton-outlined MuiButton-outlinedSizeSmall MuiButton-sizeSmall"
+            class="MuiButtonBase-root MuiButton-root makeStyles-delete-12 MuiButton-outlined MuiButton-outlinedSizeSmall MuiButton-sizeSmall"
             tabindex="0"
             type="button"
           >
@@ -243,29 +243,29 @@ exports[`Form page navigation matches snapshot 1`] = `
         </div>
       </div>
       <div
-        class="makeStyles-root-39"
+        class="makeStyles-root-8"
       >
         <div
-          class="makeStyles-wrapper-122"
+          class="makeStyles-wrapper-25"
         >
           <h1
-            class="MuiTypography-root makeStyles-title-118 MuiTypography-h3"
+            class="MuiTypography-root makeStyles-title-21 MuiTypography-h3"
           >
             test two
           </h1>
           <div>
             <h1
-              class="MuiTypography-root makeStyles-content-119 MuiTypography-h3 MuiTypography-gutterBottom"
+              class="MuiTypography-root makeStyles-content-22 MuiTypography-h3 MuiTypography-gutterBottom"
               id="test-note-2"
             >
               test note 2
             </h1>
           </div>
           <div
-            class="makeStyles-tags-121"
+            class="makeStyles-tags-24"
           >
             <div
-              class="MuiChip-root makeStyles-chip-120 MuiChip-outlined"
+              class="MuiChip-root makeStyles-chip-23 MuiChip-outlined"
             >
               <span
                 class="MuiChip-label"

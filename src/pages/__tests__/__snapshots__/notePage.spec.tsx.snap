@@ -6,26 +6,26 @@ exports[`Note page matches snapshot 1`] = `
     class="makeStyles-root-2"
   >
     <div
-      class="makeStyles-wrapper-40"
+      class="makeStyles-wrapper-8"
     >
       <h1
-        class="MuiTypography-root makeStyles-title-36 MuiTypography-h3"
+        class="MuiTypography-root makeStyles-title-4 MuiTypography-h3"
       >
         test two
       </h1>
       <div>
         <h1
-          class="MuiTypography-root makeStyles-content-37 MuiTypography-h3 MuiTypography-gutterBottom"
+          class="MuiTypography-root makeStyles-content-5 MuiTypography-h3 MuiTypography-gutterBottom"
           id="test-note-2"
         >
           test note 2
         </h1>
       </div>
       <div
-        class="makeStyles-tags-39"
+        class="makeStyles-tags-7"
       >
         <div
-          class="MuiChip-root makeStyles-chip-38 MuiChip-outlined"
+          class="MuiChip-root makeStyles-chip-6 MuiChip-outlined"
         >
           <span
             class="MuiChip-label"

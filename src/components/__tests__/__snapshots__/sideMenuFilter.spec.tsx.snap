@@ -31,10 +31,10 @@ exports[`SideMenuFilter component matches snapshot 1`] = `
         />
         <fieldset
           aria-hidden="true"
-          class="PrivateNotchedOutline-root-61 MuiOutlinedInput-notchedOutline"
+          class="PrivateNotchedOutline-root-3 MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="PrivateNotchedOutline-legendLabelled-63 PrivateNotchedOutline-legendNotched-64"
+            class="PrivateNotchedOutline-legendLabelled-5 PrivateNotchedOutline-legendNotched-6"
           >
             <span>
               Filter

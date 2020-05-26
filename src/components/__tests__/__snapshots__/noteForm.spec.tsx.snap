@@ -30,10 +30,10 @@ exports[`NoteForm component matches snapshot 1`] = `
         />
         <fieldset
           aria-hidden="true"
-          class="PrivateNotchedOutline-root-67 MuiOutlinedInput-notchedOutline"
+          class="PrivateNotchedOutline-root-9 MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="PrivateNotchedOutline-legendLabelled-69"
+            class="PrivateNotchedOutline-legendLabelled-11"
           >
             <span>
               Title
@@ -67,10 +67,10 @@ exports[`NoteForm component matches snapshot 1`] = `
         />
         <fieldset
           aria-hidden="true"
-          class="PrivateNotchedOutline-root-67 MuiOutlinedInput-notchedOutline"
+          class="PrivateNotchedOutline-root-9 MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="PrivateNotchedOutline-legendLabelled-69"
+            class="PrivateNotchedOutline-legendLabelled-11"
           >
             <span>
               Note
@@ -111,10 +111,10 @@ exports[`NoteForm component matches snapshot 1`] = `
         />
         <fieldset
           aria-hidden="true"
-          class="PrivateNotchedOutline-root-67 MuiOutlinedInput-notchedOutline"
+          class="PrivateNotchedOutline-root-9 MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="PrivateNotchedOutline-legendLabelled-69"
+            class="PrivateNotchedOutline-legendLabelled-11"
           >
             <span>
               Tags

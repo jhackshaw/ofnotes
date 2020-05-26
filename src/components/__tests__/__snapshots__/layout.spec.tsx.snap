@@ -9,10 +9,10 @@ exports[`Layout component matches snapshot 1`] = `
       class="MuiPaper-root makeStyles-container-2 makeStyles-container-4 MuiPaper-elevation1 MuiPaper-rounded"
     >
       <div
-        class="makeStyles-root-33 makeStyles-root-35"
+        class="makeStyles-root-5 makeStyles-root-7"
       >
         <div
-          class="makeStyles-header-34"
+          class="makeStyles-header-6"
         >
           <h5
             class="MuiTypography-root MuiTypography-h5"
@@ -108,10 +108,10 @@ exports[`Layout component matches snapshot 1`] = `
         </button>
       </div>
       <div
-        class="makeStyles-root-87"
+        class="makeStyles-root-8"
       >
         <div
-          class="MuiFormControl-root MuiTextField-root makeStyles-inp-88 MuiFormControl-fullWidth"
+          class="MuiFormControl-root MuiTextField-root makeStyles-inp-9 MuiFormControl-fullWidth"
         >
           <label
             class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined"
@@ -136,10 +136,10 @@ exports[`Layout component matches snapshot 1`] = `
             />
             <fieldset
               aria-hidden="true"
-              class="PrivateNotchedOutline-root-147 MuiOutlinedInput-notchedOutline"
+              class="PrivateNotchedOutline-root-10 MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="PrivateNotchedOutline-legendLabelled-149 PrivateNotchedOutline-legendNotched-150"
+                class="PrivateNotchedOutline-legendLabelled-12 PrivateNotchedOutline-legendNotched-13"
               >
                 <span>
                   Filter

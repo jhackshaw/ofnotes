@@ -6,10 +6,10 @@ exports[`SideMenu component matches snapshot 1`] = `
     class="MuiPaper-root makeStyles-container-1 makeStyles-container-3 MuiPaper-elevation1 MuiPaper-rounded"
   >
     <div
-      class="makeStyles-root-32 makeStyles-root-34"
+      class="makeStyles-root-4 makeStyles-root-6"
     >
       <div
-        class="makeStyles-header-33"
+        class="makeStyles-header-5"
       >
         <h5
           class="MuiTypography-root MuiTypography-h5"
@@ -105,10 +105,10 @@ exports[`SideMenu component matches snapshot 1`] = `
       </button>
     </div>
     <div
-      class="makeStyles-root-86"
+      class="makeStyles-root-7"
     >
       <div
-        class="MuiFormControl-root MuiTextField-root makeStyles-inp-87 MuiFormControl-fullWidth"
+        class="MuiFormControl-root MuiTextField-root makeStyles-inp-8 MuiFormControl-fullWidth"
       >
         <label
           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined"
@@ -133,10 +133,10 @@ exports[`SideMenu component matches snapshot 1`] = `
           />
           <fieldset
             aria-hidden="true"
-            class="PrivateNotchedOutline-root-146 MuiOutlinedInput-notchedOutline"
+            class="PrivateNotchedOutline-root-9 MuiOutlinedInput-notchedOutline"
           >
             <legend
-              class="PrivateNotchedOutline-legendLabelled-148 PrivateNotchedOutline-legendNotched-149"
+              class="PrivateNotchedOutline-legendLabelled-11 PrivateNotchedOutline-legendNotched-12"
             >
               <span>
                 Filter
@@ -260,7 +260,7 @@ exports[`SideMenu component matches snapshot 1`] = `
               <span>
                 2 hours ago
                 <span
-                  class="makeStyles-bullet-165"
+                  class="makeStyles-bullet-13"
                 >
                   •
                 </span>
@@ -335,7 +335,7 @@ exports[`SideMenu component matches snapshot 1`] = `
               <span>
                 22 days ago
                 <span
-                  class="makeStyles-bullet-165"
+                  class="makeStyles-bullet-13"
                 >
                   •
                 </span>
