@@ -18,7 +18,7 @@
     "@types/react-helmet": "^6.0.0",
     "@types/react-router-dom": "^5.1.5",
     "@types/showdown": "^1.9.3",
-    "clsx": "^1.1.0",
+    "clsx": "^1.1.1",
     "dexie": "^3.0.1",
     "fake-indexeddb": "^3.0.1",
     "highlight.js": "^10.0.3",
