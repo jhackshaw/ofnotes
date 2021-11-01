@@ -1,0 +1,4 @@
+This is a Brave Rewards publisher verification file.
+
+Domain: ofnote.site
+Token: 4a9bdadc288252b48fd9c4213d7dac69da7f08a8906528951b1b7e82b4373afd

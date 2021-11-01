@@ -129,7 +129,7 @@ export const RenderedNote: React.FC<Props> = ({ note }) => {
 
   useEffect(() => {
     ref.current?.querySelectorAll("pre code").forEach((block) => {
-      hljs.highlightBlock(block);
+      hljs.highlightBlock(block as HTMLElement);
     });
   }, [note.md]);
 
